@@ -1,0 +1,91 @@
+---
+import { t, otherLocale, siteName, type Locale } from '../lib/i18n';
+
+interface Props {
+	lang: Locale;
+	section: 'home' | 'about' | 'publications' | 'book';
+	/** Does the current page exist in the other language too? */
+	hasTranslation: boolean;
+}
+
+const { lang, section, hasTranslation } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const other = otherLocale(lang);
+const nav = t(lang).nav;
+
+// If a translation of this exact page exists, the toggle preserves it.
+// Otherwise it falls back to that language's home page (the closest thing
+// a standalone page has to a "section index").
+const sectionPath = section === 'home' ? '' : `${section}/`;
+const toggleHref = hasTranslation ? `${base}${other}/${sectionPath}` : `${base}${other}/`;
+---
+
+<header class="site-header">
+	<div class="container inner">
+		<a class="wordmark" href={`${base}${lang}/`}>{siteName}</a>
+		<nav aria-label={lang === 'cs' ? 'Hlavní navigace' : 'Main navigation'}>
+			<a href={`${base}${lang}/about/`} aria-current={section === 'about' ? 'page' : undefined}
+				>{nav.about}</a
+			>
+			<a
+				href={`${base}${lang}/publications/`}
+				aria-current={section === 'publications' ? 'page' : undefined}>{nav.publications}</a
+			>
+			<a href={`${base}${lang}/book/`} aria-current={section === 'book' ? 'page' : undefined}
+				>{nav.book}</a
+			>
+			<a class="lang-toggle" href={toggleHref} hreflang={other}>{nav.langToggleTo}</a>
+		</nav>
+	</div>
+</header>
+
+<style>
+	.site-header {
+		border-bottom: 1px solid var(--rule);
+	}
+	.inner {
+		padding-block: 32px 16px;
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		gap: 16px;
+	}
+	.wordmark {
+		font-family: var(--font-heading);
+		font-weight: 600;
+		font-size: 20px;
+		text-decoration: none;
+		color: var(--ink);
+	}
+	.wordmark:hover {
+		color: var(--accent);
+	}
+	nav {
+		display: flex;
+		gap: 22px;
+		align-items: baseline;
+		flex-wrap: wrap;
+	}
+	nav a {
+		font-family: var(--font-meta);
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		text-decoration: none;
+		color: var(--ink);
+		border-bottom: 1px solid transparent;
+		padding-bottom: 2px;
+	}
+	nav a:hover {
+		color: var(--accent);
+		border-bottom-color: var(--accent);
+	}
+	nav a[aria-current='page'] {
+		color: var(--accent);
+		border-bottom-color: var(--accent);
+	}
+	.lang-toggle {
+		color: var(--ink-soft);
+	}
+</style>

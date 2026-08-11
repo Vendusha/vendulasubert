@@ -2,7 +2,7 @@
 
 Personal site: professional/CV page + Czech-first humorous columns ("fejetony"), bilingual (cs/en), built with [Astro](https://astro.build), hosted on GitHub Pages, deployed automatically by GitHub Actions on every push to `main`.
 
-**Status: Phase 0.** The real bilingual site (language toggle, newsletter form, styling, custom domains) hasn't been built yet. What exists right now is only the publishing pipeline — proven end-to-end with one throwaway test post — so that writing and publishing works before anything else is built on top of it.
+**Status: Phase 1.** The publishing pipeline (Phase 0) is proven and in daily use. The bilingual site skeleton now exists too: Home, About/CV, Publications (parsed at build time from `src/data/Publications.bib` and `Talks.bib`), and the ALEFUJ! book page, each in `/cs/` and `/en/`, with a language toggle and a footer newsletter signup on every page. Blog columns (the `/blog/` routes and their bilingual equivalents) are still Phase 2 — the test posts under `src/content/blog/` are leftover Phase 0 proof, not real content yet.
 
 ---
 
@@ -90,21 +90,52 @@ This works because every post is its own folder (`index.md` + its photos side by
 ```
 src/
   content/
-    blog/
+    blog/                    ← Phase 2 (columns) — currently just Phase 0 test posts
       _template/
         index.md          ← copy this to start a new post (never published — see below)
       <column-slug>/
         <date-slug>/
           index.md         ← the post itself
           photo1.jpg        ← its images, alongside it
-  content.config.ts         ← typed frontmatter schema for the blog collection
+    pages/                   ← standalone site pages, one folder per page per language
+      home/{cs,en}/index.md
+      about/{cs,en}/index.md    ← About/CV — cern-guide.jpg lives alongside it
+      book/{cs,en}/index.md     ← ALEFUJ!
+      publications/{cs,en}/index.md  ← intro text shown above the parsed publication list
+  content.config.ts          ← typed frontmatter schemas (blog + pages collections)
+  data/
+    Publications.bib, Talks.bib  ← source of truth for the Publications page — never hardcode entries
+  lib/
+    i18n.ts                  ← all UI strings (nav, footer, buttons) — not scattered through components
+    pages.ts                 ← loads a `pages` entry with cs/en fallback (never a 404 or empty page)
+    publications.ts           ← parses the .bib files at build time, groups/sorts/highlights entries
+  layouts/Layout.astro        ← shared HTML shell: fonts, Header, Footer
+  components/                 ← Header (nav + language toggle), Footer, Newsletter, TranslationNotice
   pages/
-    index.astro              ← PHASE 0 placeholder post list (replaced in Phase 1)
-    blog/[...slug].astro      ← PHASE 0 placeholder post renderer (replaced in Phase 1)
-.github/workflows/deploy.yml  ← builds and deploys to GitHub Pages on push to main
+    index.astro                    ← root: redirects to /cs/ or /en/ by browser language
+    [lang]/index.astro             ← Home
+    [lang]/about/index.astro       ← About/CV
+    [lang]/publications/index.astro ← Publications
+    [lang]/book/index.astro        ← ALEFUJ!
+    blog/[...slug].astro           ← PHASE 0 placeholder post renderer (rebuilt in Phase 2)
+.github/workflows/deploy.yml   ← builds and deploys to GitHub Pages on push to main
 ```
 
 `_template/` sits one folder level shallower than real posts (`blog/_template/` vs. `blog/<column>/<post>/`), so the collection loader's `*/*/index.md` pattern never matches it — copying it is always safe, it will never accidentally get published.
+
+### Publications page
+
+The list on `/publications/` is generated entirely from `src/data/Publications.bib` and `Talks.bib` — nothing is hardcoded. To add the plain-language "why this is interesting" note to an entry, add a `significance` field to it in the `.bib` file, e.g.:
+
+```bibtex
+significance = {Vysvětlení pro laika, jednou až dvě věty.},
+```
+
+Until that field is added, the entry shows a styled placeholder on the live page so it's obvious which of the 27 entries still need one. Note: this field isn't split by language — whatever you write in it appears on both the `/cs/` and `/en/` Publications pages as-is.
+
+### Newsletter signup
+
+The footer form (`src/components/Newsletter.astro`) posts to `ECOMAIL_FORM_ENDPOINT_PLACEHOLDER` in `src/lib/i18n.ts` — a placeholder. Once you've created the real form in Ecomail, copy its embed code's `<form action="...">` URL in there, and check whether Ecomail's own snippet includes extra hidden fields (list id, signature, redirect) that need copying into the form too.
 
 ## Commands
 
@@ -119,4 +150,4 @@ src/
 
 Every push to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages. In the repository's **Settings → Pages**, the source must be set to **GitHub Actions** (not "Deploy from a branch") for this to work.
 
-Currently deployed at the default GitHub Pages URL for this repo. Custom domains (`vendulasubert.cz` / `vendulasubert.com`) and their DNS setup are a Phase 1 task, done once this Phase 0 workflow is confirmed working.
+Currently deployed at the default GitHub Pages URL for this repo. Custom domains (`vendulasubert.cz` / `vendulasubert.com`) and their DNS setup haven't been wired up yet — `astro.config.mjs` will need `base` changed from `/vendulasubert/` back to `/` when that happens, since a custom domain serves from the root instead of a `/vendulasubert/` subpath.

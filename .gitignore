@@ -27,3 +27,6 @@ pnpm-debug.log*
 # Individual images get copied (not moved) into specific post folders
 # under src/content/blog/ once we decide where each one goes.
 /source-photos/
+
+# throwaway static HTML design comparisons, not part of the Astro site
+/design-mockups/

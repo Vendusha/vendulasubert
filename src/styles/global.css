@@ -1,0 +1,159 @@
+/* Design direction: "Fejeton Broadsheet" — warm paper, near-black ink,
+   a single muted terracotta accent, Fraunces for display type, Source
+   Serif 4 for reading text. Approved from design-mockups/mockup-1.html. */
+
+:root {
+	--paper: #f7f3ec;
+	--ink: #201c18;
+	--ink-soft: #58514a;
+	--accent: #b5502c;
+	--rule: #d9cfc0;
+
+	--font-body: 'Source Serif 4', Georgia, serif;
+	--font-heading: 'Fraunces', Georgia, serif;
+	--font-meta: system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+	--measure: 66ch;
+	--container-width: 1040px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background: var(--paper);
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--font-body);
+	font-size: 18px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+}
+
+.container {
+	max-width: var(--container-width);
+	margin: 0 auto;
+	padding-inline: 32px;
+}
+
+@media (max-width: 720px) {
+	.container {
+		padding-inline: 24px;
+	}
+}
+
+a {
+	color: var(--ink);
+	text-decoration-color: var(--rule);
+	text-underline-offset: 3px;
+}
+
+a:hover {
+	color: var(--accent);
+	text-decoration-color: var(--accent);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-heading);
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -0.005em;
+	margin: 0 0 0.6em;
+}
+
+h1 {
+	font-size: clamp(30px, 5vw, 44px);
+}
+
+h2 {
+	font-size: clamp(22px, 3vw, 28px);
+	margin-top: 2.2em;
+}
+
+h3 {
+	font-size: 19px;
+	font-weight: 600;
+	margin-top: 1.8em;
+}
+
+p {
+	margin: 0 0 1.1em;
+}
+
+.eyebrow {
+	font-family: var(--font-meta);
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--ink-soft);
+}
+
+.hairline {
+	border: none;
+	border-top: 1px solid var(--rule);
+	margin: 2.5em 0;
+}
+
+/* Reading measure for long-form content (About, Book, Publications intro) */
+.prose {
+	max-width: var(--measure);
+}
+
+.prose img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border: 1px solid var(--ink);
+	padding: 8px;
+	margin: 1.6em 0;
+}
+
+.prose ul {
+	padding-left: 1.2em;
+}
+
+.prose li {
+	margin-bottom: 0.5em;
+}
+
+.prose strong {
+	font-weight: 600;
+}
+
+.button {
+	display: inline-block;
+	padding: 12px 22px;
+	background: var(--accent);
+	color: var(--paper);
+	border: 1px solid var(--accent);
+	font-family: var(--font-meta);
+	font-size: 13px;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button:hover {
+	background: var(--ink);
+	border-color: var(--ink);
+	color: var(--paper);
+}
+
+.tag {
+	display: inline-block;
+	font-family: var(--font-meta);
+	font-size: 12px;
+	letter-spacing: 0.04em;
+	color: var(--ink-soft);
+	border: 1px solid var(--rule);
+	padding: 3px 10px;
+	border-radius: 2px;
+}

@@ -1,0 +1,91 @@
+---
+import { t, type Locale, ECOMAIL_FORM_ENDPOINT_PLACEHOLDER } from '../lib/i18n';
+
+interface Props {
+	lang: Locale;
+}
+
+const { lang } = Astro.props;
+const copy = t(lang).footer;
+const inputId = `newsletter-email-${lang}`;
+---
+
+<div class="newsletter">
+	<p class="eyebrow">{copy.newsletterHeading}</p>
+	<p class="body">{copy.newsletterBody}</p>
+	<!--
+		TODO(Ecomail): ECOMAIL_FORM_ENDPOINT_PLACEHOLDER in src/lib/i18n.ts is a
+		placeholder. Replace it with the real "action" URL from Ecomail's own
+		embed code (Ecomail dashboard → Forms → your form → Embed code), and
+		check whether Ecomail's snippet expects extra hidden fields (list id,
+		signature, redirect URL) — copy those into this form too if so.
+	-->
+	<form class="newsletter-form" action={ECOMAIL_FORM_ENDPOINT_PLACEHOLDER} method="post">
+		<label for={inputId}>{copy.emailLabel}</label>
+		<div class="row">
+			<input
+				id={inputId}
+				type="email"
+				name="email"
+				placeholder={copy.emailPlaceholder}
+				required
+			/>
+			<button type="submit">{copy.submitLabel}</button>
+		</div>
+	</form>
+</div>
+
+<style>
+	.newsletter {
+		max-width: var(--measure);
+	}
+	.body {
+		color: var(--ink-soft);
+	}
+	.newsletter-form label {
+		display: block;
+		font-family: var(--font-meta);
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: var(--ink-soft);
+		margin-bottom: 10px;
+	}
+	.row {
+		display: flex;
+		gap: 0;
+		max-width: 420px;
+		flex-wrap: wrap;
+	}
+	.row input {
+		flex: 1;
+		min-width: 200px;
+		padding: 12px 14px;
+		border: 1px solid var(--ink);
+		border-right: none;
+		background: transparent;
+		font-family: var(--font-body);
+		font-size: 15px;
+		color: var(--ink);
+	}
+	.row button {
+		padding: 12px 20px;
+		background: var(--accent);
+		color: var(--paper);
+		border: 1px solid var(--accent);
+		font-family: var(--font-meta);
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		cursor: pointer;
+	}
+	.row button:hover {
+		background: var(--ink);
+		border-color: var(--ink);
+	}
+	@media (max-width: 480px) {
+		.row input {
+			border-right: 1px solid var(--ink);
+		}
+	}
+</style>

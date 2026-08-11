@@ -16,4 +16,17 @@ const blog = defineCollection({
 	}),
 });
 
-export const collections = { blog };
+// Standalone site pages (home, about, book, publications intro) — one
+// markdown file per language, e.g. src/content/pages/about/cs/index.md and
+// src/content/pages/about/en/index.md. Entry id is "<page-key>/<lang>",
+// e.g. "about/cs", which is exactly how pages look them up.
+const pages = defineCollection({
+	loader: glob({ pattern: '*/*/index.md', base: './src/content/pages' }),
+	schema: z.object({
+		title: z.string(),
+		lang: z.enum(['cs', 'en']),
+		description: z.string().optional(),
+	}),
+});
+
+export const collections = { blog, pages };
