@@ -2,7 +2,7 @@
 
 Personal site: professional/CV page + Czech-first humorous columns ("fejetony"), bilingual (cs/en), built with [Astro](https://astro.build), hosted on GitHub Pages, deployed automatically by GitHub Actions on every push to `main`.
 
-**Status: Phase 1.** The publishing pipeline (Phase 0) is proven and in daily use. The bilingual site skeleton now exists too: Home, About/CV, Publications (parsed at build time from `src/data/Publications.bib` and `Talks.bib`), and the ALEFUJ! book page, each in `/cs/` and `/en/`, with a language toggle and a footer newsletter signup on every page. Blog columns (the `/blog/` routes and their bilingual equivalents) are still Phase 2 — the test posts under `src/content/blog/` are leftover Phase 0 proof, not real content yet.
+**Status: Phase 2.** The publishing pipeline (Phase 0) and the bilingual site skeleton — Home, About/CV, Publications, ALEFUJ! (Phase 1) — are both done. The four real blog columns now exist too, each with its own index page, header image, and accent colour, sharing one post system: reading time, related posts, a newsletter signup at the end of every post, per-language RSS feeds, and a sitemap. One placeholder sample post exists per column in both languages so the layout and frontmatter are visible by example — replace them with real writing whenever you're ready (see "Publishing a post" below).
 
 ---
 
@@ -13,15 +13,17 @@ This is the only workflow you need for day-to-day writing. No terminal, no GitHu
 ### 1. Start a new post from the template
 
 1. In the **Explorer** panel (top icon in the left-hand Activity Bar — looks like two stacked pages), open `src/content/blog/`.
-2. Inside it, find the column folder your post belongs to (e.g. `fejetony`), or right-click `blog` → **New Folder** to start a new column.
+2. Inside it, open the folder for the column your post belongs to: `materstvi`, `zvedavost`, `outdoor`, or `zivot`.
 3. Right-click the `_template` folder → **Copy**, then right-click your column folder → **Paste**.
 4. Right-click the pasted folder (it'll be called `_template` or `_template (copy)`) → **Rename**, and give it today's date plus a short slug, e.g. `2026-09-03-nazev-clanku`. This folder name becomes the post's URL, so use lowercase, hyphens, no spaces or accents.
 5. Open the `index.md` file inside your new folder.
-6. Fill in the frontmatter at the top (between the `---` lines): `title`, `lang` (`cs` or `en`), `pubDate`. Leave `description` and `draft` commented out unless you need them — see the comments in the file for what each field does.
+6. Fill in the frontmatter at the top (between the `---` lines): `title`, `date`, `column` (must exactly match the folder name from step 2), `lang` (`cs` or `en`), `summary`. Leave `translationKey`, `heroImage`, and `draft` commented out unless you need them — see the comments in the file for what each one does.
 7. Write your post below the second `---`, in plain Markdown.
 8. Save (`Ctrl+S`).
 
-If a post exists in both languages, that is **two separate files in two separate folders** (e.g. `2026-09-03-nazev-clanku/` for the Czech version and `2026-09-03-post-title/` for the English one) — not two languages in one file.
+If a post exists in both languages, that is **two separate files in two separate folders** (e.g. `2026-09-03-nazev-clanku/` for the Czech version and `2026-09-03-post-title/` for the English one), and both files need the same `translationKey` value so the language toggle can jump directly between them — not two languages in one file.
+
+Want to work on a post without publishing it yet? Set `draft: true`. It'll show up when you run `npm run dev` locally, but is automatically left out of the live site — no need to remember to remove it before pushing, only before you actually want it live (flip it to `false` or delete the line).
 
 ### 2. Add photos
 
@@ -62,7 +64,7 @@ Use this only for small edits when you're away from your machine — it's clumsi
 4. Scroll down to **Commit changes**, add a short message, choose **Commit directly to the `main` branch**, click **Commit changes**.
 
 **Creating a new post:**
-1. In the repo, navigate into `src/content/blog/<column-folder>/`.
+1. In the repo, navigate into `src/content/blog/<column-folder>/` (`materstvi`, `zvedavost`, `outdoor`, or `zivot`).
 2. Click **Add file → Create new file**.
 3. In the filename box, type the new folder and file in one go, e.g. `2026-09-03-nazev-clanku/index.md` — GitHub creates the folder automatically.
 4. Paste in the frontmatter and text (copy the contents of `_template/index.md` as a starting point), then commit as above.
@@ -90,26 +92,31 @@ This works because every post is its own folder (`index.md` + its photos side by
 ```
 src/
   content/
-    blog/                    ← Phase 2 (columns) — currently just Phase 0 test posts
+    blog/
       _template/
         index.md          ← copy this to start a new post (never published — see below)
-      <column-slug>/
+      materstvi/zvedavost/outdoor/zivot/   ← the four real columns
         <date-slug>/
           index.md         ← the post itself
           photo1.jpg        ← its images, alongside it
-    pages/                   ← standalone site pages, one folder per page per language
-      home/{cs,en}/index.md
-      about/{cs,en}/index.md    ← About/CV — cern-guide.jpg lives alongside it
-      book/{cs,en}/index.md     ← ALEFUJ!
-      publications/{cs,en}/index.md  ← intro text shown above the parsed publication list
+      fejetony/            ← leftover Phase 0 test posts — untouched, no longer linked from
+                              anywhere (not a registered column, see lib/columns.ts), safe to
+                              delete whenever
+    pages/                   ← standalone site + column intro pages, one folder per page per language
+      home/{cs,en}/, about/{cs,en}/, book/{cs,en}/, publications/{cs,en}/
+      materstvi/{cs,en}/, zvedavost/{cs,en}/, outdoor/{cs,en}/, zivot/{cs,en}/  ← column intro text
   content.config.ts          ← typed frontmatter schemas (blog + pages collections)
   data/
     Publications.bib, Talks.bib  ← source of truth for the Publications page — never hardcode entries
+  assets/
+    columns/                 ← each column's default header image (materstvi.jpg etc.)
   lib/
     i18n.ts                  ← all UI strings (nav, footer, buttons) — not scattered through components
     pages.ts                 ← loads a `pages` entry with cs/en fallback (never a 404 or empty page)
     publications.ts           ← parses the .bib files at build time, groups/sorts/highlights entries
-  layouts/Layout.astro        ← shared HTML shell: fonts, Header, Footer
+    columns.ts                ← the four columns: slug, title, accent colour, header image — see below
+    blog.ts                   ← post queries (draft/column filtering), reading time, related posts
+  layouts/Layout.astro        ← shared HTML shell: fonts, Header, Footer, OG/Twitter meta tags
   components/                 ← Header (nav + language toggle), Footer, Newsletter, TranslationNotice
   pages/
     index.astro                    ← root: redirects to /cs/ or /en/ by browser language
@@ -117,11 +124,19 @@ src/
     [lang]/about/index.astro       ← About/CV
     [lang]/publications/index.astro ← Publications
     [lang]/book/index.astro        ← ALEFUJ!
-    blog/[...slug].astro           ← PHASE 0 placeholder post renderer (rebuilt in Phase 2)
+    [lang]/[column]/index.astro    ← a column's index page (header image, intro, post list)
+    [lang]/[column]/[slug].astro   ← a single post
+    [lang]/rss.xml.ts              ← RSS feed, one per language
 .github/workflows/deploy.yml   ← builds and deploys to GitHub Pages on push to main
 ```
 
 `_template/` sits one folder level shallower than real posts (`blog/_template/` vs. `blog/<column>/<post>/`), so the collection loader's `*/*/index.md` pattern never matches it — copying it is always safe, it will never accidentally get published.
+
+### Columns
+
+The four columns are entirely defined in `src/lib/columns.ts` — slug, Czech/English title, accent colour, and header image. Nothing else in the site hardcodes "four columns": the header nav, the Home page's column list, the RSS feed, and routing all just iterate that array. To add, rename, or retire a column, edit that one file (and add a header image to `src/assets/columns/` if adding one). A post's `column` frontmatter field must match a slug in that array to show up anywhere — posts with an unrecognized column (like the leftover `fejetony` test posts) are simply never rendered, rather than breaking the build.
+
+`zivot` ("Odjinud") has `quiet: true` in the registry, which is the *only* thing that gives it its deliberately quieter treatment (smaller, desaturated header image; muted ink-coloured accent instead of a saturated hue) — nothing else about it is structurally different from the other three, so folding it into another column later is just a content move, not a rearchitecting.
 
 ### Publications page
 
@@ -135,7 +150,11 @@ Until that field is added, the entry shows a styled placeholder on the live page
 
 ### Newsletter signup
 
-The footer form (`src/components/Newsletter.astro`) posts to `ECOMAIL_FORM_ENDPOINT_PLACEHOLDER` in `src/lib/i18n.ts` — a placeholder. Once you've created the real form in Ecomail, copy its embed code's `<form action="...">` URL in there, and check whether Ecomail's own snippet includes extra hidden fields (list id, signature, redirect) that need copying into the form too.
+The footer form (`src/components/Newsletter.astro`) posts to `ECOMAIL_FORM_ENDPOINT_PLACEHOLDER` in `src/lib/i18n.ts` — a placeholder. Once you've created the real form in Ecomail, copy its embed code's `<form action="...">` URL in there, and check whether Ecomail's own snippet includes extra hidden fields (list id, signature, redirect) that need copying into the form too. The same form also appears at the end of every blog post.
+
+### RSS and sitemap
+
+`/cs/rss.xml` and `/en/rss.xml` each list that language's published posts, newest first (linked from the page `<head>` for feed readers, and from the footer for people). A single sitemap covering every page in both languages is generated automatically at build time by the `@astrojs/sitemap` integration in `astro.config.mjs` — nothing to maintain by hand.
 
 ## Commands
 

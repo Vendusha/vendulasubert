@@ -19,8 +19,6 @@ interface Translations {
 	home: {
 		heading: string;
 		columnsHeading: string;
-		columnsNote: string;
-		columns: string[];
 	};
 	footer: {
 		newsletterHeading: string;
@@ -55,6 +53,14 @@ interface Translations {
 		statusLabel: string;
 		ctaLabel: string;
 	};
+	blog: {
+		readingTime: (minutes: number) => string;
+		relatedHeading: string;
+		backToColumn: string;
+		publishedOn: string;
+		rssLabel: string;
+		noPostsYet: string;
+	};
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -67,10 +73,7 @@ export const translations: Record<Locale, Translations> = {
 		},
 		home: {
 			heading: 'Fyzička. Spisovatelka. Někdo, kdo umí složité věci vysvětlit, aniž by vás vyděsil.',
-			columnsHeading: 'Sloupky (brzy)',
-			columnsNote:
-				'Pravidelné sloupky spustím v další fázi webu. Zatím alespoň názvy budoucích rubrik.',
-			columns: ['Fejetony', 'Glosy', 'Rozhovory', 'Recenze'],
+			columnsHeading: 'Sloupky',
 		},
 		footer: {
 			newsletterHeading: 'Zůstaňte v obraze',
@@ -106,6 +109,14 @@ export const translations: Record<Locale, Translations> = {
 			statusLabel: 'Stav',
 			ctaLabel: 'Více o knize na alefuj.cz',
 		},
+		blog: {
+			readingTime: (minutes) => `${minutes} min čtení`,
+			relatedHeading: 'Související příspěvky',
+			backToColumn: '← zpět na rubriku',
+			publishedOn: 'Vydáno',
+			rssLabel: 'RSS',
+			noPostsYet: 'V téhle rubrice zatím nic není — brzy.',
+		},
 	},
 	en: {
 		nav: {
@@ -116,10 +127,7 @@ export const translations: Record<Locale, Translations> = {
 		},
 		home: {
 			heading: 'Physicist. Writer. Someone who can explain complicated things without frightening you.',
-			columnsHeading: 'Columns (coming soon)',
-			columnsNote:
-				"Regular columns launch in the site's next phase. For now, just the names of the future sections.",
-			columns: ['Fejetony', 'Glosy', 'Rozhovory', 'Recenze'],
+			columnsHeading: 'Columns',
 		},
 		footer: {
 			newsletterHeading: 'Stay in the loop',
@@ -154,6 +162,14 @@ export const translations: Record<Locale, Translations> = {
 		book: {
 			statusLabel: 'Status',
 			ctaLabel: 'More about the book at alefuj.cz',
+		},
+		blog: {
+			readingTime: (minutes) => `${minutes} min read`,
+			relatedHeading: 'Related posts',
+			backToColumn: '← back to column',
+			publishedOn: 'Published',
+			rssLabel: 'RSS',
+			noPostsYet: 'Nothing in this column yet — soon.',
 		},
 	},
 };

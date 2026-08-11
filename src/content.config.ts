@@ -7,13 +7,30 @@ import { glob } from 'astro/loaders';
 // (one level deep) is automatically excluded and never published.
 const blog = defineCollection({
 	loader: glob({ pattern: '*/*/index.md', base: './src/content/blog' }),
-	schema: z.object({
-		title: z.string(),
-		lang: z.enum(['cs', 'en']),
-		pubDate: z.coerce.date(),
-		description: z.string().optional(),
-		draft: z.boolean().default(false),
-	}),
+	schema: ({ image }) =>
+		z.object({
+			title: z.string(),
+			date: z.coerce.date(),
+			// The column a post belongs to (also the folder it lives in — kept as
+			// its own field, rather than derived from the path, so authors can see
+			// and set it directly in the frontmatter). Not a strict enum of the
+			// four current columns: that would break if a column is ever renamed,
+			// merged, or retired (see src/lib/columns.ts) and would fail the whole
+			// collection's validation for one typo. Which columns actually get a
+			// nav entry, index page, and header image is entirely driven by the
+			// COLUMNS registry, not by this schema.
+			column: z.string(),
+			lang: z.enum(['cs', 'en']),
+			// Shared between a Czech post and its English counterpart so the
+			// language toggle can link directly between them even though their
+			// slugs differ. Omit if this post has no translation.
+			translationKey: z.string().optional(),
+			summary: z.string(),
+			// Optional: falls back to the column's default header image when
+			// omitted. Just a filename, same as inline images — see the template.
+			heroImage: image().optional(),
+			draft: z.boolean().default(false),
+		}),
 });
 
 // Standalone site pages (home, about, book, publications intro) — one

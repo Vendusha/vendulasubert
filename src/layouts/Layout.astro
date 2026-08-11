@@ -1,19 +1,42 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { getImage } from 'astro:assets';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { siteName, type Locale } from '../lib/i18n';
+import defaultOgImage from '../assets/portrait.jpg';
 import '../styles/global.css';
 
 interface Props {
 	lang: Locale;
-	section: 'home' | 'about' | 'publications' | 'book';
+	section: string;
 	hasTranslation: boolean;
+	toggleHref?: string;
 	title: string;
 	description?: string;
+	/** Falls back to the site portrait when a page (or post) has no image
+	 * of its own — every page should produce a decent social-share card. */
+	image?: ImageMetadata;
+	ogType?: 'website' | 'article';
 }
 
-const { lang, section, hasTranslation, title, description } = Astro.props;
+const {
+	lang,
+	section,
+	hasTranslation,
+	toggleHref,
+	title,
+	description,
+	image = defaultOgImage,
+	ogType = 'website',
+} = Astro.props;
 const pageTitle = section === 'home' ? siteName : `${title} — ${siteName}`;
+
+// Social platforms (Twitter/X, Facebook, Slack) expect a properly sized
+// preview image, not the original source photo — some reject files over a
+// few MB outright. 1200px wide JPEG is the standard OG image recommendation.
+const ogImage = await getImage({ src: image, width: 1200, format: 'jpg' });
+const absoluteImageUrl = new URL(ogImage.src, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -23,6 +46,27 @@ const pageTitle = section === 'home' ? siteName : `${title} — ${siteName}`;
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>{pageTitle}</title>
 		{description && <meta name="description" content={description} />}
+		<link rel="canonical" href={Astro.url.href} />
+		<link
+			rel="alternate"
+			type="application/rss+xml"
+			title={siteName}
+			href={`${import.meta.env.BASE_URL}${lang}/rss.xml`}
+		/>
+
+		<meta property="og:type" content={ogType} />
+		<meta property="og:site_name" content={siteName} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:url" content={Astro.url.href} />
+		<meta property="og:image" content={absoluteImageUrl} />
+		<meta property="og:locale" content={lang === 'cs' ? 'cs_CZ' : 'en_US'} />
+		{description && <meta property="og:description" content={description} />}
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={pageTitle} />
+		<meta name="twitter:image" content={absoluteImageUrl} />
+		{description && <meta name="twitter:description" content={description} />}
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -31,7 +75,7 @@ const pageTitle = section === 'home' ? siteName : `${title} — ${siteName}`;
 		/>
 	</head>
 	<body>
-		<Header lang={lang} section={section} hasTranslation={hasTranslation} />
+		<Header lang={lang} section={section} hasTranslation={hasTranslation} toggleHref={toggleHref} />
 		<main class="container">
 			<slot />
 		</main>

@@ -1,0 +1,147 @@
+---
+import { Image } from 'astro:assets';
+import { render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import Newsletter from '../../../components/Newsletter.astro';
+import { getBlogPosts, getRelatedPosts, estimateReadingTime } from '../../../lib/blog';
+import { getColumn } from '../../../lib/columns';
+import { t, locales, otherLocale, type Locale } from '../../../lib/i18n';
+
+export async function getStaticPaths() {
+	const paths = [];
+	for (const lang of locales) {
+		const posts = await getBlogPosts(lang);
+		for (const post of posts) {
+			const [column, slug] = post.id.split('/');
+			paths.push({ params: { lang, column, slug }, props: { post } });
+		}
+	}
+	return paths;
+}
+
+const lang = Astro.params.lang as Locale;
+const { post } = Astro.props as { post: Awaited<ReturnType<typeof getBlogPosts>>[number] };
+const column = getColumn(post.data.column)!;
+const { Content } = await render(post);
+const copy = t(lang);
+const base = import.meta.env.BASE_URL;
+
+const readingTime = estimateReadingTime(post.body ?? '');
+const relatedPosts = await getRelatedPosts(post);
+const heroImage = post.data.heroImage ?? column.heroImage;
+
+// The language toggle needs the SPECIFIC sibling post (same translationKey,
+// other language), not just the column index — falls back to the column
+// index when no translation exists, per the toggle's own contract.
+let toggleHref: string;
+if (post.data.translationKey) {
+	const other = otherLocale(lang);
+	const siblings = await getBlogPosts(other);
+	const sibling = siblings.find((p) => p.data.translationKey === post.data.translationKey);
+	toggleHref = sibling
+		? `${base}${other}/${sibling.data.column}/${sibling.id.split('/')[1]}/`
+		: `${base}${other}/${post.data.column}/`;
+} else {
+	toggleHref = `${base}${otherLocale(lang)}/${post.data.column}/`;
+}
+---
+
+<Layout
+	lang={lang}
+	section={post.data.column}
+	hasTranslation={false}
+	toggleHref={toggleHref}
+	title={post.data.title}
+	description={post.data.summary}
+	image={heroImage}
+	ogType="article"
+>
+	<article class:list={['post', { quiet: column.quiet }]}>
+		<p class="back-link">
+			<a href={`${base}${lang}/${post.data.column}/`} style={`color: ${column.accent}`}
+				>{copy.blog.backToColumn} {column.title[lang]}</a
+			>
+		</p>
+
+		<Image
+			src={heroImage}
+			alt=""
+			width={1000}
+			widths={[600, 1000]}
+			sizes="(max-width: 720px) 100vw, 1040px"
+			quality={55}
+			loading="eager"
+			class="hero-image"
+		/>
+
+		<h1>{post.data.title}</h1>
+		<p class="meta">
+			{copy.blog.publishedOn} {post.data.date.toISOString().slice(0, 10)} · {copy.blog.readingTime(readingTime)}
+		</p>
+
+		<div class="prose">
+			<Content />
+		</div>
+	</article>
+
+	{
+		relatedPosts.length > 0 && (
+			<section class="related">
+				<h2>{copy.blog.relatedHeading}</h2>
+				<ul>
+					{relatedPosts.map((r) => (
+						<li>
+							<a href={`${base}${lang}/${r.data.column}/${r.id.split('/')[1]}/`}>{r.data.title}</a>
+						</li>
+					))}
+				</ul>
+			</section>
+		)
+	}
+
+	<hr class="hairline" />
+	<Newsletter lang={lang} />
+</Layout>
+
+<style>
+	.back-link {
+		font-family: var(--font-meta);
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		margin-top: 24px;
+	}
+	.back-link a {
+		text-decoration: none;
+	}
+	.post :global(.hero-image) {
+		display: block;
+		width: 100%;
+		height: 360px;
+		object-fit: cover;
+		margin: 20px 0 32px;
+	}
+	.post.quiet :global(.hero-image) {
+		height: 200px;
+		filter: grayscale(40%);
+	}
+	.meta {
+		font-family: var(--font-meta);
+		font-size: 13px;
+		color: var(--ink-soft);
+		margin-top: -0.4em;
+	}
+	.related {
+		margin-top: 3em;
+		padding-top: 1.5em;
+		border-top: 1px solid var(--rule);
+		max-width: var(--measure);
+	}
+	.related ul {
+		list-style: none;
+		padding: 0;
+	}
+	.related li {
+		margin-bottom: 0.5em;
+	}
+</style>
