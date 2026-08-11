@@ -10,7 +10,11 @@ Deset let jsem zkoumala, jak radiace ničí křemíkové detektory — nejdřív
 
 V CERNu jsem se věnovala tomu, jak záření poškozuje křemíkové detektory používané ve fyzice vysokých energií — konkrétně jevu zvanému non-ionizing energy loss (NIEL), a tomu, proč zjednodušené předpoklady, se kterými se v oboru běžně pracuje, ne vždy sedí. Kombinovala jsem simulace v Geant4 a TRIM/SRIM s experimentálním ověřováním (CV-IV, TCT, DLTS, TSC) — tedy s měřeními, která ukážou, co se s poškozeným křemíkem doopravdy děje.
 
+![Vendula pájí součástky detektoru pod mikroskopem](soldering.jpg)
+
 Předtím jsem v European Spallation Source ve Švédsku od nuly rozvíjela koncept neutronového detektoru — od návrhu přes kalibraci a testování až po publikaci. Bavilo mě to samo o sobě: postavit něco, co ještě neexistuje, a pak to poctivě proměřit.
+
+![Vendula testuje detektor na experimentální hale v Helmholtz-Zentrum Berlin](detector-test.jpg)
 
 ## Vysvětlit, ne vystrašit
 

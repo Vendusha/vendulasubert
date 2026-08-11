@@ -1,55 +1,67 @@
 # vendulasubert.cz / vendulasubert.com
 
-Personal site: professional/CV page + Czech-first humorous columns ("fejetony"), bilingual (cs/en), built with [Astro](https://astro.build), hosted on GitHub Pages, deployed automatically by GitHub Actions on every push to `main`.
+Personal site: professional/CV page + Czech-first humorous columns, bilingual (cs/en), built with [Astro](https://astro.build), hosted on GitHub Pages, deployed automatically by GitHub Actions on every push to `main`.
 
-**Status: Phase 2.** The publishing pipeline (Phase 0) and the bilingual site skeleton — Home, About/CV, Publications, ALEFUJ! (Phase 1) — are both done. The four real blog columns now exist too, each with its own index page, header image, and accent colour, sharing one post system: reading time, related posts, a newsletter signup at the end of every post, per-language RSS feeds, and a sitemap. One placeholder sample post exists per column in both languages so the layout and frontmatter are visible by example — replace them with real writing whenever you're ready (see "Publishing a post" below).
+**Status: Phase 3.** Publishing pipeline (Phase 0), bilingual site skeleton — Home, About/CV, Publications, ALEFUJ! (Phase 1) — and the four blog columns with their shared post system (Phase 2) are all done. Phase 3 was photography and polish: real photos placed throughout (see "Images" below for how hero-image cropping works), responsive WebP images with fallbacks everywhere, and this README's "How to update this site" section rewritten as a single, complete, example-driven walkthrough. One placeholder sample post exists per column in both languages so the layout and frontmatter are visible by example — replace them with real writing whenever you're ready (see "How to update this site" below).
 
 ---
 
-## Publishing a post (VS Code — do this one)
+## How to update this site
 
-This is the only workflow you need for day-to-day writing. No terminal, no GitHub Desktop.
+Written for future-you, having forgotten all of this. Four things you'll ever need to do: write a post, translate a post, add a photo, and publish. No terminal, no GitHub Desktop — everything below uses VS Code's built-in panels, plus a browser fallback if you're away from your laptop.
 
-### 1. Start a new post from the template
+If you get properly stuck, you can also just ask Claude Code (or another AI coding assistant) to do any of this for you — describe what you want in plain language ("add a new post to the outdoor column about X") and point it at this repo.
+
+### 1. Write a new post
 
 1. In the **Explorer** panel (top icon in the left-hand Activity Bar — looks like two stacked pages), open `src/content/blog/`.
-2. Inside it, open the folder for the column your post belongs to: `materstvi`, `zvedavost`, `outdoor`, or `zivot`.
+2. Open the folder for the column your post belongs to: `materstvi`, `zvedavost`, `outdoor`, or `zivot`.
 3. Right-click the `_template` folder → **Copy**, then right-click your column folder → **Paste**.
-4. Right-click the pasted folder (it'll be called `_template` or `_template (copy)`) → **Rename**, and give it today's date plus a short slug, e.g. `2026-09-03-nazev-clanku`. This folder name becomes the post's URL, so use lowercase, hyphens, no spaces or accents.
+4. Right-click the pasted folder (called `_template` or `_template (copy)`) → **Rename**, and give it today's date plus a short slug, e.g. `2026-09-03-nazev-clanku`. This folder name becomes the post's URL — lowercase, hyphens, no spaces or accents.
 5. Open the `index.md` file inside your new folder.
-6. Fill in the frontmatter at the top (between the `---` lines): `title`, `date`, `column` (must exactly match the folder name from step 2), `lang` (`cs` or `en`), `summary`. Leave `translationKey`, `heroImage`, and `draft` commented out unless you need them — see the comments in the file for what each one does.
-7. Write your post below the second `---`, in plain Markdown.
+6. Fill in the frontmatter at the top (between the `---` lines): `title`, `date`, `column` (must exactly match the folder name from step 2), `lang` (`cs` or `en`), `summary`. Leave `translationKey`, `heroImage`, and `draft` alone for now — see steps 2–3 below and the comments in the file itself.
+7. Write the post below the second `---`, in plain Markdown: `**bold**`, `_italics_`, `[link text](https://example.com)`, `## a heading`, `- a bullet`.
 8. Save (`Ctrl+S`).
 
-If a post exists in both languages, that is **two separate files in two separate folders** (e.g. `2026-09-03-nazev-clanku/` for the Czech version and `2026-09-03-post-title/` for the English one), and both files need the same `translationKey` value so the language toggle can jump directly between them — not two languages in one file.
+Not ready to publish yet? Add `draft: true` to the frontmatter. It shows up when you run `npm run dev` to preview locally, but is automatically left out of the live site — you can commit and push a draft with zero risk of it going live by accident. Flip it to `draft: false` (or delete the line) whenever you actually want it live.
 
-Want to work on a post without publishing it yet? Set `draft: true`. It'll show up when you run `npm run dev` locally, but is automatically left out of the live site — no need to remember to remove it before pushing, only before you actually want it live (flip it to `false` or delete the line).
+### 2. Add a translation of a post
 
-### 2. Add photos
+A translation is a **second, separate post file** — not a second language inside the same file.
 
-1. In your file manager, locate the photo you want.
-2. Drag the photo file and drop it directly onto your post's folder in VS Code's Explorer panel (the same folder that contains that post's `index.md`).
-3. In the text, reference it by filename only — no path, no slash:
+1. Do everything in "Write a new post" above, but with `lang` set to the other language, in a **new folder** (same column, different slug — e.g. the Czech post might be `2026-09-03-nazev-clanku/` and the English one `2026-09-03-post-title/`).
+2. Open **both** the Czech file and the English file, and give them the exact same `translationKey` value in the frontmatter — anything you like, e.g. `translationKey: "nazev-clanku"`, as long as it's identical in both files.
+3. That's it. The language toggle button in the header will now jump straight between the two, instead of falling back to the column's front page.
 
+Not every post needs a translation — it's entirely fine for a post to exist in only one language. If a reader lands on the untranslated language anyway (e.g. someone shares a link), the site shows the version that *does* exist with a small "only available in Czech/English" notice, rather than a broken or empty page.
+
+### 3. Add a photo
+
+**A photo inside a post's text:**
+1. Drag the photo file from your file manager and drop it directly onto that post's folder in VS Code's Explorer panel — the same folder as its `index.md`.
+2. Reference it in the text by filename only, no path, no slash:
    ```markdown
    ![Popisek fotky pro nevidomé / alt text for the photo](nazev-fotky.jpg)
    ```
+3. Preview with `Ctrl+Shift+V` to check it shows up and the description reads well. This preview is close to, but not pixel-identical to, the final styled site — it's there to catch typos and broken image paths, not to show you the final design.
 
-   That's it — no special Astro syntax needed. Astro automatically finds, optimizes, and resizes any image referenced this way, as long as it lives in the same folder as the post (this is why each post gets its own folder). Because the path is a plain relative filename, it also just works in VS Code's built-in preview.
+No special syntax, no Astro component to remember — the site automatically finds, optimizes, and resizes every image referenced this way (as WebP, at several sizes for different screens), as long as it lives in the same folder as the post. If a source photo is huge (a modern phone photo easily runs 10+ MB), you don't need to shrink it yourself first — the site does that at build time — though if you have a batch of very large originals, resizing the long edge down to ~2000px before adding them keeps the repository itself smaller.
 
-4. Preview your post with `Ctrl+Shift+V` (or click the preview icon in the top-right of the editor tab). Check the image shows up and formatting looks right. This preview is close to, but not pixel-identical to, the final styled site — its job is to catch typos and broken image paths before you push, not to show you the final design.
+**As a post's main header image (optional):** add `heroImage: "nazev-fotky.jpg"` to the frontmatter, filename only, same folder as above. Skip this and the post just uses its column's default header photo instead.
 
-### 3. Publish (commit and push)
+**Changing a column's own default header photo, or its accent colour:** that's a code change, not a content change — it lives in `src/lib/columns.ts`, not in any Markdown file. Ask Claude Code (or another developer) to update it, or if you're comfortable editing TypeScript, open that file directly.
 
-1. Open the **Source Control** panel: click its icon in the Activity Bar (left edge of the window — it looks like three dots connected by branching lines), or press `Ctrl+Shift+G`.
-2. Under **Changes**, you'll see your new files listed — the `.md` file and the photo(s) — each with a **U** badge (untracked/new).
-3. Hover over the word **Changes** and click the **+** that appears on the right to stage everything. (You can also stage files one at a time by hovering each one and clicking its own **+**.)
+### 4. Publish (go live)
+
+1. Open the **Source Control** panel: click its icon in the Activity Bar (left edge of the window — three dots connected by branching lines), or press `Ctrl+Shift+G`.
+2. Under **Changes**, you'll see your new/edited files listed — the `.md` file, any photos — each with a **U** (untracked/new) or **M** (modified) badge.
+3. Hover over the word **Changes** and click the **+** that appears to stage everything. (Or stage files one at a time by hovering each and clicking its own **+**.)
 4. Click into the text box at the top of the panel (placeholder text says "Message") and type a short commit message, e.g. `Nový příspěvek: Název`.
-5. Click the blue **checkmark (✓)** button above that text box — this commits your staged changes.
-6. Click **Sync Changes** (a circular-arrows icon that appears in the same panel after committing, also mirrored in the bottom-left of the status bar) — this pushes your commit to GitHub. If it also offers to pull first, let it.
-7. Wait about a minute, then check the **Actions** tab on the repository's GitHub.com page — a workflow run should appear and turn green. Once it's green, your post is live.
+5. Click the blue **checkmark (✓)** above that text box — this commits your staged changes.
+6. Click **Sync Changes** (circular-arrows icon, appears in the same panel after committing, also mirrored bottom-left in the status bar) — this pushes to GitHub. Let it pull first if it offers to.
+7. Wait about a minute, then check the **Actions** tab on the repository's GitHub.com page — a workflow run should appear and turn green. Once green, it's live at the real URL.
 
-That's the whole loop: **copy template → rename → fill in → drag in photos → Source Control panel → stage → commit → sync.**
+That's the whole loop, every time: **write/edit in VS Code → Source Control panel → stage → commit message → checkmark → Sync Changes → wait for the green checkmark on GitHub.**
 
 ---
 
@@ -72,18 +84,6 @@ Use this only for small edits when you're away from your machine — it's clumsi
 **Adding a photo:**
 1. Navigate into the post's folder.
 2. Click **Add file → Upload files**, drag the photo in, commit.
-
----
-
-## Image syntax — confirmed
-
-Always write images as a bare relative filename, no folder, no leading slash:
-
-```markdown
-![Alt text](photo1.jpg)
-```
-
-This works because every post is its own folder (`index.md` + its photos side by side), so `photo1.jpg` always means "the file called `photo1.jpg` sitting right next to this post." It resolves correctly in VS Code's Markdown preview *and* Astro automatically optimizes it into a resized/compressed `.webp` at build time — no extra component or import needed.
 
 ---
 
@@ -137,6 +137,14 @@ src/
 The four columns are entirely defined in `src/lib/columns.ts` — slug, Czech/English title, accent colour, and header image. Nothing else in the site hardcodes "four columns": the header nav, the Home page's column list, the RSS feed, and routing all just iterate that array. To add, rename, or retire a column, edit that one file (and add a header image to `src/assets/columns/` if adding one). A post's `column` frontmatter field must match a slug in that array to show up anywhere — posts with an unrecognized column (like the leftover `fejetony` test posts) are simply never rendered, rather than breaking the build.
 
 `zivot` ("Odjinud") has `quiet: true` in the registry, which is the *only* thing that gives it its deliberately quieter treatment (smaller, desaturated header image; muted ink-coloured accent instead of a saturated hue) — nothing else about it is structurally different from the other three, so folding it into another column later is just a content move, not a rearchitecting.
+
+### Images
+
+Every hero/header image (column headers, post headers, the Home page's portrait and column cards) goes through Astro's `<Picture>` component: it's served as WebP with a same-format fallback for browsers that don't support WebP, at multiple sizes via `srcset` so phones don't download desktop-sized images, and lazy-loaded (`loading="lazy"`) everywhere except the two above-the-fold hero slots (column index header, post header), which load eagerly so they don't hurt perceived load time.
+
+Cropping: hero images use `aspect-ratio: 16/9` (or `4/3` for `zivot`'s quieter, narrower treatment) rather than a fixed pixel height, and each column has a hand-picked `heroPosition` (a CSS `object-position` value) in `columns.ts` so the actual subject — not just the geometric centre — stays in frame. Most of the source photos are tall portrait shots being cropped into a wide banner, so getting the vertical position right matters more than the horizontal. If you swap in a new column header photo, check how it crops at both mobile and desktop widths and adjust `heroPosition` if a face ends up too close to the edge — there's no automatic face detection (deliberately: it looked worse, not better, when tried).
+
+Images embedded directly in Markdown body text (inline in a post or in an About/Publications-style page) aren't cropped at all — they display at their full composition, scaled to fit the reading column. Large source photos (multi-megabyte phone photos) are resized down before being added to the repository rather than shipped at full resolution and merely scaled down by CSS, which would download the full file anyway.
 
 ### Publications page
 

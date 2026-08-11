@@ -10,7 +10,11 @@ For ten years I studied how radiation damages silicon detectors — first in Lun
 
 At CERN I worked on how radiation damages the silicon detectors used in high-energy physics — specifically non-ionizing energy loss (NIEL), and why the simplifying assumptions the field usually relies on don't always hold. I combined Geant4 and TRIM/SRIM simulations with experimental validation (CV-IV, TCT, DLTS, TSC) — measurements that show what's actually happening inside damaged silicon.
 
+![Vendula soldering detector components under a microscope](soldering.jpg)
+
 Before that, at the European Spallation Source in Sweden, I took a neutron detector concept from scratch through design, calibration, testing, and publication. I liked it for its own sake: building something that didn't exist yet, then measuring it honestly.
+
+![Vendula testing a detector in the experimental hall at Helmholtz-Zentrum Berlin](detector-test.jpg)
 
 ## Explain, don't intimidate
 

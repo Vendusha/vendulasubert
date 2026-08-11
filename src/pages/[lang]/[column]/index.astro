@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import TranslationNotice from '../../../components/TranslationNotice.astro';
@@ -37,14 +37,17 @@ const postsWithMeta = posts.map((post) => ({
 	image={column.heroImage}
 >
 	<div class:list={['column-hero', { quiet: column.quiet }]}>
-		<Image
+		<Picture
 			src={column.heroImage}
 			alt=""
 			width={1000}
 			widths={[600, 1000]}
 			sizes="(max-width: 720px) 100vw, 1040px"
-			quality={55}
+			formats={['webp']}
+			fallbackFormat="jpg"
+			quality={65}
 			loading="eager"
+			style={`object-position: ${column.heroPosition ?? 'center'}`}
 			class="hero-image"
 		/>
 		<div class="hero-caption">
@@ -88,11 +91,17 @@ const postsWithMeta = posts.map((post) => ({
 	.column-hero :global(.hero-image) {
 		display: block;
 		width: 100%;
-		height: 320px;
+		aspect-ratio: 16 / 9;
 		object-fit: cover;
 	}
+	/* "zivot" is quieter by being smaller and desaturated, not by being
+	   cropped into a tighter strip — a severe aspect ratio is exactly what
+	   caused the bad face-cropping this is meant to avoid. */
+	.column-hero.quiet {
+		max-width: 560px;
+	}
 	.column-hero.quiet :global(.hero-image) {
-		height: 160px;
+		aspect-ratio: 4 / 3;
 		filter: grayscale(40%);
 	}
 	.hero-caption {

@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Picture } from 'astro:assets';
 import { render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import TranslationNotice from '../../components/TranslationNotice.astro';
@@ -24,7 +24,15 @@ const base = import.meta.env.BASE_URL;
 
 	<div class="hero">
 		<div class="portrait-frame">
-			<Image src={portrait} alt={lang === 'cs' ? 'Portrét Venduly Šubert' : 'Portrait of Vendula Šubert'} width={560} widths={[280, 560]} sizes="280px" />
+			<Picture
+				src={portrait}
+				alt={lang === 'cs' ? 'Portrét Venduly Šubert' : 'Portrait of Vendula Šubert'}
+				width={560}
+				widths={[280, 560]}
+				sizes="280px"
+				formats={['webp']}
+				fallbackFormat="jpg"
+			/>
 		</div>
 		<div class="hero-text">
 			<h1>{copy.home.heading}</h1>
@@ -46,7 +54,17 @@ const base = import.meta.env.BASE_URL;
 						href={`${base}${lang}/${col.slug}/`}
 						style={`--card-accent: ${col.accent}`}
 					>
-						<Image src={col.heroImage} alt="" width={560} widths={[280, 560]} sizes="280px" quality={70} />
+						<Picture
+							src={col.heroImage}
+							alt=""
+							width={560}
+							widths={[280, 560]}
+							sizes="280px"
+							formats={['webp']}
+							fallbackFormat="jpg"
+							quality={70}
+							style={`object-position: ${col.heroPosition ?? 'center'}`}
+						/>
 						<span class="column-title">{col.title[lang]}</span>
 					</a>
 				</li>
@@ -98,12 +116,11 @@ const base = import.meta.env.BASE_URL;
 	.column-card :global(img) {
 		display: block;
 		width: 100%;
-		height: 140px;
+		aspect-ratio: 4 / 3;
 		object-fit: cover;
 		margin-bottom: 10px;
 	}
 	.column-card.quiet :global(img) {
-		height: 100px;
 		filter: grayscale(40%);
 	}
 	.column-title {

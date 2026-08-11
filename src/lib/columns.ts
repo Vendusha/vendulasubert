@@ -11,6 +11,11 @@ export interface ColumnDef {
 	 * --accent, just a different one per column, per the design brief. */
 	accent: string;
 	heroImage: ImageMetadata;
+	/** CSS object-position for the header crop — hand-picked per photo so
+	 * the actual subject (not just the geometric centre) stays in frame.
+	 * Most of these source photos are tall portrait shots being cropped
+	 * into a wide banner, so the vertical component matters most. */
+	heroPosition?: string;
 	/** "zivot" gets a visibly quieter treatment: desaturated accent, smaller
 	 * header. Not a permanent fixture — it may get folded into the other
 	 * columns later, so nothing else in the app assumes 4 columns exist. */
@@ -25,12 +30,16 @@ export const COLUMNS: ColumnDef[] = [
 		title: { cs: 'Fejetony o mateřství', en: 'Notes on parenthood' },
 		accent: '#a24e63',
 		heroImage: materstviImg,
+		// Both her face and the child's (in the carrier, over her shoulder)
+		// sit in the top quarter of this tall ski photo.
+		heroPosition: 'center 12%',
 	},
 	{
 		slug: 'zvedavost',
 		title: { cs: 'CERN a jiná místa pro zvědavé', en: 'CERN and other places for the curious' },
 		accent: '#2e5c8a',
 		heroImage: zvedavostImg,
+		heroPosition: 'center 22%',
 	},
 	{
 		slug: 'outdoor',
@@ -40,12 +49,14 @@ export const COLUMNS: ColumnDef[] = [
 		},
 		accent: '#3b6142',
 		heroImage: outdoorImg,
+		heroPosition: 'center 38%',
 	},
 	{
 		slug: 'zivot',
 		title: { cs: 'Odjinud', en: 'Dispatches' },
 		accent: '#58514a',
 		heroImage: zivotImg,
+		heroPosition: 'center 30%',
 		quiet: true,
 	},
 ];
