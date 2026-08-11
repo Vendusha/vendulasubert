@@ -177,4 +177,6 @@ The footer form (`src/components/Newsletter.astro`) posts to `ECOMAIL_FORM_ENDPO
 
 Every push to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes it to GitHub Pages. In the repository's **Settings → Pages**, the source must be set to **GitHub Actions** (not "Deploy from a branch") for this to work.
 
-Currently deployed at the default GitHub Pages URL for this repo. Custom domains (`vendulasubert.cz` / `vendulasubert.com`) and their DNS setup haven't been wired up yet — `astro.config.mjs` will need `base` changed from `/vendulasubert/` back to `/` when that happens, since a custom domain serves from the root instead of a `/vendulasubert/` subpath.
+Deployed at the custom domain `vendulasubert.cz`, served from the root (no `base` in `astro.config.mjs`). The domain is set two places, both required: `public/CNAME` (copied verbatim into every build by Astro, so GitHub Pages knows which domain to serve) and the repository's **Settings → Pages → Custom domain**, which is also where the HTTPS certificate lives. If the domain is ever changed, update both, along with `site` in `astro.config.mjs`.
+
+`vendulasubert.com` isn't wired up. GitHub Pages only serves one primary custom domain via `CNAME`; making `.com` also work means either a DNS-level redirect to `.cz` at wherever the `.com` domain is registered, or a separate small redirect page — not something this repo can do on its own.
