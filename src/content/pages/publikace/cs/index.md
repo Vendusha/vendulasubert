@@ -35,3 +35,4 @@ V European Spallation Source jsem navrhla vanadiový monitor neutronového svazk
 Publikovala jsem pod původně pod jménem — V. Maulerova. Poté jsem se vdala, takže mám rovněž publikace se jmény V. Maulerova-Subert a Vendula Šubert.
 
 ![Test detektoru s kolegy na Source Testing Facility (Lund, Švédsko)](lab-group.jpg)
+Test detektoru s kolegy na Source Testing Facility (Lund, Švédsko).
