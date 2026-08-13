@@ -4,7 +4,15 @@ lang: "cs"
 description: "Odborné zázemí, technické dovednosti a vědecké publikace Venduly Šubert."
 ---
 
-Deset let jsem se věnovala tomu, jak radiace poškozuje křemíkové detektory, a vývoji nových detektorů pro neutronové experimenty — na Lundské univerzitě a v European Spallation Source ve Švédsku, pak na Univerzitě v Hamburku a v CERNu ve Švýcarsku. Navrhuju, stavím a testuju detektory, od konceptu po publikované výsledky.
+Moje specializace je neutronika a fyzika křemíkových detektorů. Ve zkratce: pracuju s přístroji, které zachytávají částice, a zkoumám, co se s nimi děje, když je ozařujeme.
+
+V posledních letech jsem se věnovala tomu, jak záření poškozuje křemíkové detektory. Když do materiálu vletí vysokoenergetická částice – třeba proton – napáchá si v křemíku svou daň v podobě složitých defektů, které se chovají jinak, než bychom čekali podle všech modelů, které máme k dispozici. Během doktorátu na Univerzitě v Hamburku jsem hledala způsoby, jak tyhle jevy lépe popsat. Testovala jsem především křemíkové detektory – technologii, která není důležitá jen v CERNu, ale třeba i ve vesmírném výzkumu, a jsou na ní založené i fotografické snímače.
+
+Při výzkumu jsem kombinovala počítačové simulace s experimenty v laboratoři. Simuluju v programech Geant4 a TRIM/SRIM, píšu si vlastní kódy v Pythonu a C++ a pak si všechno ověřuju měřením – metodami s názvy jako CV-IV, TCT, DLTS a TSC (což jsou v podstatě různé způsoby, jak "proklepnout" detektor a zjistit, co se v něm děje). Baví mě právě ten přesah: od teorie přes kód až k přístroji, na kterém si ušpiním ruce.
+
+Před CERNem jsem ve švédském ESS (European Spallation Source) pracovala na vývoji monitoru neutronových svazků – od první myšlenky přes návrh, kalibraci a testování až po publikaci funkčního prototypu. Monitor byl v podstatě kus vanadového kovu obklopený čtyřmi heliovými detektory po stranách. Princip byl jednoduchý: vanadium reaguje jen s velmi malou částí neutronů, takže neutronový svazek zůstával téměř nerušený, a ty neutrony, které se od vanadia odrazily, zachytily heliové detektory. Navrhovala jsem design, řešila elektroniku, měřila detektor na skutečných svazcích a v publikaci jsem ho předložila ESS jako jednu z možných technologií.
+
+V ESS a na Lundské univerzitě jsem se naučila nejen fyziku, ale i to, jak nainstalovat a udržovat Linuxové systémy se speciálními ovladači pro detektorovou elektroniku, jak nastavit monitorování radiace a jak jezdit po evropských laboratořích a ladit hardware pod časovým tlakem. Zkrátka: umím si poradit, i když to v manuálu není.
 
 ## Technické dovednosti
 
@@ -12,9 +20,9 @@ Deset let jsem se věnovala tomu, jak radiace poškozuje křemíkové detektory,
 
 **Experimentální techniky:** CV-IV, TCT, DLTS, TSC, měření s radioaktivními zdroji a na neutronových svazcích
 
-**Hardware:** vývoj a stavba detektorů, beam monitory, uvedení konceptu do provozu, pájení a laboratorní práce
+**Hardware:** vývoj a stavba detektorů, monitory neutronových svazků, pájení, svařování, drobné manuální práce a laboratorní práce
 
-**Systémy:** Linux (CentOS, Ubuntu), správa testovací infrastruktury
+**Systémy:** Linux (CentOS, Ubuntu), správa testovací infrastruktury, Windows, Mac
 
 **Komunikace vědy:** průvodce v CERNu (veřejné prohlídky), popularizační přednášky
 
@@ -24,6 +32,6 @@ V European Spallation Source jsem navrhla vanadiový monitor neutronového svazk
 
 ## Publikace
 
-Publikovala jsem pod třemi různými jmény — V. Maulerova, V. Maulerova-Subert a nyní Vendula Šubert. Je to pořád tatáž osoba a tatáž práce.
+Publikovala jsem pod původně pod jménem — V. Maulerova. Poté jsem se vdala, takže mám rovněž publikace se jmény V. Maulerova-Subert a Vendula Šubert.
 
-![Vendula a kolegyně z týmu zapojují měřicí přístroje k detektoru](lab-group.jpg)
+![Test detektoru s kolegy na Source Testing Facility (Lund, Švédsko)](lab-group.jpg)
