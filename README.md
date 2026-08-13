@@ -183,7 +183,11 @@ Until that field is added, the entry shows a styled placeholder on the live page
 
 ### Newsletter signup
 
-The footer form (`src/components/Newsletter.astro`) posts to `ECOMAIL_FORM_ENDPOINT_PLACEHOLDER` in `src/lib/i18n.ts` — a placeholder. Once you've created the real form in Ecomail, copy its embed code's `<form action="...">` URL in there, and check whether Ecomail's own snippet includes extra hidden fields (list id, signature, redirect) that need copying into the form too. The same form also appears at the end of every blog post.
+The footer form (`src/components/Newsletter.astro`) is a plain HTML POST to MailerLite (`NEWSLETTER_FORM_ENDPOINT` in `src/lib/i18n.ts`) — deliberately not MailerLite's JavaScript embed, so there's no tracking script on the site. The same form also appears at the end of every blog post.
+
+It submits into a hidden `<iframe>` (via the form's `target` attribute) instead of navigating the page. That's not decorative: MailerLite's endpoint has "jsonp" in its URL because it's built for their own AJAX embed, and a normal top-level POST to it lands on a bare `{"success":true}` JSON page — the iframe swallows that invisibly so the visitor just stays put. Since there's no JavaScript here to show a "thanks, check your email" toast after submit, that message is instead a small permanent line under the form (`newsletterConfirmNote` in `i18n.ts`) — always visible, not conditional on submission. Double opt-in is on in MailerLite, so that note is correct: nothing arrives until the visitor clicks the confirmation link in their inbox.
+
+If the form ever moves to a different MailerLite form/account, update `NEWSLETTER_FORM_ENDPOINT` — the account and form IDs are baked into that URL's path, no separate hidden ID fields needed.
 
 ### RSS and sitemap
 

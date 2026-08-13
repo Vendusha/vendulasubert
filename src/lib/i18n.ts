@@ -4,10 +4,11 @@ export const defaultLocale: Locale = 'cs';
 
 export const siteName = 'Vendula Šubert';
 
-// Ecomail form action URL — replace once the real Ecomail signup form exists.
-// Find it in Ecomail: Forms → your form → Embed code → the <form action="...">.
-export const ECOMAIL_FORM_ENDPOINT_PLACEHOLDER =
-	'https://REPLACE-ME.ecomailapp.cz/public/subscribe/FORM_ID/FORM_SIGNATURE';
+// MailerLite embedded-form action URL — the plain HTML POST endpoint (not
+// the JS/AJAX embed). Find/change it in MailerLite: Forms → this form →
+// Embed → HTML code → the <form action="...">.
+export const NEWSLETTER_FORM_ENDPOINT =
+	'https://assets.mailerlite.com/jsonp/2569527/forms/195688773516789161/subscribe';
 
 interface Translations {
 	nav: {
@@ -27,6 +28,7 @@ interface Translations {
 	footer: {
 		newsletterHeading: string;
 		newsletterBody: string;
+		newsletterConfirmNote: string;
 		emailLabel: string;
 		emailPlaceholder: string;
 		submitLabel: string;
@@ -87,6 +89,8 @@ export const translations: Record<Locale, Translations> = {
 			newsletterHeading: 'Zůstaňte v obraze',
 			newsletterBody:
 				'Nové sloupky a novinky o knize ALEFUJ! přímo do e-mailu, jednou za čas, žádný spam.',
+			newsletterConfirmNote:
+				'Po přihlášení vám přijde potvrzovací e-mail — klikněte na odkaz v něm, jinak se odběr nedokončí.',
 			emailLabel: 'E-mail',
 			emailPlaceholder: 'vas@email.cz',
 			submitLabel: 'Přihlásit k odběru',
@@ -145,6 +149,8 @@ export const translations: Record<Locale, Translations> = {
 			newsletterHeading: 'Stay in the loop',
 			newsletterBody:
 				'New columns and news about the novel ALEFUJ! straight to your inbox, now and then, no spam.',
+			newsletterConfirmNote:
+				"After signing up you'll get a confirmation email — click the link in it, or the subscription won't go through.",
 			emailLabel: 'Email',
 			emailPlaceholder: 'you@example.com',
 			submitLabel: 'Subscribe',

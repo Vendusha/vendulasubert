@@ -1,38 +1,57 @@
 ---
-import { t, type Locale, ECOMAIL_FORM_ENDPOINT_PLACEHOLDER } from '../lib/i18n';
+import { t, type Locale, NEWSLETTER_FORM_ENDPOINT } from '../lib/i18n';
 
 interface Props {
 	lang: Locale;
+	/** Distinguishes this instance's ids/iframe name from any other
+	 * Newsletter on the same page — e.g. a post page renders one at the end
+	 * of the article AND gets the site-wide one from Footer. Without this,
+	 * both would render an iframe with the same `name`, which is invalid
+	 * HTML and leaves target resolution ambiguous. */
+	instanceId?: string;
 }
 
-const { lang } = Astro.props;
+const { lang, instanceId = 'default' } = Astro.props;
 const copy = t(lang).footer;
-const inputId = `newsletter-email-${lang}`;
+const inputId = `newsletter-email-${lang}-${instanceId}`;
+const iframeName = `ml-target-${lang}-${instanceId}`;
 ---
 
 <div class="newsletter">
 	<p class="eyebrow">{copy.newsletterHeading}</p>
 	<p class="body">{copy.newsletterBody}</p>
 	<!--
-		TODO(Ecomail): ECOMAIL_FORM_ENDPOINT_PLACEHOLDER in src/lib/i18n.ts is a
-		placeholder. Replace it with the real "action" URL from Ecomail's own
-		embed code (Ecomail dashboard → Forms → your form → Embed code), and
-		check whether Ecomail's snippet expects extra hidden fields (list id,
-		signature, redirect URL) — copy those into this form too if so.
+		Plain HTML POST straight to MailerLite (no JS embed, no tracking
+		script). The form targets a hidden iframe rather than navigating the
+		page: MailerLite's endpoint has "jsonp" in its URL because it's meant
+		for their own AJAX embed, and a normal top-level POST to it returns a
+		bare `{"success":true}` JSON page instead of anything readable. The
+		iframe swallows that response invisibly so the visitor just stays on
+		this page — the confirm-note paragraph below the form is what tells
+		them what happens next, since there's no JS here to pop up a "thanks!"
+		message after submit.
 	-->
-	<form class="newsletter-form" action={ECOMAIL_FORM_ENDPOINT_PLACEHOLDER} method="post">
+	<form
+		class="newsletter-form"
+		action={NEWSLETTER_FORM_ENDPOINT}
+		method="post"
+		target={iframeName}
+	>
 		<label for={inputId}>{copy.emailLabel}</label>
 		<div class="row">
 			<input
 				id={inputId}
 				type="email"
-				name="email"
+				name="fields[email]"
 				placeholder={copy.emailPlaceholder}
 				required
 			/>
 			<button type="submit">{copy.submitLabel}</button>
 		</div>
+		<input type="hidden" name="ml-submit" value="1" />
 	</form>
+	<p class="confirm-note">{copy.newsletterConfirmNote}</p>
+	<iframe name={iframeName} title="" aria-hidden="true" tabindex="-1" class="ml-target"></iframe>
 </div>
 
 <style>
@@ -87,5 +106,15 @@ const inputId = `newsletter-email-${lang}`;
 		.row input {
 			border-right: 1px solid var(--ink);
 		}
+	}
+	.confirm-note {
+		margin-top: 10px;
+		max-width: 420px;
+		font-family: var(--font-meta);
+		font-size: 12px;
+		color: var(--ink-soft);
+	}
+	.ml-target {
+		display: none;
 	}
 </style>
