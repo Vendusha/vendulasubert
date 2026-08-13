@@ -36,7 +36,7 @@ const { Content } = await render(entry);
 				fallbackFormat="jpg"
 			/>
 		</div>
-		<article class="prose">
+		<article class="prose o-mne-photos">
 			<h1>{entry.data.title}</h1>
 			<Content />
 		</article>
@@ -65,5 +65,109 @@ const { Content } = await render(entry);
 		display: block;
 		width: 100%;
 		height: auto;
+	}
+</style>
+
+<!--
+	"Tucked into the page" photos for O mně — four specific inline markdown
+	images, each identified by filename (Astro's asset hashing always keeps
+	the original filename as a prefix, e.g. "alefuj-cover.HASH.webp", so this
+	is reliable regardless of how the markdown renderer wraps the element).
+	Filename matching is used instead of nth-of-type because the markdown
+	renderer wraps each solitary image in its own <p>, so images are not
+	direct siblings of each other for nth-of-type to count correctly.
+
+	This has to be a global style block (not Astro's normal component-scoped
+	<style>): the images come from <Content />, which is a separately
+	rendered/scoped component, so a normally-scoped selector here would
+	never match them. Scoped to just this page anyway via the
+	.o-mne-photos wrapper class on the <article>, which *is* written
+	directly in this component's own template.
+
+	Each image's caption is written directly below it in the Markdown with
+	no blank line in between, which keeps them as one paragraph (the image
+	and the italic caption text as inline siblings) — that's what lets a
+	single float move both together as one unit.
+-->
+<style is:global>
+	.o-mne-photos h2 {
+		clear: both;
+	}
+
+	.o-mne-photos p:has(> img[src*='alefuj-cover']),
+	.o-mne-photos p:has(> img[src*='beam-monitor-berlin']),
+	.o-mne-photos p:has(> img[src*='chanson-koncert']),
+	.o-mne-photos p:has(> img[src*='canyoning-alloix']) {
+		max-width: 220px;
+		margin-top: 0.3em;
+		margin-bottom: 1.4em;
+	}
+	.o-mne-photos p:has(> img[src*='alefuj-cover']),
+	.o-mne-photos p:has(> img[src*='chanson-koncert']) {
+		float: left;
+		margin-right: 28px;
+	}
+	.o-mne-photos p:has(> img[src*='beam-monitor-berlin']),
+	.o-mne-photos p:has(> img[src*='canyoning-alloix']) {
+		float: right;
+		margin-left: 28px;
+	}
+
+	.o-mne-photos p:has(> img[src*='alefuj-cover']) img,
+	.o-mne-photos p:has(> img[src*='beam-monitor-berlin']) img,
+	.o-mne-photos p:has(> img[src*='chanson-koncert']) img,
+	.o-mne-photos p:has(> img[src*='canyoning-alloix']) img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border: 8px solid var(--paper);
+		outline: 1px solid var(--rule);
+		box-shadow: 0 6px 16px rgba(32, 28, 24, 0.18);
+		padding: 0;
+		margin: 0;
+	}
+	.o-mne-photos img[src*='alefuj-cover'] {
+		transform: rotate(-3deg);
+	}
+	.o-mne-photos img[src*='beam-monitor-berlin'] {
+		transform: rotate(3deg);
+	}
+	.o-mne-photos img[src*='chanson-koncert'] {
+		transform: rotate(-2.5deg);
+	}
+	.o-mne-photos img[src*='canyoning-alloix'] {
+		transform: rotate(3.5deg);
+	}
+
+	.o-mne-photos p:has(> img[src*='alefuj-cover']) em,
+	.o-mne-photos p:has(> img[src*='beam-monitor-berlin']) em,
+	.o-mne-photos p:has(> img[src*='chanson-koncert']) em,
+	.o-mne-photos p:has(> img[src*='canyoning-alloix']) em {
+		display: block;
+		margin-top: 10px;
+		font-family: var(--font-body);
+		font-style: italic;
+		font-size: 13px;
+		line-height: 1.4;
+		color: var(--ink-soft);
+		text-align: center;
+	}
+
+	@media (max-width: 720px) {
+		.o-mne-photos p:has(> img[src*='alefuj-cover']),
+		.o-mne-photos p:has(> img[src*='beam-monitor-berlin']),
+		.o-mne-photos p:has(> img[src*='chanson-koncert']),
+		.o-mne-photos p:has(> img[src*='canyoning-alloix']) {
+			float: none;
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.o-mne-photos img[src*='alefuj-cover'],
+		.o-mne-photos img[src*='beam-monitor-berlin'],
+		.o-mne-photos img[src*='chanson-koncert'],
+		.o-mne-photos img[src*='canyoning-alloix'] {
+			transform: none;
+		}
 	}
 </style>
