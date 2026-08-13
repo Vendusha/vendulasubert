@@ -4,4 +4,5 @@ lang: "cs"
 description: "Kaňoning, horská turistika a jízda na kole — před dětmi a teď s nimi."
 ---
 
-Zde se střídají články o tom, co nás nadchlo, když jsme ještě děti neměli, a o tom, jak se jim snažíme lásku k outdooru předat.
+Střídají se tu články o tom, co jsme na horách zažívali, než jsme měli děti – a o tom, jak do hor vyrážíme teď. 
+Jednou píšu o tom, jak slaňovali vodopády, podruhé o tom, jak taháme kárku s dětmi přes kořeny. 

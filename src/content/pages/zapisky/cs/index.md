@@ -1,7 +1,7 @@
 ---
 title: "Zápisky"
 lang: "cs"
-description: "Krátké věci, o které se chci podělit."
+description: "Krátké věci, které věřím občas můžou někomu pomoci."
 ---
 
-Krátké věci, o které se chci podělit. Občas tip k dětem, občas něco úplně jiného.
+Krátké věci, které věřím občas můžou někomu pomoci. Občas tip k dětem, občas něco úplně jiného.
