@@ -1,7 +1,7 @@
 ---
-title: "Outdoor stories, with kids and without"
+title: "Outdoors, with kids and before them"
 lang: "en"
-description: "Canyoning, mountaineering, and cycling, with kids and without."
+description: "Canyoning, mountaineering, and cycling — before kids and now with them."
 ---
 
-Canyoning, mountaineering, and cycling — sometimes with kids, sometimes without, always with a bit of soaked gear.
+Here you'll find pieces about what excited us before we had kids, alongside ones about how we're trying to pass on our love of the outdoors to them now.

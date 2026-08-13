@@ -66,10 +66,24 @@ const base = import.meta.env.BASE_URL;
 							style={`object-position: ${col.heroPosition ?? 'center'}`}
 						/>
 						<span class="column-title">{col.title[lang]}</span>
+						<p class="column-desc">{col.description[lang]}</p>
 					</a>
 				</li>
 			))}
 		</ul>
+	</section>
+
+	<hr class="hairline" />
+
+	<section class="closing prose">
+		<p>
+			{copy.home.bookIntro} <strong>ALEFUJ!</strong>{' '}
+			<a href={`${base}${lang}/book/`}>{copy.home.bookLinkLabel} »</a>
+		</p>
+		<p class="professional-link">
+			{copy.home.professionalIntro}{' '}
+			<a href={`${base}${lang}/publikace/`}>{copy.home.professionalLinkLabel}</a>.
+		</p>
 	</section>
 </Layout>
 
@@ -98,13 +112,13 @@ const base = import.meta.env.BASE_URL;
 		height: auto;
 	}
 	.columns {
-		padding-block: 8px 48px;
+		padding-block: 8px 40px;
 	}
 	.columns-list {
 		list-style: none;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-		gap: 20px;
+		grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+		gap: 28px;
 		padding: 0;
 		margin: 1em 0 0;
 	}
@@ -124,11 +138,26 @@ const base = import.meta.env.BASE_URL;
 		filter: grayscale(40%);
 	}
 	.column-title {
+		display: block;
 		font-family: var(--font-heading);
 		font-weight: 600;
 		font-size: 16px;
+		margin-bottom: 4px;
 	}
 	.column-card:hover .column-title {
 		color: var(--card-accent);
+	}
+	.column-desc {
+		font-size: 14px;
+		color: var(--ink-soft);
+		line-height: 1.5;
+		margin: 0;
+	}
+	.closing {
+		padding-block: 8px 40px;
+	}
+	.professional-link {
+		color: var(--ink-soft);
+		font-size: 15px;
 	}
 </style>

@@ -1,5 +1,5 @@
 ---
-title: "Sample post — CERN and other places for the curious"
+title: "Sample post — Physics and other curiosities"
 date: 2026-08-16
 column: "zvedavost"
 lang: "en"

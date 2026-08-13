@@ -31,12 +31,12 @@ const toggleHref =
 	<div class="container inner">
 		<a class="wordmark" href={`${base}${lang}/`}>{siteName}</a>
 		<nav aria-label={lang === 'cs' ? 'Hlavní navigace' : 'Main navigation'}>
-			<a href={`${base}${lang}/about/`} aria-current={section === 'about' ? 'page' : undefined}
+			<a href={`${base}${lang}/o-mne/`} aria-current={section === 'o-mne' ? 'page' : undefined}
 				>{nav.about}</a
 			>
 			<a
-				href={`${base}${lang}/publications/`}
-				aria-current={section === 'publications' ? 'page' : undefined}>{nav.publications}</a
+				href={`${base}${lang}/publikace/`}
+				aria-current={section === 'publikace' ? 'page' : undefined}>{nav.publications}</a
 			>
 			<a href={`${base}${lang}/book/`} aria-current={section === 'book' ? 'page' : undefined}
 				>{nav.book}</a

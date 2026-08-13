@@ -1,5 +1,5 @@
 ---
-title: "Ukázkový příspěvek — CERN a jiná místa pro zvědavé"
+title: "Ukázkový příspěvek — Fyzika a jiné zvědavosti"
 date: 2026-08-16
 column: "zvedavost"
 lang: "cs"

@@ -19,6 +19,10 @@ interface Translations {
 	home: {
 		heading: string;
 		columnsHeading: string;
+		bookIntro: string;
+		bookLinkLabel: string;
+		professionalIntro: string;
+		professionalLinkLabel: string;
 	};
 	footer: {
 		newsletterHeading: string;
@@ -72,8 +76,12 @@ export const translations: Record<Locale, Translations> = {
 			langToggleTo: 'EN',
 		},
 		home: {
-			heading: 'Fyzička. Spisovatelka. Někdo, kdo umí složité věci vysvětlit, aniž by vás vyděsil.',
+			heading: 'Ahoj.',
 			columnsHeading: 'Sloupky',
+			bookIntro: 'Zrovna dokončuju svůj první komický román,',
+			bookLinkLabel: 'Víc o knize',
+			professionalIntro: 'Dřív jsem pracovala v CERNu a v European Spallation Source. Co konkrétně, je',
+			professionalLinkLabel: 'tady',
 		},
 		footer: {
 			newsletterHeading: 'Zůstaňte v obraze',
@@ -126,8 +134,12 @@ export const translations: Record<Locale, Translations> = {
 			langToggleTo: 'CS',
 		},
 		home: {
-			heading: 'Physicist. Writer. Someone who can explain complicated things without frightening you.',
+			heading: 'Hi.',
 			columnsHeading: 'Columns',
+			bookIntro: "I'm currently finishing my first comic novel,",
+			bookLinkLabel: 'More about the book',
+			professionalIntro: 'I used to work at CERN and the European Spallation Source. The details are',
+			professionalLinkLabel: 'here',
 		},
 		footer: {
 			newsletterHeading: 'Stay in the loop',

@@ -1,5 +1,5 @@
 ---
-title: "Ukázkový příspěvek — Příběhy ze světa outdooru"
+title: "Ukázkový příspěvek — Outdoor s dětmi i před dětmi"
 date: 2026-08-17
 column: "outdoor"
 lang: "cs"
@@ -11,7 +11,7 @@ draft: false
 
 Tohle je **ukázkový text**, ne skutečný příběh. Tenhle příspěvek má navíc vlastní hlavičkový obrázek (`heroImage` ve frontmatteru výše) místo výchozího obrázku rubriky — takhle se to dělá, když chceš k příspěvku jiný obrázek, než je ten na indexu rubriky.
 
-Skutečný obsah téhle rubriky bude o kaňoningu, horské turistice a jízdě na kole — někdy s dětmi, někdy bez nich.
+Skutečné příspěvky v téhle rubrice budou o tom, co nás bavilo na kaňoningu a v horách, než jsme měli děti, a jak se to teď snažíme dělat s nimi — s proměnlivým úspěchem, a klidně i s popisem toho, co se nepovedlo.
 
 Pro ukázku pár věcí, které Markdown umí:
 

@@ -1,8 +1,8 @@
 # vendulasubert.cz / vendulasubert.com
 
-Personal site: professional/CV page + Czech-first humorous columns, bilingual (cs/en), built with [Astro](https://astro.build), hosted on GitHub Pages, deployed automatically by GitHub Actions on every push to `main`.
+Personal site, two audiences in this priority order: people who already know Vendula (warm, personal, primary), and people who find her by searching, including potential employers (the professional evidence lives in one clear place, `/publikace/` — see "O mně / Publikace" below). Czech-first, bilingual (cs/en), built with [Astro](https://astro.build), hosted on GitHub Pages, deployed automatically by GitHub Actions on every push to `main`.
 
-**Status: Phase 3.** Publishing pipeline (Phase 0), bilingual site skeleton — Home, About/CV, Publications, ALEFUJ! (Phase 1) — and the four blog columns with their shared post system (Phase 2) are all done. Phase 3 was photography and polish: real photos placed throughout (see "Images" below for how hero-image cropping works), responsive WebP images with fallbacks everywhere, and this README's "How to update this site" section rewritten as a single, complete, example-driven walkthrough. One placeholder sample post exists per column in both languages so the layout and frontmatter are visible by example — replace them with real writing whenever you're ready (see "How to update this site" below).
+**Status: Phase 4.** Publishing pipeline (Phase 0), bilingual site skeleton (Phase 1), blog columns and shared post system (Phase 2), and photography/polish (Phase 3) are all done. Phase 4 restructured the site around those two audiences: three columns instead of four (`outdoor`, `zvedavost`, `zapisky` — the `zivot` "Odjinud" column was removed entirely, its life-update purpose absorbed into the whole site's new warmer tone), and the old combined About/CV page split into `/o-mne/` (short, personal, one photo) and `/publikace/` (professional: summary, skills, one concrete achievement, then the existing publication list). See "O mně / Publikace" below. One placeholder sample post exists per column in both languages so the layout and frontmatter are visible by example — replace them with real writing whenever you're ready (see "How to update this site" below).
 
 ---
 
@@ -15,7 +15,7 @@ If you get properly stuck, you can also just ask Claude Code (or another AI codi
 ### 1. Write a new post
 
 1. In the **Explorer** panel (top icon in the left-hand Activity Bar — looks like two stacked pages), open `src/content/blog/`.
-2. Open the folder for the column your post belongs to: `materstvi`, `zvedavost`, `outdoor`, or `zivot`.
+2. Open the folder for the column your post belongs to: `outdoor`, `zvedavost`, or `zapisky`.
 3. Right-click the `_template` folder → **Copy**, then right-click your column folder → **Paste**.
 4. Right-click the pasted folder (called `_template` or `_template (copy)`) → **Rename**, and give it today's date plus a short slug, e.g. `2026-09-03-nazev-clanku`. This folder name becomes the post's URL — lowercase, hyphens, no spaces or accents.
 5. Open the `index.md` file inside your new folder.
@@ -76,7 +76,7 @@ Use this only for small edits when you're away from your machine — it's clumsi
 4. Scroll down to **Commit changes**, add a short message, choose **Commit directly to the `main` branch**, click **Commit changes**.
 
 **Creating a new post:**
-1. In the repo, navigate into `src/content/blog/<column-folder>/` (`materstvi`, `zvedavost`, `outdoor`, or `zivot`).
+1. In the repo, navigate into `src/content/blog/<column-folder>/` (`outdoor`, `zvedavost`, or `zapisky`).
 2. Click **Add file → Create new file**.
 3. In the filename box, type the new folder and file in one go, e.g. `2026-09-03-nazev-clanku/index.md` — GitHub creates the folder automatically.
 4. Paste in the frontmatter and text (copy the contents of `_template/index.md` as a starting point), then commit as above.
@@ -95,7 +95,7 @@ src/
     blog/
       _template/
         index.md          ← copy this to start a new post (never published — see below)
-      materstvi/zvedavost/outdoor/zivot/   ← the four real columns
+      outdoor/zvedavost/zapisky/   ← the three real columns
         <date-slug>/
           index.md         ← the post itself
           photo1.jpg        ← its images, alongside it
@@ -103,30 +103,34 @@ src/
                               anywhere (not a registered column, see lib/columns.ts), safe to
                               delete whenever
     pages/                   ← standalone site + column intro pages, one folder per page per language
-      home/{cs,en}/, about/{cs,en}/, book/{cs,en}/, publications/{cs,en}/
-      materstvi/{cs,en}/, zvedavost/{cs,en}/, outdoor/{cs,en}/, zivot/{cs,en}/  ← column intro text
+      home/{cs,en}/, o-mne/{cs,en}/, book/{cs,en}/, publikace/{cs,en}/
+      outdoor/{cs,en}/, zvedavost/{cs,en}/, zapisky/{cs,en}/  ← column intro text
   content.config.ts          ← typed frontmatter schemas (blog + pages collections)
   data/
-    Publications.bib, Talks.bib  ← source of truth for the Publications page — never hardcode entries
+    Publications.bib, Talks.bib  ← source of truth for the Publikace page's list — never hardcode entries
   assets/
-    columns/                 ← each column's default header image (materstvi.jpg etc.)
+    columns/                 ← each column's default header image (outdoor.jpg etc.)
   lib/
     i18n.ts                  ← all UI strings (nav, footer, buttons) — not scattered through components
     pages.ts                 ← loads a `pages` entry with cs/en fallback (never a 404 or empty page)
     publications.ts           ← parses the .bib files at build time, groups/sorts/highlights entries
-    columns.ts                ← the four columns: slug, title, accent colour, header image — see below
+    columns.ts                ← the three columns: slug, title, homepage description, accent colour,
+                                 header image — see below
     blog.ts                   ← post queries (draft/column filtering), reading time, related posts
   layouts/Layout.astro        ← shared HTML shell: fonts, Header, Footer, OG/Twitter meta tags
-  components/                 ← Header (nav + language toggle), Footer, Newsletter, TranslationNotice
+  components/                 ← Header (nav + language toggle), Footer, Newsletter, TranslationNotice,
+                                 Redirect (old-URL stubs, see "Renamed/removed pages" below)
   pages/
     index.astro                    ← root: redirects to /cs/ or /en/ by browser language
     [lang]/index.astro             ← Home
-    [lang]/about/index.astro       ← About/CV
-    [lang]/publications/index.astro ← Publications
+    [lang]/o-mne/index.astro       ← O mně (personal)
+    [lang]/publikace/index.astro   ← Publikace (professional)
     [lang]/book/index.astro        ← ALEFUJ!
     [lang]/[column]/index.astro    ← a column's index page (header image, intro, post list)
     [lang]/[column]/[slug].astro   ← a single post
     [lang]/rss.xml.ts              ← RSS feed, one per language
+    cs/about/, en/about/, cs/publications/, en/publications/,
+    cs/materstvi/, en/materstvi/, cs/zivot/, en/zivot/            ← redirect stubs, see below
 .github/workflows/deploy.yml   ← builds and deploys to GitHub Pages on push to main
 ```
 
@@ -134,27 +138,48 @@ src/
 
 ### Columns
 
-The four columns are entirely defined in `src/lib/columns.ts` — slug, Czech/English title, accent colour, and header image. Nothing else in the site hardcodes "four columns": the header nav, the Home page's column list, the RSS feed, and routing all just iterate that array. To add, rename, or retire a column, edit that one file (and add a header image to `src/assets/columns/` if adding one). A post's `column` frontmatter field must match a slug in that array to show up anywhere — posts with an unrecognized column (like the leftover `fejetony` test posts) are simply never rendered, rather than breaking the build.
+The three columns are entirely defined in `src/lib/columns.ts` — slug, Czech/English title, a one-line homepage description, accent colour, and header image. Nothing else in the site hardcodes "three columns": the header nav, the Home page's column list, the RSS feed, and routing all just iterate that array. To add, rename, or retire a column, edit that one file (and add a header image to `src/assets/columns/` if adding one). A post's `column` frontmatter field must match a slug in that array to show up anywhere — posts with an unrecognized column (like the leftover `fejetony` test posts, or the removed `materstvi`/`zivot`) are simply never rendered, rather than breaking the build.
 
-`zivot` ("Odjinud") has `quiet: true` in the registry, which is the *only* thing that gives it its deliberately quieter treatment (smaller, desaturated header image; muted ink-coloured accent instead of a saturated hue) — nothing else about it is structurally different from the other three, so folding it into another column later is just a content move, not a rearchitecting.
+The registry still supports a `quiet: true` flag per column (smaller, desaturated header) — the removed `zivot` column used to be the one with it. No current column uses it, but the CSS and layout logic for it are still there if a future column ever wants that treatment again.
+
+A column's homepage `description` is deliberately separate from that column's own page intro (`src/content/pages/<slug>/`) — the intro can run longer, or (like `zvedavost`'s) include an image, which wouldn't fit in a small homepage card.
+
+### Renamed/removed pages
+
+Old URLs that used to work now redirect (plain `<meta refresh>`, via `src/components/Redirect.astro`, so they work even with JavaScript off) rather than 404:
+
+| Old | New |
+|---|---|
+| `/{cs,en}/materstvi/` | `/{cs,en}/zapisky/` (column renamed) |
+| `/{cs,en}/about/` | `/{cs,en}/o-mne/` (split — see below) |
+| `/{cs,en}/publications/` | `/{cs,en}/publikace/` (split — see below) |
+| `/{cs,en}/zivot/` | `/{cs,en}/` (column removed entirely) |
+
+Individual old post URLs under `materstvi` and `zivot` aren't individually redirected — both only ever held placeholder sample posts, never real content, so a column-level redirect is enough.
+
+### O mně / Publikace
+
+The old combined About/CV page is now two, with deliberately different voices: `/o-mne/` is short, personal, warm, one photo, ends with a quiet link to `/publikace/`. `/publikace/` is professional and scannable — a plain-language summary, grouped technical skills, one concretely-stated achievement (no adjectives), then the existing publication list, unchanged (first-author highlighting, ORCID link, the three-names note explaining she's published as V. Maulerova / V. Maulerova-Subert / Vendula Šubert).
+
+Neither page states a degree or doctoral title anywhere, by design — CERN, the European Spallation Source, the University of Hamburg, and Lund University are described as places work happened, not as credentials.
 
 ### Images
 
 Every hero/header image (column headers, post headers, the Home page's portrait and column cards) goes through Astro's `<Picture>` component: it's served as WebP with a same-format fallback for browsers that don't support WebP, at multiple sizes via `srcset` so phones don't download desktop-sized images, and lazy-loaded (`loading="lazy"`) everywhere except the two above-the-fold hero slots (column index header, post header), which load eagerly so they don't hurt perceived load time.
 
-Cropping: hero images use `aspect-ratio: 16/9` (or `4/3` for `zivot`'s quieter, narrower treatment) rather than a fixed pixel height, and each column has a hand-picked `heroPosition` (a CSS `object-position` value) in `columns.ts` so the actual subject — not just the geometric centre — stays in frame. Most of the source photos are tall portrait shots being cropped into a wide banner, so getting the vertical position right matters more than the horizontal. If you swap in a new column header photo, check how it crops at both mobile and desktop widths and adjust `heroPosition` if a face ends up too close to the edge — there's no automatic face detection (deliberately: it looked worse, not better, when tried).
+Cropping: hero images use `aspect-ratio: 16/9` (or `4/3` for a column's `quiet` treatment, currently unused — see "Columns" above) rather than a fixed pixel height, and each column has a hand-picked `heroPosition` (a CSS `object-position` value) in `columns.ts` so the actual subject — not just the geometric centre — stays in frame. Most of the source photos are tall portrait shots being cropped into a wide banner, so getting the vertical position right matters more than the horizontal. If you swap in a new column header photo, check how it crops at both mobile and desktop widths and adjust `heroPosition` if a face ends up too close to the edge — there's no automatic face detection (deliberately: it looked worse, not better, when tried).
 
-Images embedded directly in Markdown body text (inline in a post or in an About/Publications-style page) aren't cropped at all — they display at their full composition, scaled to fit the reading column. Large source photos (multi-megabyte phone photos) are resized down before being added to the repository rather than shipped at full resolution and merely scaled down by CSS, which would download the full file anyway.
+Images embedded directly in Markdown body text (inline in a post or in an O mně/Publikace-style page) aren't cropped at all — they display at their full composition, scaled to fit the reading column. Large source photos (multi-megabyte phone photos) are resized down before being added to the repository rather than shipped at full resolution and merely scaled down by CSS, which would download the full file anyway.
 
-### Publications page
+### Publikace page's publication list
 
-The list on `/publications/` is generated entirely from `src/data/Publications.bib` and `Talks.bib` — nothing is hardcoded. To add the plain-language "why this is interesting" note to an entry, add a `significance` field to it in the `.bib` file, e.g.:
+The list at the bottom of `/publikace/` is generated entirely from `src/data/Publications.bib` and `Talks.bib` — nothing is hardcoded. To add the plain-language "why this is interesting" note to an entry, add a `significance` field to it in the `.bib` file, e.g.:
 
 ```bibtex
 significance = {Vysvětlení pro laika, jednou až dvě věty.},
 ```
 
-Until that field is added, the entry shows a styled placeholder on the live page so it's obvious which of the 27 entries still need one. Note: this field isn't split by language — whatever you write in it appears on both the `/cs/` and `/en/` Publications pages as-is.
+Until that field is added, the entry shows a styled placeholder on the live page so it's obvious which of the 27 entries still need one. Note: this field isn't split by language — whatever you write in it appears on both the `/cs/` and `/en/` Publikace pages as-is.
 
 ### Newsletter signup
 

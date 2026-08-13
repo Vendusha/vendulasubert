@@ -1,5 +1,5 @@
 ---
-title: "Sample post — Outdoor stories"
+title: "Sample post — Outdoors, with kids and before them"
 date: 2026-08-17
 column: "outdoor"
 lang: "en"
@@ -11,7 +11,7 @@ draft: false
 
 This is **placeholder text**, not a real story. This post also has its own header image (`heroImage` in the frontmatter above) instead of the column's default — that's how you give a post a different image than the one on the column index.
 
-The real content here will be about canyoning, mountaineering, and cycling — sometimes with kids, sometimes without.
+The real posts in this column will be about what we loved about canyoning and the mountains before we had kids, and how we're trying to do it with them now — with mixed success, including the parts that didn't go well.
 
 A few things Markdown can do, for demonstration:
 

@@ -1,0 +1,28 @@
+---
+// A full-page unconditional redirect stub — used for old URLs that moved
+// (column renames, the About/Publications split) so nothing that was ever
+// linked or bookmarked 404s. Unlike the root language-redirect page, this
+// has nothing to decide client-side, so a plain <meta refresh> is correct
+// and simpler — it works even with JavaScript disabled.
+interface Props {
+	/** Path relative to the site root, e.g. "cs/zapisky/". */
+	to: string;
+}
+
+const { to } = Astro.props;
+const base = import.meta.env.BASE_URL;
+const target = `${base}${to.replace(/^\//, '')}`;
+---
+
+<!doctype html>
+<html lang="cs">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="refresh" content={`0; url=${target}`} />
+		<link rel="canonical" href={target} />
+		<title>Přesměrování / Redirecting…</title>
+	</head>
+	<body>
+		<p>Tato stránka se přesunula / This page has moved: <a href={target}>{target}</a></p>
+	</body>
+</html>
