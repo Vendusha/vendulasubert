@@ -29,6 +29,7 @@ interface Translations {
 		newsletterHeading: string;
 		newsletterBody: string;
 		newsletterConfirmNote: string;
+		newsletterSuccess: string;
 		emailLabel: string;
 		emailPlaceholder: string;
 		submitLabel: string;
@@ -91,6 +92,7 @@ export const translations: Record<Locale, Translations> = {
 				'Nové sloupky a novinky o knize ALEFUJ! přímo do e-mailu, jednou za čas, žádný spam.',
 			newsletterConfirmNote:
 				'Po přihlášení vám přijde potvrzovací e-mail — klikněte na odkaz v něm, jinak se odběr nedokončí.',
+			newsletterSuccess: 'Díky! Zkontrolujte e-mail a potvrďte přihlášení k odběru.',
 			emailLabel: 'E-mail',
 			emailPlaceholder: 'Váš e-mail',
 			submitLabel: 'Přihlásit se k odběru',
@@ -151,6 +153,7 @@ export const translations: Record<Locale, Translations> = {
 				'New columns and news about the novel ALEFUJ! straight to your inbox, now and then, no spam.',
 			newsletterConfirmNote:
 				"After signing up you'll get a confirmation email — click the link in it, or the subscription won't go through.",
+			newsletterSuccess: "Thanks! Check your email and confirm your subscription.",
 			emailLabel: 'Email',
 			emailPlaceholder: 'Your email',
 			submitLabel: 'Subscribe',

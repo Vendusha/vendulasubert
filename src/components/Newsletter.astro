@@ -3,17 +3,18 @@ import { t, type Locale, NEWSLETTER_FORM_ENDPOINT } from '../lib/i18n';
 
 interface Props {
 	lang: Locale;
-	/** Distinguishes this instance's label id from any other Newsletter on
-	 * the same page — e.g. a post page renders one at the end of the
-	 * article AND gets the site-wide one from Footer. Without this both
-	 * instances share one <label for>/<input id> pair, which is invalid
-	 * HTML (duplicate id) even though it renders fine either way. */
+	/** Distinguishes this instance's ids from any other Newsletter on the
+	 * same page — e.g. a post page renders one at the end of the article
+	 * AND gets the site-wide one from Footer. Without this, two instances
+	 * would share one iframe `name` (ambiguous submit target) and one
+	 * label/input id pair (invalid HTML). */
 	instanceId?: string;
 }
 
 const { lang, instanceId = 'default' } = Astro.props;
 const copy = t(lang).footer;
 const inputId = `newsletter-email-${lang}-${instanceId}`;
+const iframeName = `ml-target-${lang}-${instanceId}`;
 ---
 
 <div class="newsletter">
@@ -21,12 +22,16 @@ const inputId = `newsletter-email-${lang}-${instanceId}`;
 	<p class="body">{copy.newsletterBody}</p>
 	<!--
 		Plain HTML POST straight to MailerLite (no JS embed, no tracking
-		script). target="_blank" is required: this endpoint doesn't redirect
-		back to the page it was submitted from, it opens its own confirmation
-		page. So after a successful submit the visitor gets a new tab showing
-		a plain MailerLite page, not this site — that's expected, not a bug.
+		script — the script below is ours, just a form/iframe/message toggle).
+		Submits into a hidden iframe so the visitor never leaves the page;
+		the script swaps the form for a success message once that iframe
+		finishes loading. Since a cross-origin iframe's response body can't be
+		read, "finished loading" is the only signal available — this shows
+		success on any completed submit, not a confirmed accept from
+		MailerLite. Fine for a newsletter signup; a genuinely malformed
+		submission is rare given the browser's own email validation.
 	-->
-	<form class="newsletter-form" action={NEWSLETTER_FORM_ENDPOINT} method="post" target="_blank">
+	<form class="newsletter-form" action={NEWSLETTER_FORM_ENDPOINT} method="post" target={iframeName}>
 		<label for={inputId}>{copy.emailLabel}</label>
 		<div class="row">
 			<input
@@ -41,7 +46,35 @@ const inputId = `newsletter-email-${lang}-${instanceId}`;
 		<input type="hidden" name="ml-submit" value="1" />
 	</form>
 	<p class="confirm-note">{copy.newsletterConfirmNote}</p>
+	<p class="success-note" hidden aria-live="polite">{copy.newsletterSuccess}</p>
+	<iframe name={iframeName} class="ml-target" title="" aria-hidden="true" tabindex="-1"></iframe>
 </div>
+
+<script>
+	// Runs once per page load and wires up every Newsletter instance present
+	// (there can be two: footer + end of post) via closest()/querySelector
+	// rather than hardcoded ids, since Astro dedupes this script to a single
+	// copy even when the component renders more than once.
+	document.querySelectorAll<HTMLFormElement>('.newsletter-form').forEach((form) => {
+		const container = form.closest('.newsletter');
+		const iframe = container?.querySelector('iframe');
+		const successNote = container?.querySelector<HTMLElement>('.success-note');
+		const confirmNote = container?.querySelector<HTMLElement>('.confirm-note');
+		if (!iframe || !successNote) return;
+
+		form.addEventListener('submit', () => {
+			iframe.addEventListener(
+				'load',
+				() => {
+					form.hidden = true;
+					if (confirmNote) confirmNote.hidden = true;
+					successNote.hidden = false;
+				},
+				{ once: true }
+			);
+		});
+	});
+</script>
 
 <style>
 	.newsletter {
@@ -102,5 +135,16 @@ const inputId = `newsletter-email-${lang}-${instanceId}`;
 		font-family: var(--font-meta);
 		font-size: 12px;
 		color: var(--ink-soft);
+	}
+	.success-note {
+		max-width: 420px;
+		padding: 14px 16px;
+		border-left: 2px solid var(--accent);
+		font-family: var(--font-body);
+		font-size: 15px;
+		color: var(--ink);
+	}
+	.ml-target {
+		display: none;
 	}
 </style>
