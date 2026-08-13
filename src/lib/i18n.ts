@@ -92,8 +92,8 @@ export const translations: Record<Locale, Translations> = {
 			newsletterConfirmNote:
 				'Po přihlášení vám přijde potvrzovací e-mail — klikněte na odkaz v něm, jinak se odběr nedokončí.',
 			emailLabel: 'E-mail',
-			emailPlaceholder: 'vas@email.cz',
-			submitLabel: 'Přihlásit k odběru',
+			emailPlaceholder: 'Váš e-mail',
+			submitLabel: 'Přihlásit se k odběru',
 			copyright: 'Vendula Šubert',
 		},
 		translationNotice: {
@@ -152,7 +152,7 @@ export const translations: Record<Locale, Translations> = {
 			newsletterConfirmNote:
 				"After signing up you'll get a confirmation email — click the link in it, or the subscription won't go through.",
 			emailLabel: 'Email',
-			emailPlaceholder: 'you@example.com',
+			emailPlaceholder: 'Your email',
 			submitLabel: 'Subscribe',
 			copyright: 'Vendula Šubert',
 		},
