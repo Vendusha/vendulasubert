@@ -15,6 +15,10 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Locale;
 const { entry, shownLang, hasTranslation } = await loadPage('home', lang);
 const { Content } = await render(entry);
+
+const oMne = await loadPage('o-mne', lang);
+const { Content: OMneContent } = await render(oMne.entry);
+
 const copy = t(lang);
 const base = import.meta.env.BASE_URL;
 ---
@@ -22,7 +26,7 @@ const base = import.meta.env.BASE_URL;
 <Layout lang={lang} section="home" hasTranslation={hasTranslation} title={entry.data.title} description={entry.data.description}>
 	{shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={shownLang} />}
 
-	<div class="hero">
+	<div class="hero" id="ahoj">
 		<div class="portrait-frame">
 			<Picture
 				src={portrait}
@@ -44,7 +48,15 @@ const base = import.meta.env.BASE_URL;
 
 	<hr class="hairline" />
 
-	<section class="columns">
+	<section class="o-mne prose o-mne-photos" id="o-mne">
+		<h2>{oMne.entry.data.title}</h2>
+		{oMne.shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={oMne.shownLang} />}
+		<OMneContent />
+	</section>
+
+	<hr class="hairline" />
+
+	<section class="columns" id="blog">
 		<p class="eyebrow">{copy.home.columnsHeading}</p>
 		<ul class="columns-list">
 			{COLUMNS.map((col) => (
@@ -72,19 +84,6 @@ const base = import.meta.env.BASE_URL;
 			))}
 		</ul>
 	</section>
-
-	<hr class="hairline" />
-
-	<section class="closing prose">
-		<p>
-			{copy.home.bookIntro} <strong>ALEFUJ!</strong>{' '}
-			<a href={`${base}${lang}/book/`}>{copy.home.bookLinkLabel} »</a>
-		</p>
-		<p class="professional-link">
-			{copy.home.professionalIntro}{' '}
-			<a href={`${base}${lang}/publikace/`}>{copy.home.professionalLinkLabel}</a>.
-		</p>
-	</section>
 </Layout>
 
 <style>
@@ -94,6 +93,7 @@ const base = import.meta.env.BASE_URL;
 		gap: 56px;
 		align-items: start;
 		padding-block: 48px;
+		scroll-margin-top: 32px;
 	}
 	@media (max-width: 720px) {
 		.hero {
@@ -111,8 +111,13 @@ const base = import.meta.env.BASE_URL;
 		width: 100%;
 		height: auto;
 	}
+	.o-mne {
+		padding-block: 8px 16px;
+		scroll-margin-top: 32px;
+	}
 	.columns {
 		padding-block: 8px 40px;
+		scroll-margin-top: 32px;
 	}
 	.columns-list {
 		list-style: none;
@@ -160,11 +165,98 @@ const base = import.meta.env.BASE_URL;
 		line-height: 1.5;
 		margin: 0;
 	}
-	.closing {
-		padding-block: 8px 40px;
+</style>
+
+<!--
+	"Tucked into the page" photos for O mně, moved here from the old
+	standalone /o-mne/ route along with the section itself. See that
+	component's git history for the original explanation: filename
+	matching (not nth-of-type) because inline Markdown images get
+	auto-wrapped in their own <p> by the renderer, so they aren't direct
+	siblings; is:global + the .o-mne-photos wrapper class because
+	<Content /> is a separately-scoped component a normal scoped <style>
+	can't reach. Selectors target h3 here (not h2, as on the old page)
+	because the section now nests under this page's own "O mně" <h2>.
+-->
+<style is:global>
+	.o-mne-photos h3 {
+		clear: both;
 	}
-	.professional-link {
+
+	.o-mne-photos p:has(> img[src*='alefuj-cover']),
+	.o-mne-photos p:has(> img[src*='beam-monitor-berlin']),
+	.o-mne-photos p:has(> img[src*='chanson-koncert']),
+	.o-mne-photos p:has(> img[src*='canyoning-alloix']) {
+		max-width: 220px;
+		margin-top: 0.3em;
+		margin-bottom: 1.4em;
+	}
+	.o-mne-photos p:has(> img[src*='alefuj-cover']),
+	.o-mne-photos p:has(> img[src*='chanson-koncert']) {
+		float: left;
+		margin-right: 28px;
+	}
+	.o-mne-photos p:has(> img[src*='beam-monitor-berlin']),
+	.o-mne-photos p:has(> img[src*='canyoning-alloix']) {
+		float: right;
+		margin-left: 28px;
+	}
+
+	.o-mne-photos p:has(> img[src*='alefuj-cover']) img,
+	.o-mne-photos p:has(> img[src*='beam-monitor-berlin']) img,
+	.o-mne-photos p:has(> img[src*='chanson-koncert']) img,
+	.o-mne-photos p:has(> img[src*='canyoning-alloix']) img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border: 8px solid var(--paper);
+		outline: 1px solid var(--rule);
+		box-shadow: 0 6px 16px rgba(32, 28, 24, 0.18);
+		padding: 0;
+		margin: 0;
+	}
+	.o-mne-photos img[src*='alefuj-cover'] {
+		transform: rotate(-3deg);
+	}
+	.o-mne-photos img[src*='beam-monitor-berlin'] {
+		transform: rotate(3deg);
+	}
+	.o-mne-photos img[src*='chanson-koncert'] {
+		transform: rotate(-2.5deg);
+	}
+	.o-mne-photos img[src*='canyoning-alloix'] {
+		transform: rotate(3.5deg);
+	}
+
+	.o-mne-photos p:has(> img[src*='alefuj-cover']) em,
+	.o-mne-photos p:has(> img[src*='beam-monitor-berlin']) em,
+	.o-mne-photos p:has(> img[src*='chanson-koncert']) em,
+	.o-mne-photos p:has(> img[src*='canyoning-alloix']) em {
+		display: block;
+		margin-top: 10px;
+		font-family: var(--font-body);
+		font-style: italic;
+		font-size: 13px;
+		line-height: 1.4;
 		color: var(--ink-soft);
-		font-size: 15px;
+		text-align: center;
+	}
+
+	@media (max-width: 720px) {
+		.o-mne-photos p:has(> img[src*='alefuj-cover']),
+		.o-mne-photos p:has(> img[src*='beam-monitor-berlin']),
+		.o-mne-photos p:has(> img[src*='chanson-koncert']),
+		.o-mne-photos p:has(> img[src*='canyoning-alloix']) {
+			float: none;
+			max-width: 100%;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.o-mne-photos img[src*='alefuj-cover'],
+		.o-mne-photos img[src*='beam-monitor-berlin'],
+		.o-mne-photos img[src*='chanson-koncert'],
+		.o-mne-photos img[src*='canyoning-alloix'] {
+			transform: none;
+		}
 	}
 </style>

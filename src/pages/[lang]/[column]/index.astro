@@ -15,6 +15,10 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Locale;
 const columnSlug = Astro.params.column as string;
 const column = COLUMNS.find((c) => c.slug === columnSlug)!;
+// Small header image alternates sides by column position — consistent
+// within each page, varying across the three so the section doesn't feel
+// mechanically repeated.
+const imageRight = COLUMNS.findIndex((c) => c.slug === columnSlug) % 2 === 1;
 
 const { entry, shownLang } = await loadPage(columnSlug, lang);
 const { Content } = await render(entry);
@@ -36,30 +40,31 @@ const postsWithMeta = posts.map((post) => ({
 	description={entry.data.description}
 	image={column.heroImage}
 >
-	<div class:list={['column-hero', { quiet: column.quiet }]}>
-		<Picture
-			src={column.heroImage}
-			alt=""
-			width={1000}
-			widths={[600, 1000]}
-			sizes="(max-width: 720px) 100vw, 1040px"
-			formats={['webp']}
-			fallbackFormat="jpg"
-			quality={65}
-			loading="eager"
-			style={`object-position: ${column.heroPosition ?? 'center'}`}
-			class="hero-image"
-		/>
-		<div class="hero-caption">
+	<div class:list={['column-header', { 'image-right': imageRight, quiet: column.quiet }]}>
+		<div class="column-header-image">
+			<Picture
+				src={column.heroImage}
+				alt=""
+				width={320}
+				widths={[240, 320, 480]}
+				sizes="(max-width: 720px) 240px, 320px"
+				formats={['webp']}
+				fallbackFormat="jpg"
+				quality={70}
+				loading="eager"
+				style={`object-position: ${column.heroPosition ?? 'center'}`}
+			/>
+		</div>
+		<div class="column-header-text">
 			<p class="eyebrow">{copy.home.columnsHeading}</p>
 			<h1>{column.title[lang]}</h1>
+
+			{shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={shownLang} />}
+
+			<div class="prose intro">
+				<Content />
+			</div>
 		</div>
-	</div>
-
-	{shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={shownLang} />}
-
-	<div class="prose intro">
-		<Content />
 	</div>
 
 	{
@@ -84,34 +89,48 @@ const postsWithMeta = posts.map((post) => ({
 </Layout>
 
 <style define:vars={{ columnAccent: column.accent }}>
-	.column-hero {
-		position: relative;
+	.column-header {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
 		margin: 24px 0 40px;
 	}
-	.column-hero :global(.hero-image) {
+	.column-header-image {
+		max-width: 240px;
+	}
+	.column-header-image :global(img) {
 		display: block;
 		width: 100%;
-		aspect-ratio: 16 / 9;
+		height: auto;
+		aspect-ratio: 4 / 3;
 		object-fit: cover;
 	}
-	/* "zivot" is quieter by being smaller and desaturated, not by being
-	   cropped into a tighter strip — a severe aspect ratio is exactly what
-	   caused the bad face-cropping this is meant to avoid. */
-	.column-hero.quiet {
-		max-width: 560px;
-	}
-	.column-hero.quiet :global(.hero-image) {
-		aspect-ratio: 4 / 3;
+	.column-header.quiet .column-header-image :global(img) {
 		filter: grayscale(40%);
 	}
-	.hero-caption {
-		padding: 20px 0 0;
-	}
-	.hero-caption .eyebrow {
+	.column-header-text .eyebrow {
 		color: var(--columnAccent);
 	}
-	.column-hero.quiet .hero-caption .eyebrow {
+	.column-header.quiet .column-header-text .eyebrow {
 		color: var(--ink-soft);
+	}
+	@media (min-width: 721px) {
+		.column-header {
+			flex-direction: row;
+			align-items: flex-start;
+			gap: 40px;
+		}
+		.column-header.image-right {
+			flex-direction: row-reverse;
+		}
+		.column-header-image {
+			flex: 0 0 30%;
+			max-width: 320px;
+		}
+		.column-header-text {
+			flex: 1 1 auto;
+			min-width: 0;
+		}
 	}
 	.intro {
 		padding-bottom: 8px;

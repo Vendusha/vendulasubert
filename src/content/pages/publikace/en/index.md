@@ -1,5 +1,5 @@
 ---
-title: "Publications and professional background"
+title: "My CV"
 lang: "en"
 description: "Professional background, technical skills, and scientific publications for Vendula Šubert."
 ---

@@ -4,4 +4,4 @@ lang: "en"
 description: "Canyoning, mountaineering, and cycling — before kids and now with them."
 ---
 
-Here you'll find pieces about what excited us before we had kids, alongside ones about how we're trying to pass on our love of the outdoors to them now.
+These posts alternate between what we got up to in the mountains before we had kids, and how we get out there now. One post might be about rappelling down waterfalls; the next, about hauling a cart with the kids over tree roots.

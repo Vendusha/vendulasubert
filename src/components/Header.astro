@@ -25,34 +25,153 @@ const nav = t(lang).nav;
 const sectionPath = section === 'home' ? '' : `${section}/`;
 const toggleHref =
 	toggleHrefOverride ?? (hasTranslation ? `${base}${other}/${sectionPath}` : `${base}${other}/`);
+
+// "O mně" and "Můj blog" are anchors on the homepage, not their own routes,
+// so both count as "current" whenever we're anywhere on that page. The
+// blog trigger (and its matching dropdown item) is also current on any
+// column page, since those are the blog's own sub-pages.
+const onHome = section === 'home';
+const onColumn = COLUMNS.some((col) => col.slug === section);
 ---
 
 <header class="site-header">
 	<div class="container inner">
 		<a class="wordmark" href={`${base}${lang}/`}>{siteName}</a>
 		<nav aria-label={lang === 'cs' ? 'Hlavní navigace' : 'Main navigation'}>
-			<a href={`${base}${lang}/o-mne/`} aria-current={section === 'o-mne' ? 'page' : undefined}
-				>{nav.about}</a
-			>
+			<a href={`${base}${lang}/#o-mne`} aria-current={onHome ? 'page' : undefined}>{nav.about}</a>
+
+			<div class="has-dropdown">
+				<a
+					class="nav-trigger"
+					href={`${base}${lang}/#blog`}
+					aria-haspopup="true"
+					aria-expanded="false"
+					aria-current={onHome || onColumn ? 'page' : undefined}
+				>
+					{nav.blog}
+				</a>
+				<ul class="dropdown-menu" role="menu">
+					{COLUMNS.map((col) => (
+						<li role="none">
+							<a
+								role="menuitem"
+								href={`${base}${lang}/${col.slug}/`}
+								aria-current={section === col.slug ? 'page' : undefined}
+							>
+								{col.title[lang]}
+							</a>
+						</li>
+					))}
+				</ul>
+			</div>
+
 			<a
 				href={`${base}${lang}/publikace/`}
-				aria-current={section === 'publikace' ? 'page' : undefined}>{nav.publications}</a
+				aria-current={section === 'publikace' ? 'page' : undefined}>{nav.cv}</a
 			>
 			<a href={`${base}${lang}/book/`} aria-current={section === 'book' ? 'page' : undefined}
 				>{nav.book}</a
 			>
-			{COLUMNS.map((col) => (
-				<a
-					href={`${base}${lang}/${col.slug}/`}
-					aria-current={section === col.slug ? 'page' : undefined}
-				>
-					{col.title[lang]}
-				</a>
-			))}
 			<a class="lang-toggle" href={toggleHref} hreflang={other}>{nav.langToggleTo}</a>
 		</nav>
 	</div>
 </header>
+
+<script>
+	// Accessible dropdown for the "Můj blog" nav item. Hover and keyboard
+	// focus open it via plain CSS (:hover / :focus-within) so it still works
+	// with no JS at all — this script layers on top: it keeps aria-expanded
+	// in sync, adds Escape/arrow-key navigation, and makes touch devices
+	// require a first tap to open before a second tap navigates (otherwise
+	// a touch "tap" fires as both hover and click at once, and the menu
+	// never gets a chance to show).
+	document.querySelectorAll<HTMLElement>('.has-dropdown').forEach((container) => {
+		const trigger = container.querySelector<HTMLAnchorElement>(':scope > .nav-trigger');
+		const menu = container.querySelector<HTMLElement>(':scope > .dropdown-menu');
+		if (!trigger || !menu) return;
+		const items = Array.from(menu.querySelectorAll<HTMLAnchorElement>('a'));
+		// Touch browsers fire compatibility mouse events (mouseenter, etc.) on
+		// tap, which would open the menu via hover *before* the click handler
+		// below ever runs — defeating "first tap opens, second tap follows
+		// the link". So hover wiring is skipped entirely on touch, and open
+		// state there is driven only by the click handler's own .open class.
+		const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+		// Suppresses the focus handler while we're programmatically returning
+		// focus to the trigger after Escape — otherwise that focus() call
+		// re-fires "focus" and immediately reopens what we just closed.
+		let suppressFocusOpen = false;
+
+		function openMenu() {
+			container.classList.add('open');
+			trigger!.setAttribute('aria-expanded', 'true');
+		}
+		function closeMenu(focusTrigger = false) {
+			container.classList.remove('open');
+			trigger!.setAttribute('aria-expanded', 'false');
+			if (focusTrigger) {
+				suppressFocusOpen = true;
+				trigger!.focus();
+				suppressFocusOpen = false;
+			}
+		}
+		function isOpen() {
+			return container.classList.contains('open');
+		}
+
+		if (!isTouch) {
+			container.addEventListener('mouseenter', openMenu);
+			container.addEventListener('mouseleave', () => closeMenu());
+			// Tapping a link also focuses it, which would auto-open the menu
+			// here too and defeat the touch handling below (by the time the
+			// click handler runs, isOpen() would already be true from this).
+			// Keyboard Tab-focus only matters for non-touch, so this is scoped
+			// to the same branch as hover.
+			trigger.addEventListener('focus', () => {
+				if (!suppressFocusOpen) openMenu();
+			});
+		}
+
+		trigger.addEventListener('click', (e) => {
+			if (isTouch && !isOpen()) {
+				e.preventDefault();
+				openMenu();
+			}
+		});
+
+		trigger.addEventListener('keydown', (e) => {
+			if (e.key === 'ArrowDown' || e.key === ' ') {
+				e.preventDefault();
+				openMenu();
+				items[0]?.focus();
+			} else if (e.key === 'Escape') {
+				closeMenu(true);
+			}
+		});
+
+		items.forEach((item, index) => {
+			item.addEventListener('keydown', (e) => {
+				if (e.key === 'ArrowDown') {
+					e.preventDefault();
+					(items[index + 1] ?? items[0]).focus();
+				} else if (e.key === 'ArrowUp') {
+					e.preventDefault();
+					(items[index - 1] ?? items[items.length - 1]).focus();
+				} else if (e.key === 'Escape') {
+					closeMenu(true);
+				}
+			});
+		});
+
+		container.addEventListener('focusout', (e) => {
+			const next = e.relatedTarget as Node | null;
+			if (!next || !container.contains(next)) closeMenu();
+		});
+
+		document.addEventListener('click', (e) => {
+			if (isOpen() && !container.contains(e.target as Node)) closeMenu();
+		});
+	});
+</script>
 
 <style>
 	.site-header {
@@ -82,7 +201,7 @@ const toggleHref =
 		align-items: baseline;
 		flex-wrap: wrap;
 	}
-	nav a {
+	nav > a {
 		font-family: var(--font-meta);
 		font-size: 12px;
 		text-transform: uppercase;
@@ -92,15 +211,76 @@ const toggleHref =
 		border-bottom: 1px solid transparent;
 		padding-bottom: 2px;
 	}
-	nav a:hover {
+	nav > a:hover {
 		color: var(--accent);
 		border-bottom-color: var(--accent);
 	}
-	nav a[aria-current='page'] {
+	nav > a[aria-current='page'] {
 		color: var(--accent);
 		border-bottom-color: var(--accent);
 	}
 	.lang-toggle {
 		color: var(--ink-soft);
+	}
+
+	.has-dropdown {
+		position: relative;
+	}
+	.nav-trigger {
+		font-family: var(--font-meta);
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		text-decoration: none;
+		color: var(--ink);
+		border-bottom: 1px solid transparent;
+		padding-bottom: 2px;
+	}
+	.nav-trigger:hover {
+		color: var(--accent);
+		border-bottom-color: var(--accent);
+	}
+	.nav-trigger[aria-current='page'] {
+		color: var(--accent);
+		border-bottom-color: var(--accent);
+	}
+	.dropdown-menu {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin: 8px 0 0;
+		padding: 6px 0;
+		min-width: 220px;
+		list-style: none;
+		background: var(--paper);
+		border: 1px solid var(--rule);
+		box-shadow: 0 8px 20px rgba(32, 28, 24, 0.12);
+		z-index: 10;
+	}
+	.has-dropdown:hover .dropdown-menu,
+	.has-dropdown:focus-within .dropdown-menu,
+	.has-dropdown.open .dropdown-menu {
+		display: block;
+	}
+	.dropdown-menu a {
+		display: block;
+		padding: 9px 16px;
+		font-family: var(--font-meta);
+		font-size: 12px;
+		text-transform: none;
+		letter-spacing: 0.02em;
+		text-decoration: none;
+		color: var(--ink);
+		white-space: nowrap;
+	}
+	.dropdown-menu a:hover,
+	.dropdown-menu a:focus {
+		color: var(--accent);
+		background: var(--rule);
+		outline: none;
+	}
+	.dropdown-menu a[aria-current='page'] {
+		color: var(--accent);
 	}
 </style>

@@ -1,8 +1,8 @@
 # vendulasubert.cz / vendulasubert.com
 
-Personal site, two audiences in this priority order: people who already know Vendula (warm, personal, primary), and people who find her by searching, including potential employers (the professional evidence lives in one clear place, `/publikace/` — see "O mně / Publikace" below). Czech-first, bilingual (cs/en), built with [Astro](https://astro.build), hosted on GitHub Pages, deployed automatically by GitHub Actions on every push to `main`.
+Personal site, two audiences in this priority order: people who already know Vendula (warm, personal, primary), and people who find her by searching, including potential employers (the professional evidence lives in one clear place, `/publikace/`, labelled "Můj životopis" / "My CV" in the nav — see "Home page / O mně / Můj životopis" below). Czech-first, bilingual (cs/en), built with [Astro](https://astro.build), hosted on GitHub Pages, deployed automatically by GitHub Actions on every push to `main`.
 
-**Status: Phase 4.** Publishing pipeline (Phase 0), bilingual site skeleton (Phase 1), blog columns and shared post system (Phase 2), and photography/polish (Phase 3) are all done. Phase 4 restructured the site around those two audiences: three columns instead of four (`outdoor`, `zvedavost`, `zapisky` — the `zivot` "Odjinud" column was removed entirely, its life-update purpose absorbed into the whole site's new warmer tone), and the old combined About/CV page split into `/o-mne/` (short, personal, one photo) and `/publikace/` (professional: summary, skills, one concrete achievement, then the existing publication list). See "O mně / Publikace" below. One placeholder sample post exists per column in both languages so the layout and frontmatter are visible by example — replace them with real writing whenever you're ready (see "How to update this site" below).
+**Status: Phase 5.** Publishing pipeline (Phase 0), bilingual site skeleton (Phase 1), blog columns and shared post system (Phase 2), photography/polish (Phase 3), and the audience restructure — three columns, About/CV split (Phase 4) — are all done. Phase 5 turned the Home page into a single long scrolling page: O mně now lives inline there as an `#o-mne` section (the old standalone `/o-mne/` route just redirects to it) instead of its own page, the header nav points at page anchors for "O mně" and "Můj blog" (the latter a hover/keyboard/touch-accessible dropdown listing the three columns), and "Publikace" was renamed "Můj životopis" / "My CV" throughout (URL slug `/publikace/` unchanged). See "Home page / O mně / Můj životopis" below. One placeholder sample post exists per column in both languages so the layout and frontmatter are visible by example — replace them with real writing whenever you're ready (see "How to update this site" below).
 
 ---
 
@@ -118,15 +118,16 @@ src/
                                  header image — see below
     blog.ts                   ← post queries (draft/column filtering), reading time, related posts
   layouts/Layout.astro        ← shared HTML shell: fonts, Header, Footer, OG/Twitter meta tags
-  components/                 ← Header (nav + language toggle), Footer, Newsletter, TranslationNotice,
-                                 Redirect (old-URL stubs, see "Renamed/removed pages" below)
+  components/                 ← Header (nav, language toggle, "Můj blog" dropdown), Footer, Newsletter,
+                                 TranslationNotice, Redirect (old-URL stubs, see "Renamed/removed pages")
   pages/
-    index.astro                    ← root: redirects to /cs/ or /en/ by browser language
-    [lang]/index.astro             ← Home
-    [lang]/o-mne/index.astro       ← O mně (personal)
-    [lang]/publikace/index.astro   ← Publikace (professional)
+    index.astro                    ← root: unconditional redirect to /cs/ (no browser-language detection —
+                                       English is only ever reached via the header toggle)
+    [lang]/index.astro             ← Home: one long scrolling page, #ahoj / #o-mne / #blog sections
+    [lang]/o-mne/index.astro       ← redirect stub → /[lang]/#o-mne (content lives on Home now)
+    [lang]/publikace/index.astro   ← Můj životopis / My CV (professional) — URL slug unchanged
     [lang]/book/index.astro        ← ALEFUJ!
-    [lang]/[column]/index.astro    ← a column's index page (header image, intro, post list)
+    [lang]/[column]/index.astro    ← a column's index page (small header image beside intro, post list)
     [lang]/[column]/[slug].astro   ← a single post
     [lang]/rss.xml.ts              ← RSS feed, one per language
     cs/about/, en/about/, cs/publications/, en/publications/,
@@ -151,17 +152,21 @@ Old URLs that used to work now redirect (plain `<meta refresh>`, via `src/compon
 | Old | New |
 |---|---|
 | `/{cs,en}/materstvi/` | `/{cs,en}/zapisky/` (column renamed) |
-| `/{cs,en}/about/` | `/{cs,en}/o-mne/` (split — see below) |
-| `/{cs,en}/publications/` | `/{cs,en}/publikace/` (split — see below) |
+| `/{cs,en}/about/`, `/{cs,en}/o-mne/` | `/{cs,en}/#o-mne` (About/CV split, then merged into the Home page — see below) |
+| `/{cs,en}/publications/` | `/{cs,en}/publikace/` (renamed "Můj životopis" / "My CV" — see below) |
 | `/{cs,en}/zivot/` | `/{cs,en}/` (column removed entirely) |
 
 Individual old post URLs under `materstvi` and `zivot` aren't individually redirected — both only ever held placeholder sample posts, never real content, so a column-level redirect is enough.
 
-### O mně / Publikace
+### Home page / O mně / Můj životopis
 
-The old combined About/CV page is now two, with deliberately different voices: `/o-mne/` is short, personal, warm, one photo, ends with a quiet link to `/publikace/`. `/publikace/` is professional and scannable — a plain-language summary, grouped technical skills, one concretely-stated achievement (no adjectives), then the existing publication list, unchanged (first-author highlighting, ORCID link, the three-names note explaining she's published as V. Maulerova / V. Maulerova-Subert / Vendula Šubert).
+The Home page (`[lang]/index.astro`) is one long scrolling page with three stable-id sections: `#ahoj` (the original hero/intro), `#o-mne` (personal, warm, one photo per subsection — moved inline here from the old standalone `/o-mne/` route, which now just redirects to `/[lang]/#o-mne`), and `#blog` (the unchanged three-column preview grid). The header nav's "O mně" and "Můj blog" links point at `/[lang]/#o-mne` and `/[lang]/#blog` — full paths, not bare hashes, so they still work when clicked from a column or post page. `html { scroll-behavior: smooth }` in `global.css` animates the jump, disabled under `prefers-reduced-motion` (also in `global.css`); each section has a small `scroll-margin-top` so its heading doesn't land flush against the viewport edge.
+
+`/publikace/` (nav label "Můj životopis" / "My CV" — URL slug deliberately left unchanged so nothing breaks) is professional and scannable — a plain-language summary, grouped technical skills, one concretely-stated achievement (no adjectives), then the existing publication list, unchanged (first-author highlighting, ORCID link, the three-names note explaining she's published as V. Maulerova / V. Maulerova-Subert / Vendula Šubert).
 
 Neither page states a degree or doctoral title anywhere, by design — CERN, the European Spallation Source, the University of Hamburg, and Lund University are described as places work happened, not as credentials.
+
+**"Můj blog" nav dropdown:** hovering or focusing the "Můj blog" trigger (in `Header.astro`) opens a dropdown listing the three columns, via plain CSS (`:hover`/`:focus-within`) so it still works with no JavaScript at all. A small script layered on top keeps `aria-expanded` in sync, adds arrow-key navigation between items and Escape-to-close, and — since tapping a link on a touchscreen fires hover *and* click together, which would otherwise let a single tap navigate straight past the menu — makes the first tap open the menu instead of following the link, requiring a second tap to actually navigate. Clicking the "Můj blog" label itself (not hovering) always navigates to `/[lang]/#blog`, same as any other nav link.
 
 ### Images
 
@@ -173,9 +178,11 @@ Cropping: hero images use `aspect-ratio: 16/9` (or `4/3` for a column's `quiet` 
 
 The Home page's column-card photos and the column/post header photos intentionally use *different* `object-position` values (top-anchored for the small homepage cards, hand-picked per-column `heroPosition` for the big header banners) — don't unify them, they're solving different problems.
 
-The four supporting photos on `/o-mne/` ("tucked into the page" — rotated, bordered, drop-shadowed, captioned) are styled by matching filename substring in `src/pages/[lang]/o-mne/index.astro` (an `is:global` style block, scoped via the `.o-mne-photos` wrapper class), not by position — inline Markdown images get auto-wrapped in their own `<p>` by the renderer, so they aren't siblings of each other for `:nth-of-type` to count correctly, and `<Content />` is a separately-scoped component that a normal scoped `<style>` here can't reach at all. Each photo's caption is the italic line directly under it in the Markdown with no blank line in between, which keeps image+caption as one paragraph (one floated unit) instead of two. To add a fifth photo there, follow the same pattern and add its filename to the CSS block.
+The four supporting photos in the Home page's `#o-mne` section ("tucked into the page" — rotated, bordered, drop-shadowed, captioned) are styled by matching filename substring in `src/pages/[lang]/index.astro` (an `is:global` style block, scoped via the `.o-mne-photos` wrapper class), not by position — inline Markdown images get auto-wrapped in their own `<p>` by the renderer, so they aren't siblings of each other for `:nth-of-type` to count correctly, and `<Content />` is a separately-scoped component that a normal scoped `<style>` here can't reach at all. Each photo's caption is the italic line directly under it in the Markdown with no blank line in between, which keeps image+caption as one paragraph (one floated unit) instead of two. The section's own subheadings (e.g. "Na čem teď pracuju") are `###`/`<h3>` in the Markdown, one level below the page's own `<h2>O mně</h2>` — if editing `src/content/pages/o-mne/{cs,en}/index.md`, keep new subheadings at that same level. To add a fifth photo, follow the same pattern and add its filename to the CSS block.
 
-Images embedded directly in Markdown body text (inline in a post or in an O mně/Publikace-style page) aren't cropped at all — they display at their full composition, scaled to fit the reading column. Large source photos (multi-megabyte phone photos) are resized down before being added to the repository rather than shipped at full resolution and merely scaled down by CSS, which would download the full file anyway.
+Images embedded directly in Markdown body text (inline in a post, or in the O mně/column-intro/Můj životopis pages) aren't cropped at all — they display at their full composition, scaled to fit the reading column. Large source photos (multi-megabyte phone photos) are resized down before being added to the repository rather than shipped at full resolution and merely scaled down by CSS, which would download the full file anyway. The O mně photos live in `src/content/pages/o-mne/cs/` and must also be copied into `src/content/pages/o-mne/en/` (each language folder needs its own copy of every image it references — Astro resolves inline Markdown images relative to that specific file's own folder).
+
+Column index pages (`/[lang]/[column]/`) show a small (~1/3-width) header image beside the column's intro text rather than a full-width banner — image side alternates by column position (`imageRight` in `[lang]/[column]/index.astro`, computed from index parity) but stays consistent within any one page, and stacks above the text on mobile.
 
 ### Publikace page's publication list
 

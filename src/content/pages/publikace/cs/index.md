@@ -1,5 +1,5 @@
 ---
-title: "Publikace a odborné zázemí"
+title: "Můj životopis"
 lang: "cs"
 description: "Odborné zázemí, technické dovednosti a vědecké publikace Venduly Šubert."
 ---

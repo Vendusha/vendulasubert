@@ -13,17 +13,14 @@ export const NEWSLETTER_FORM_ENDPOINT =
 interface Translations {
 	nav: {
 		about: string;
-		publications: string;
+		blog: string;
+		cv: string;
 		book: string;
 		langToggleTo: string; // e.g. "EN" shown while on the Czech site
 	};
 	home: {
 		heading: string;
 		columnsHeading: string;
-		bookIntro: string;
-		bookLinkLabel: string;
-		professionalIntro: string;
-		professionalLinkLabel: string;
 	};
 	footer: {
 		newsletterHeading: string;
@@ -74,17 +71,14 @@ export const translations: Record<Locale, Translations> = {
 	cs: {
 		nav: {
 			about: 'O mně',
-			publications: 'Publikace',
+			blog: 'Můj blog',
+			cv: 'Můj životopis',
 			book: 'ALEFUJ!',
 			langToggleTo: 'EN',
 		},
 		home: {
 			heading: 'Ahoj.',
-			columnsHeading: 'Sloupky',
-			bookIntro: 'Zrovna dokončuju svůj první komický román,',
-			bookLinkLabel: 'Víc o knize',
-			professionalIntro: 'Dřív jsem pracovala v CERNu a v European Spallation Source. Co konkrétně, je',
-			professionalLinkLabel: 'tady',
+			columnsHeading: 'Blog',
 		},
 		footer: {
 			newsletterHeading: 'Zůstaňte v obraze',
@@ -103,7 +97,7 @@ export const translations: Record<Locale, Translations> = {
 			onlyInEnglish: 'This content is only available in English.',
 		},
 		publications: {
-			title: 'Publikace',
+			title: 'Můj životopis',
 			orcidLabel: 'ORCID',
 			groupJournal: 'Články v časopisech',
 			groupProceedings: 'Konferenční příspěvky a přednášky',
@@ -135,17 +129,14 @@ export const translations: Record<Locale, Translations> = {
 	en: {
 		nav: {
 			about: 'About',
-			publications: 'Publications',
+			blog: 'My blog',
+			cv: 'My CV',
 			book: 'ALEFUJ!',
 			langToggleTo: 'CS',
 		},
 		home: {
 			heading: 'Hi.',
-			columnsHeading: 'Columns',
-			bookIntro: "I'm currently finishing my first comic novel,",
-			bookLinkLabel: 'More about the book',
-			professionalIntro: 'I used to work at CERN and the European Spallation Source. The details are',
-			professionalLinkLabel: 'here',
+			columnsHeading: 'Blog',
 		},
 		footer: {
 			newsletterHeading: 'Stay in the loop',
@@ -164,7 +155,7 @@ export const translations: Record<Locale, Translations> = {
 			onlyInEnglish: 'This content is only available in English.',
 		},
 		publications: {
-			title: 'Publications',
+			title: 'My CV',
 			orcidLabel: 'ORCID',
 			groupJournal: 'Journal articles',
 			groupProceedings: 'Conference proceedings & talks',
