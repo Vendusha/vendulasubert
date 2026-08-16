@@ -225,6 +225,15 @@ const onColumn = COLUMNS.some((col) => col.slug === section);
 
 	.has-dropdown {
 		position: relative;
+		/* Extends the hoverable box straight down to meet the dropdown-menu's
+		   top edge (padding-bottom does that; margin-bottom cancels it back
+		   out so it doesn't push the rest of the nav down). Without this,
+		   the empty gap between the trigger and the menu belongs to neither
+		   element, so moving the mouse from one to the other in a straight
+		   line loses :hover partway through and the menu closes before a
+		   real user's pointer ever reaches an item. */
+		padding-bottom: 12px;
+		margin-bottom: -12px;
 	}
 	.nav-trigger {
 		font-family: var(--font-meta);
@@ -249,7 +258,7 @@ const onColumn = COLUMNS.some((col) => col.slug === section);
 		position: absolute;
 		top: 100%;
 		left: 0;
-		margin: 8px 0 0;
+		margin: 0;
 		padding: 6px 0;
 		min-width: 220px;
 		list-style: none;
