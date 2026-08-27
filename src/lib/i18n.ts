@@ -8,7 +8,7 @@ export const siteName = 'Vendula Šubert';
 // the JS/AJAX embed). Find/change it in MailerLite: Forms → this form →
 // Embed → HTML code → the <form action="...">.
 export const NEWSLETTER_FORM_ENDPOINT =
-	'https://assets.mailerlite.com/jsonp/2569527/forms/195688773516789161/subscribe';
+	'https://assets.mailerlite.com/jsonp/2569527/forms/195688903656604820/subscribe';
 
 interface Translations {
 	nav: {
