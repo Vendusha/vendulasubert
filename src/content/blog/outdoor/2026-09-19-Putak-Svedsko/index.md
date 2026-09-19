@@ -5,7 +5,7 @@ column: "outdoor"
 lang: "cs"
 translationKey: "outdoor-svedsko-putak"
 summary: "Svatba u jezera Uspen, tři noci pod stanem a jeden půjčený longtail, který se nevejde na eskalátor. Jak vypadá puťák, když nesou dva spacáky pro čtyři a k tomu sem tam další dva."
-heroImage: "Svedsko_uspen.png"
+heroImage: "Svedsko_uspen.jpg"
 draft: false
 ---
 
@@ -27,15 +27,15 @@ Svatba byla moc krásná: u jezera Uspen.
 
 Den po svatbě jsme se vydali na mini puťáček. Náš dvouleťák ťapkal na svůj věk velmi dobře. Přes švédské mokřady často vedou dřevěné lávky a pro dvouleťáka to byly naprosto skvělé překážky, takže když jich bylo dvacet za sebou, dokázal uchodit několik kilometrů. Klasickým terénem se většinou po hodině chození začal trochu nudit.
 
-![Dvouleťák na dřevěné lávce přes švédský mokřad](./dvouletak_na_lavce.png)
+![Dvouleťák na dřevěné lávce přes švédský mokřad](dvouletak_na_lavce.jpg)
 
 Eda měl lávky rád podstatně méně. Kočárem na ně vjel předním kolečkem, ale ta zadní byla příliš široká, a tak musel dost velkou část celé váhy nést na rukou. 
-![Svačinka v kočáru po přechodu lávky.](./Svacinka.jpg)
+![Svačinka v kočáru po přechodu lávky.](Svacinka.jpg)
 Já nesla devadesátilitrák a sem tam mladší rokačtvrtku, protože ne vždycky se jí v kočáru líbilo tak, jak jsme doufali, že bude. Nejlepší podle ní bylo sedět mámě na krku, nahoře na devadesátilitrovém batohu.
 
 Chvílemi byl terén příliš prudký a museli jsme přenést nejdřív batohy, potom děti, potom obsah kočáru, což bylo většinou snadno dostupné jídlo v taškách, a úplně nakonec vzal Eda kočár nad hlavu a přenesl ho pár desítek výškových metrů.
 
-![Eda nese kočár nad hlavou do prudkého kopce](./longtail_nad_hlavou.png)
+![Eda nese kočár nad hlavou do prudkého kopce](longtail_nad_hlavou.jpg)
 
 
 Pak jsme našli klasický švédský přístřešek a opekli si párky, co jsme dostali ze svatby.
@@ -44,7 +44,7 @@ Pak jsme našli klasický švédský přístřešek a opekli si párky, co jsme 
 Naše děti mají tendenci budit se za světla, což je v letním Švédsku docela problém, a tak jsme postavili stan uvnitř přístřešku a nakonec jsme se docela vyspali.
 
 Druhý den jsme kus ušli a děti si trochu spinkly.
-![Obě děti spí ve lontailu.](./Deti_spi.png)
+![Obě děti spí ve lontailu.](Deti_spi.jpg)
 Pak začalo pršet. A pršelo a pršelo a pršelo. Došli jsme do přístřešku, ale byl to nízký typ přístřešku: nedalo se v něm stát, jenom sedět nebo ležet. Naše děti to nebyly schopné pochopit, a poté, co se po dvacáté bouchly do hlavy a byly ve velmi špatné náladě, zatímco venku lilo jako z konve, jsme to zabalili. Děti jsme nacpali do kočáru, zapláštěnkovali, na sebe hodili pláštěnky a doběhli na autobus a do nejbližšího airbnb. Udělali jsme zajímavý okruh: vrátili jsme se autobusem tam, odkud jsme ráno vyrazili. Airbnb bylo nahoře v kopci, a tak jsme si ten kopec dali ještě jednou.
 
 V airbnb byly děti jako vyměněné a zbaštily zbytek zásob. Ráno jsme se trochu prošli a pak se vydali do Göteborgu na letiště. Že by nás ráno na letiště hodil nějaký uber s dvěma sedačkami a místem pro gigantický kočár, jsme si už naivně nemysleli, takže jsme jeli autobusem — což se nakonec ukázalo jako vůbec nejspolehlivější prostředek na letiště i z letiště. Od letiště jsme kousek poodešli do místního lesa a přespali tam ve stanu. Ráno se nám dokonce podařilo nacpat spící děti do kočáru; já jsem se vydala na půlhodinovou cestu k letišti a Eda sbalil stan a přidal se k nám později.
