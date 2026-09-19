@@ -2,7 +2,6 @@
 import { Picture } from 'astro:assets';
 import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
-import Newsletter from '../../../components/Newsletter.astro';
 import { getBlogPosts, getRelatedPosts, estimateReadingTime } from '../../../lib/blog';
 import { getColumn } from '../../../lib/columns';
 import { t, locales, otherLocale, type Locale } from '../../../lib/i18n';
@@ -88,7 +87,7 @@ if (post.data.translationKey) {
 			{copy.blog.publishedOn} {post.data.date.toISOString().slice(0, 10)} · {copy.blog.readingTime(readingTime)}
 		</p>
 
-		<div class="prose">
+		<div class="prose post-photos">
 			<Content />
 		</div>
 	</article>
@@ -107,9 +106,6 @@ if (post.data.translationKey) {
 			</section>
 		)
 	}
-
-	<hr class="hairline" />
-	<Newsletter lang={lang} instanceId="post" />
 </Layout>
 
 <style>
@@ -153,5 +149,76 @@ if (post.data.translationKey) {
 	}
 	.related li {
 		margin-bottom: 0.5em;
+	}
+</style>
+
+<!--
+	Generic "tucked into the page" treatment for any post photo written on
+	its own line (blank lines before and after — same convention as an
+	O mně photo), optionally followed with no blank line by an italic
+	caption. Applies automatically to every post, no per-photo CSS needed:
+	the selector only matches a <p> whose *only* element children are the
+	image and, optionally, the caption <em> — so it can't accidentally
+	catch a photo dropped into the middle of a running sentence (that would
+	leave real text sharing the paragraph, which this can't detect and
+	would look broken if it did match). A photo like that just renders as
+	a plain image, same as before.
+
+	Deliberately centred rather than floated like O mně's version: a post
+	is long, undivided running prose with no guaranteed heading to clear a
+	float against, so an uncleared float here could still be dragging text
+	around several paragraphs later. Centring gets the same tilted/framed/
+	captioned look without that risk. Rotation cycles through four fixed
+	angles by position (not per-filename, since a post's photos aren't a
+	fixed known set the way O mně's four are) purely for visual variety.
+
+	Global + .post-photos-scoped for the same reason as O mně's version:
+	<Content /> is a separately-scoped component a normal scoped <style>
+	here can't reach.
+-->
+<style is:global>
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))) {
+		max-width: 420px;
+		margin: 1.8em auto;
+		text-align: center;
+	}
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))) img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border: 8px solid var(--paper);
+		outline: 1px solid var(--rule);
+		box-shadow: 0 6px 16px rgba(32, 28, 24, 0.18);
+		padding: 0;
+		margin: 0 auto;
+	}
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))):nth-of-type(4n + 1) img {
+		transform: rotate(-3deg);
+	}
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))):nth-of-type(4n + 2) img {
+		transform: rotate(2.5deg);
+	}
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))):nth-of-type(4n + 3) img {
+		transform: rotate(-2deg);
+	}
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))):nth-of-type(4n) img {
+		transform: rotate(3deg);
+	}
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))) em {
+		display: block;
+		margin-top: 10px;
+		font-family: var(--font-body);
+		font-style: italic;
+		font-size: 13px;
+		line-height: 1.4;
+		color: var(--ink-soft);
+	}
+	@media (max-width: 720px) {
+		.post-photos p:has(> img):not(:has(> :not(img):not(em))) {
+			max-width: 100%;
+		}
+		.post-photos p:has(> img):not(:has(> :not(img):not(em))) img {
+			transform: none;
+		}
 	}
 </style>
