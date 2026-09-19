@@ -6,6 +6,7 @@ lang: "en"
 translationKey: "outdoor-svedsko-putak"
 summary: "A wedding by Lake Uspen, three nights under canvas and one rented monster of a trailer that doesn't fit on an escalator. What backpacking looks like when two people carry sleeping bags for four, plus the other two on top."
 heroImage: "Svedsko_uspen.jpg"
+thumbnail: "Svacinka.jpg"
 draft: false
 ---
 

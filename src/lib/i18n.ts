@@ -83,7 +83,7 @@ export const translations: Record<Locale, Translations> = {
 		footer: {
 			newsletterHeading: 'Zůstaňte v obraze',
 			newsletterBody:
-				'Nové sloupky a novinky o knize ALEFUJ! přímo do e-mailu, jednou za čas, žádný spam.',
+				'Co jsem napsala na blogu a jak postupuje ALEFUJ! — shrnutí jednou za měsíc do e-mailu.',
 			newsletterConfirmNote:
 				'Po přihlášení vám přijde potvrzovací e-mail — klikněte na odkaz v něm, jinak se odběr nedokončí.',
 			newsletterSuccess: 'Díky! Zkontrolujte e-mail a potvrďte přihlášení k odběru.',
@@ -141,7 +141,7 @@ export const translations: Record<Locale, Translations> = {
 		footer: {
 			newsletterHeading: 'Stay in the loop',
 			newsletterBody:
-				'New columns and news about the novel ALEFUJ! straight to your inbox, now and then, no spam.',
+				"What I've written on the blog, and how ALEFUJ! is coming along — a summary once a month, straight to your inbox.",
 			newsletterConfirmNote:
 				"After signing up you'll get a confirmation email — click the link in it, or the subscription won't go through.",
 			newsletterSuccess: "Thanks! Check your email and confirm your subscription.",

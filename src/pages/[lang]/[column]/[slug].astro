@@ -122,12 +122,20 @@ if (post.data.translationKey) {
 	.post :global(.hero-image) {
 		display: block;
 		width: 100%;
+		/* height:auto looks redundant next to aspect-ratio but isn't: Picture
+		   sets literal width/height HTML attributes reflecting the source
+		   photo's own uncropped proportions, and browsers silently use those
+		   over aspect-ratio for computing height unless height is *also*
+		   explicitly set here — without it this rendered at the source's
+		   native ~4:3 (taller, more dominant) instead of the intended 16:9. */
+		height: auto;
 		aspect-ratio: 16 / 9;
 		object-fit: cover;
 		margin: 20px 0 32px;
 	}
 	.post.quiet :global(.hero-image) {
 		max-width: 560px;
+		height: auto;
 		aspect-ratio: 4 / 3;
 		filter: grayscale(40%);
 	}

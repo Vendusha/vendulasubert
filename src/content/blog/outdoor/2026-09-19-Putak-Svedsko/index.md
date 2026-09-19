@@ -6,6 +6,7 @@ lang: "cs"
 translationKey: "outdoor-svedsko-putak"
 summary: "Svatba u jezera Uspen, tři noci pod stanem a jeden půjčený longtail, který se nevejde na eskalátor. Jak vypadá puťák, když nesou dva spacáky pro čtyři a k tomu sem tam další dva."
 heroImage: "Svedsko_uspen.jpg"
+thumbnail: "Svacinka.jpg"
 draft: false
 ---
 

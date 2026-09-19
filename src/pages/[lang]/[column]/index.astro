@@ -29,6 +29,7 @@ const posts = await getColumnPosts(columnSlug, lang);
 const postsWithMeta = posts.map((post) => ({
 	post,
 	readingTime: estimateReadingTime(post.body ?? ''),
+	thumbnail: post.data.thumbnail ?? post.data.heroImage ?? column.heroImage,
 }));
 ---
 
@@ -72,14 +73,27 @@ const postsWithMeta = posts.map((post) => ({
 			<p class="empty">{copy.blog.noPostsYet}</p>
 		) : (
 			<ul class="post-list">
-				{postsWithMeta.map(({ post, readingTime }) => (
+				{postsWithMeta.map(({ post, readingTime, thumbnail }) => (
 					<li class="post-card">
 						<a href={`${base}${lang}/${columnSlug}/${post.id.split('/')[1]}/`}>
-							<p class="post-date">
-								{post.data.date.toISOString().slice(0, 10)} · {copy.blog.readingTime(readingTime)}
-							</p>
-							<h2>{post.data.title}</h2>
-							<p class="post-summary">{post.data.summary}</p>
+							<Picture
+								src={thumbnail}
+								alt=""
+								width={160}
+								widths={[120, 160, 240]}
+								sizes="120px"
+								formats={['webp']}
+								fallbackFormat="jpg"
+								quality={65}
+								class="post-thumb"
+							/>
+							<div class="post-card-text">
+								<p class="post-date">
+									{post.data.date.toISOString().slice(0, 10)} · {copy.blog.readingTime(readingTime)}
+								</p>
+								<h2>{post.data.title}</h2>
+								<p class="post-summary">{post.data.summary}</p>
+							</div>
 						</a>
 					</li>
 				))}
@@ -154,10 +168,30 @@ const postsWithMeta = posts.map((post) => ({
 	.post-card a {
 		text-decoration: none;
 		color: var(--ink);
-		display: block;
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
 	}
 	.post-card:hover h2 {
 		color: var(--columnAccent);
+	}
+	.post-card :global(.post-thumb) {
+		display: block;
+		width: 120px;
+		height: auto;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+		flex: 0 0 auto;
+	}
+	.post-card-text {
+		min-width: 0;
+	}
+	@media (min-width: 481px) {
+		.post-card a {
+			flex-direction: row;
+			align-items: flex-start;
+			gap: 20px;
+		}
 	}
 	.post-date {
 		font-family: var(--font-meta);

@@ -29,6 +29,12 @@ const blog = defineCollection({
 			// Optional: falls back to the column's default header image when
 			// omitted. Just a filename, same as inline images — see the template.
 			heroImage: image().optional(),
+			// Optional small image shown next to this post in the column's post
+			// list — falls back to heroImage, then the column's default. Separate
+			// from heroImage because the best "teaser" photo for a listing (e.g.
+			// a candid in-the-moment shot) isn't always the best wide banner shot
+			// for the post's own page.
+			thumbnail: image().optional(),
 			draft: z.boolean().default(false),
 		}),
 });
