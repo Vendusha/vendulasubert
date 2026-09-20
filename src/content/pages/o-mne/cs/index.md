@@ -11,7 +11,7 @@ Jsem fyzička, která jednou na pohovoru řekla, že umí sešroubovat nábytek 
 ![Obálka knihy ALEFUJ!](alefuj-cover.png)
 *foto: ilustrační foto knihy ALEFUJ!*
 
-Jeden z největších projektů, na kterých teď dělám, je knížka [ALEFUJ!](https://alefuj.cz/cs/). Je to humoristická kniha, ve které se Kosťa snaží najít práci, která by měla smysl. Ale protože smysl většinou vidí jinde než jeho šéf, v každé kapitole si Kosťa hledá práci novou. Naproti tomu Báře dává smysl studovat chemii, ale místo toho většinu času tráví hlídáním dvou malých příšer, hraním v amatérském orchestru a pátráním po záhadném muži, který desítky let anonymně radil Nobelovu výboru pro fyziku.
+Jeden z největších projektů, na kterých teď dělám, je knížka [ALEFUJ!](https://alefuj.cz/cs/). Je to humoristická kniha, ve které se Kosťa snaží najít práci, která by měla smysl. Ale protože smysl většinou vidí jinde než jeho šéf, v každé kapitole si Kosťa hledá práci novou. Naproti tomu [Báře Miklasové](https://www.linkedin.com/in/barbora-miklasov%C3%A1-42b457a2/) (Assistant Director | Editor and Publisher, London) dává smysl studovat chemii, ale místo toho většinu času tráví hlídáním dvou malých příšer, hraním v amatérském orchestru a pátráním po záhadném muži, který desítky let anonymně radil Nobelovu výboru pro fyziku.
 
 ### Moje odbornost ve zkratce
 

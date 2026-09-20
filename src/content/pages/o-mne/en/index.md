@@ -11,7 +11,7 @@ I'm a physicist who once mentioned in a job interview that she can assemble IKEA
 ![Cover of the book ALEFUJ!](alefuj-cover.png)
 *photo: cover art for ALEFUJ!*
 
-One of the biggest projects I'm working on right now is the book [ALEFUJ!](https://alefuj.cz/cs/). It's a comic novel in which Kosťa keeps trying to find work that actually means something — but since he usually finds the meaning somewhere his boss doesn't, he ends up looking for a new job in pretty much every chapter. Bára, meanwhile, finds meaning in studying chemistry, except she spends most of her time babysitting two small monsters, playing in an amateur orchestra, and chasing down a mysterious man who spent decades anonymously advising the Nobel Committee for Physics.
+One of the biggest projects I'm working on right now is the book [ALEFUJ!](https://alefuj.cz/cs/). It's a comic novel in which Kosťa keeps trying to find work that actually means something — but since he usually finds the meaning somewhere his boss doesn't, he ends up looking for a new job in pretty much every chapter. [Bára Miklasová](https://www.linkedin.com/in/barbora-miklasov%C3%A1-42b457a2/) (Assistant Director | Editor and Publisher, London), meanwhile, finds meaning in studying chemistry, except she spends most of her time babysitting two small monsters, playing in an amateur orchestra, and chasing down a mysterious man who spent decades anonymously advising the Nobel Committee for Physics.
 
 ### My expertise in brief
 
