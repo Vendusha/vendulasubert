@@ -229,4 +229,48 @@ if (post.data.translationKey) {
 			transform: none;
 		}
 	}
+
+	/*
+		A comparison group: several photo+caption pairs written back to back
+		with no blank lines at all between them (unlike a single tucked-in
+		photo, which needs blank lines around it — see above), so the whole
+		group is ONE paragraph containing img, em, img, em, ... in sequence.
+		:has(> img ~ img) singles that case out from an ordinary one-photo
+		paragraph. grid-auto-flow: column with a fixed 2-row template pairs
+		each image with the caption right after it into its own column —
+		column 1 gets the first two children (img, em), column 2 the next
+		two, and so on — without needing a wrapper element around each pair,
+		which plain "image on its own line" Markdown can't produce anyway.
+		Plain small frames, no rotation: these are meant to be compared at a
+		glance, not admired individually like the single-photo treatment.
+	*/
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))):has(> img ~ img) {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto auto;
+		grid-auto-flow: column;
+		gap: 6px 14px;
+		max-width: 480px;
+		margin: 1.8em auto;
+		text-align: center;
+	}
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))):has(> img ~ img) img {
+		border: 1px solid var(--ink);
+		outline: none;
+		box-shadow: none;
+		transform: none !important;
+		aspect-ratio: 3 / 4;
+		object-fit: cover;
+	}
+	.post-photos p:has(> img):not(:has(> :not(img):not(em))):has(> img ~ img) em {
+		margin-top: 4px;
+		font-size: 12px;
+	}
+	@media (max-width: 480px) {
+		.post-photos p:has(> img):not(:has(> :not(img):not(em))):has(> img ~ img) {
+			grid-template-columns: repeat(3, 1fr);
+			max-width: 100%;
+			gap: 4px 8px;
+		}
+	}
 </style>
