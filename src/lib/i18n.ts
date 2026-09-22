@@ -16,6 +16,7 @@ interface Translations {
 		blog: string;
 		cv: string;
 		book: string;
+		music: string;
 		langToggleTo: string; // e.g. "EN" shown while on the Czech site
 	};
 	home: {
@@ -65,6 +66,15 @@ interface Translations {
 		rssLabel: string;
 		noPostsYet: string;
 	};
+	music: {
+		playLabel: string;
+		thumbnailAlt: string;
+		soundcloudListen: string;
+		lyricsSummary: string;
+		comingSoon: string;
+		youtubeIntro: string;
+		youtubeCta: string;
+	};
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -74,6 +84,7 @@ export const translations: Record<Locale, Translations> = {
 			blog: 'Můj blog',
 			cv: 'Můj životopis',
 			book: 'ALEFUJ!',
+			music: 'Hudba',
 			langToggleTo: 'EN',
 		},
 		home: {
@@ -125,6 +136,15 @@ export const translations: Record<Locale, Translations> = {
 			rssLabel: 'RSS',
 			noPostsYet: 'V téhle rubrice zatím nic není — brzy.',
 		},
+		music: {
+			playLabel: 'Přehrát',
+			thumbnailAlt: 'Náhled videa',
+			soundcloudListen: 'Poslechnout na SoundCloudu',
+			lyricsSummary: 'Text písničky',
+			comingSoon: 'Připravuji.',
+			youtubeIntro: 'Nové písničky přidávám na YouTube.',
+			youtubeCta: 'Odebírat kanál',
+		},
 	},
 	en: {
 		nav: {
@@ -132,6 +152,7 @@ export const translations: Record<Locale, Translations> = {
 			blog: 'My blog',
 			cv: 'My CV',
 			book: 'ALEFUJ!',
+			music: 'Music',
 			langToggleTo: 'CS',
 		},
 		home: {
@@ -182,6 +203,15 @@ export const translations: Record<Locale, Translations> = {
 			publishedOn: 'Published',
 			rssLabel: 'RSS',
 			noPostsYet: 'Nothing in this column yet — soon.',
+		},
+		music: {
+			playLabel: 'Play',
+			thumbnailAlt: 'Video preview',
+			soundcloudListen: 'Listen on SoundCloud',
+			lyricsSummary: 'Lyrics',
+			comingSoon: 'Coming soon.',
+			youtubeIntro: 'I post new songs on YouTube.',
+			youtubeCta: 'Subscribe to the channel',
 		},
 	},
 };

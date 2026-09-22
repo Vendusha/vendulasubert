@@ -1,0 +1,124 @@
+---
+// Literal (not [lang]-dynamic) route: unlike every other page, the future
+// English version of this page won't share this slug — Vendula wants
+// /en/music/, not /en/hudba/ — so it can't go through the shared
+// `[lang]/[page]/` pattern, which assumes one slug works for both
+// languages. When the English content is ready, add
+// src/pages/en/music/index.astro as its own sibling file, reusing the
+// same data (src/data/music.ts) and components below with lang="en" —
+// nothing here needs to change for that.
+import { render } from 'astro:content';
+import Layout from '../../../layouts/Layout.astro';
+import TranslationNotice from '../../../components/TranslationNotice.astro';
+import SongCard from '../../../components/SongCard.astro';
+import { loadPage } from '../../../lib/pages';
+import { t } from '../../../lib/i18n';
+import { getFeaturedSong, getVisibleCategories, getCategorySongs, pick } from '../../../data/music';
+
+const lang = 'cs' as const;
+const { entry, shownLang, hasTranslation } = await loadPage('hudba', lang);
+const { Content } = await render(entry);
+const copy = t(lang).music;
+
+const featured = getFeaturedSong();
+const categories = getVisibleCategories();
+---
+
+<Layout
+	lang={lang}
+	section="hudba"
+	hasTranslation={hasTranslation}
+	title={entry.data.title}
+	description={entry.data.description}
+>
+	{shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={shownLang} />}
+
+	<article class="prose intro">
+		<h1>{entry.data.title}</h1>
+		<Content />
+	</article>
+
+	{featured && <SongCard song={featured} lang={lang} anchorId={`featured-${featured.id}`} priority />}
+
+	{
+		categories.map((cat) => {
+			const entries = getCategorySongs(cat.id);
+			const full = entries.filter((e) => e.isPrimary);
+			const compact = entries.filter((e) => !e.isPrimary);
+			const linkHost = cat.link ? new URL(cat.link).hostname : undefined;
+
+			return (
+				<section class="music-category">
+					<h2>{pick(cat.title, lang)}</h2>
+					<p class="category-intro">{pick(cat.intro, lang)}</p>
+					{cat.link && (
+						<p>
+							<a class="category-link" href={cat.link} target="_blank" rel="noopener noreferrer">
+								{linkHost} →
+							</a>
+						</p>
+					)}
+
+					{entries.length === 0 ? (
+						<p class="empty">{copy.comingSoon}</p>
+					) : (
+						<>
+							{full.map((e) => (
+								<SongCard song={e.song} lang={lang} />
+							))}
+							{compact.map((e) => (
+								<p class="song-compact-link">
+									<a href={`#${e.song.id}`}>→ {pick(e.song.title, lang)}</a>
+								</p>
+							))}
+						</>
+					)}
+				</section>
+			);
+		})
+	}
+
+	<section class="youtube-cta prose">
+		<p>
+			{copy.youtubeIntro}{' '}
+			<a
+				class="button"
+				href="https://www.youtube.com/@vendulasubert"
+				target="_blank"
+				rel="noopener noreferrer"
+			>
+				{copy.youtubeCta}
+			</a>
+		</p>
+	</section>
+</Layout>
+
+<style>
+	.intro {
+		padding-block: 40px 24px;
+	}
+	.music-category {
+		padding-block: 24px;
+		border-top: 1px solid var(--rule);
+	}
+	.category-intro {
+		color: var(--ink-soft);
+		max-width: var(--measure);
+	}
+	.category-link {
+		font-family: var(--font-meta);
+		font-size: 13px;
+	}
+	.empty {
+		color: var(--ink-soft);
+		font-style: italic;
+	}
+	.song-compact-link {
+		font-family: var(--font-meta);
+		font-size: 14px;
+	}
+	.youtube-cta {
+		padding-block: 24px 8px;
+		border-top: 1px solid var(--rule);
+	}
+</style>

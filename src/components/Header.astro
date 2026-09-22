@@ -69,6 +69,13 @@ const onColumn = COLUMNS.some((col) => col.slug === section);
 				href={`${base}${lang}/publikace/`}
 				aria-current={section === 'publikace' ? 'page' : undefined}>{nav.cv}</a
 			>
+			{
+				lang === 'cs' && (
+					<a href={`${base}${lang}/hudba/`} aria-current={section === 'hudba' ? 'page' : undefined}>
+						{nav.music}
+					</a>
+				)
+			}
 			<a href={`${base}${lang}/book/`} aria-current={section === 'book' ? 'page' : undefined}
 				>{nav.book}</a
 			>

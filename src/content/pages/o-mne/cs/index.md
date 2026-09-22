@@ -25,7 +25,7 @@ Umím navrhnout detektor, oživit ho, změřit, nasimulovat a popsat v článku.
 ![Vendula a Mína na chansonovém koncertě](chanson-koncert.jpg)
 *foto: chansonový koncert, Ostrava*
 
-Vystudovala jsem klavír na Janáčkově konzervatoři v Ostravě, hrála jsem na koncertech (doprovázela jsem umělkyni Vilemínu Hanu Ondrušovou na chansonových večerech), měla jsem i vlastní program "Muzikálové melodie". Hrávala jsem na varhany a na klavír na svatbách i pohřbech v Česku a ve Švédsku. Zpívala jsem jako účinkující ve sboru na koncertě v Kodani při turné hudby z Hry o trůny – a dirigoval nás sám Ramin Djawadi.
+Vystudovala jsem klavír na Janáčkově konzervatoři v Ostravě, hrála jsem na koncertech (doprovázela jsem umělkyni Vilemínu Hanu Ondrušovou na chansonových večerech), měla jsem i vlastní program "Muzikálové melodie". Hrávala jsem na varhany a na klavír na svatbách i pohřbech v Česku a ve Švédsku. Zpívala jsem jako účinkující ve sboru na koncertě v Kodani při turné hudby z Hry o trůny – a dirigoval nás sám Ramin Djawadi. Dnes píšu vlastní písničky – najdete je v sekci [Hudba](/cs/hudba/).
 
 ### Kdo jsem taky
 

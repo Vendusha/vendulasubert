@@ -1,0 +1,108 @@
+---
+// Lightweight "click to load" YouTube embed: no iframe (and no YouTube
+// tracking/cookies) until the visitor actually asks to play something,
+// same spirit as the Newsletter form's no-JS-embed rule elsewhere on this
+// site. Just a real <button> around a plain thumbnail <img> — no library,
+// no new dependency — so keyboard/Enter/Space activation comes for free
+// from using a real button element rather than a styled <div>.
+interface Props {
+	videoId: string;
+	title: string;
+	playLabel: string;
+	thumbnailAlt: string;
+	/** Loads the thumbnail eagerly instead of lazily — for whichever song
+	 * renders first on the page (currently the featured one). */
+	priority?: boolean;
+}
+
+const { videoId, title, playLabel, thumbnailAlt, priority = false } = Astro.props;
+---
+
+<div class="yt-embed" data-video-id={videoId} data-title={title}>
+	<button type="button" class="yt-play" aria-label={`${playLabel}: ${title}`}>
+		<img
+			src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+			alt={`${thumbnailAlt}: ${title}`}
+			width="480"
+			height="360"
+			loading={priority ? 'eager' : 'lazy'}
+		/>
+		<span class="yt-play-icon" aria-hidden="true"></span>
+	</button>
+</div>
+
+<script>
+	// One listener per embed on the page; Astro dedupes this script tag to a
+	// single copy even though YouTubeEmbed can render many times on one page
+	// (same pattern as Newsletter.astro/Header.astro's inline scripts).
+	document.querySelectorAll<HTMLElement>('.yt-embed').forEach((container) => {
+		const button = container.querySelector<HTMLButtonElement>('.yt-play');
+		const videoId = container.dataset.videoId;
+		const title = container.dataset.title ?? '';
+		if (!button || !videoId) return;
+
+		button.addEventListener('click', () => {
+			const iframe = document.createElement('iframe');
+			iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1`;
+			iframe.title = title;
+			iframe.allow =
+				'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+			iframe.allowFullscreen = true;
+			container.replaceChildren(iframe);
+		});
+	});
+</script>
+
+<style>
+	.yt-embed {
+		position: relative;
+		aspect-ratio: 16 / 9;
+		background: var(--ink);
+		margin: 1em 0;
+	}
+	.yt-play {
+		all: unset;
+		cursor: pointer;
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+	}
+	.yt-play:focus-visible {
+		outline: 3px solid var(--accent);
+		outline-offset: -3px;
+	}
+	.yt-play img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	.yt-play-icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 64px;
+		height: 64px;
+		border-radius: 50%;
+		background: rgba(32, 28, 24, 0.72);
+	}
+	.yt-play-icon::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 54%;
+		transform: translate(-50%, -50%);
+		border-style: solid;
+		border-width: 12px 0 12px 20px;
+		border-color: transparent transparent transparent var(--paper);
+	}
+	.yt-embed :global(iframe) {
+		display: block;
+		width: 100%;
+		height: 100%;
+		border: 0;
+	}
+</style>

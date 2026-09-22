@@ -1,0 +1,99 @@
+---
+// The "full" rendering of a song — player/card + description + optional
+// lyrics. Used both for the featured song at the top of the page and for
+// each song inside its own (primary) category; a song appearing in any
+// OTHER category just gets a compact link back to whichever instance has
+// the real id, not a second copy of this component — see hudba/index.astro.
+import YouTubeEmbed from './YouTubeEmbed.astro';
+import { pick, type Song } from '../data/music';
+import { t, type Locale } from '../lib/i18n';
+
+interface Props {
+	song: Song;
+	lang: Locale;
+	/** Overrides the element id — used for the featured-song repeat at the
+	 * top of the page, so it doesn't collide with the "real" instance in
+	 * its own category (the one every cross-category link points at). */
+	anchorId?: string;
+	priority?: boolean;
+}
+
+const { song, lang, anchorId = song.id, priority = false } = Astro.props;
+const copy = t(lang).music;
+const title = pick(song.title, lang);
+const description = pick(song.description, lang);
+const lyrics = song.lyrics ? pick(song.lyrics, lang) : undefined;
+---
+
+<article class="song-card" id={anchorId}>
+	<h3>{title}</h3>
+
+	{
+		song.platform === 'youtube' && song.youtubeId && (
+			<YouTubeEmbed
+				videoId={song.youtubeId}
+				title={title}
+				playLabel={copy.playLabel}
+				thumbnailAlt={copy.thumbnailAlt}
+				priority={priority}
+			/>
+		)
+	}
+
+	{
+		song.platform === 'soundcloud' && song.url && (
+			<p class="song-soundcloud">
+				<a class="button" href={song.url} target="_blank" rel="noopener noreferrer">
+					{copy.soundcloudListen}
+				</a>
+			</p>
+		)
+	}
+
+	<p class="song-desc">{description}</p>
+
+	{
+		lyrics && (
+			<details class="song-lyrics">
+				<summary>{copy.lyricsSummary}</summary>
+				<div class="lyrics-text">{lyrics}</div>
+			</details>
+		)
+	}
+</article>
+
+<style>
+	.song-card {
+		max-width: var(--measure);
+		margin: 2em 0;
+		scroll-margin-top: 24px;
+	}
+	.song-card h3 {
+		margin-bottom: 0.5em;
+	}
+	.song-soundcloud {
+		margin: 1em 0;
+	}
+	.song-desc {
+		color: var(--ink-soft);
+	}
+	.song-lyrics {
+		margin-top: 1em;
+	}
+	.song-lyrics summary {
+		cursor: pointer;
+		font-family: var(--font-meta);
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--ink-soft);
+	}
+	.song-lyrics summary:hover {
+		color: var(--accent);
+	}
+	.lyrics-text {
+		white-space: pre-line;
+		margin-top: 0.8em;
+		color: var(--ink-soft);
+	}
+</style>
