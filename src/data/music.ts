@@ -103,7 +103,10 @@ export const SONGS: Song[] = [
 		description: {
 			cs: 'Mírně satirická písnička o mladistvém hledání partnera. Moje paní učitelka vždycky říkala, že by už mladá být nechtěla – vybírat si zaměstnání a životního partnera. Pomalu se dostávám do fáze, kdy si myslím totéž, a tohle je vzpomínka na ta léta snahy zaujmout někoho, kdo možná chce, ale možná taky nechce být zaujat.',
 		},
-		categories: ['ze-zivota', 'alefuj'],
+		// Already shown once at the top as the featured song — kept out of
+		// "Ze života" so it doesn't render there a second time right below
+		// it; it still has a home (in full) under "Z knihy ALEFUJ!".
+		categories: ['alefuj'],
 		status: 'published',
 		platform: 'youtube',
 		youtubeId: 'X0lMcfhJ6LQ',
@@ -111,7 +114,7 @@ export const SONGS: Song[] = [
 	},
 	{
 		id: 'svatebni',
-		title: { cs: '[NÁZEV]' },
+		title: { cs: 'Pár hvězd tmou' },
 		description: {
 			cs: 'Napsala jsem ji na svatbu přátel, u kterých se to hledání naopak završilo šťastným koncem. Doplněná o outdoorová videa, protože outdoor je vždycky hezký.',
 		},
