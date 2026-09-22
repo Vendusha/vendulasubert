@@ -26,10 +26,12 @@ const sectionPath = section === 'home' ? '' : `${section}/`;
 const toggleHref =
 	toggleHrefOverride ?? (hasTranslation ? `${base}${other}/${sectionPath}` : `${base}${other}/`);
 
-// "O mně" and "Můj blog" are anchors on the homepage, not their own routes,
-// so both count as "current" whenever we're anywhere on that page. The
-// blog trigger (and its matching dropdown item) is also current on any
-// column page, since those are the blog's own sub-pages.
+// "Můj blog" is an anchor on the homepage, not its own route, so it counts
+// as "current" whenever we're anywhere on that page — same for the
+// dropdown trigger on any column page, since those are the blog's own
+// sub-pages. "O mně" is the same kind of homepage anchor, but deliberately
+// isn't marked current this way: on the homepage that would underline both
+// it and "Můj blog" at once, which reads as noise rather than orientation.
 const onHome = section === 'home';
 const onColumn = COLUMNS.some((col) => col.slug === section);
 ---
@@ -38,7 +40,7 @@ const onColumn = COLUMNS.some((col) => col.slug === section);
 	<div class="container inner">
 		<a class="wordmark" href={`${base}${lang}/`}>{siteName}</a>
 		<nav aria-label={lang === 'cs' ? 'Hlavní navigace' : 'Main navigation'}>
-			<a href={`${base}${lang}/#o-mne`} aria-current={onHome ? 'page' : undefined}>{nav.about}</a>
+			<a href={`${base}${lang}/#o-mne`}>{nav.about}</a>
 
 			<div class="has-dropdown">
 				<a
