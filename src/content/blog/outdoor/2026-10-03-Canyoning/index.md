@@ -1,21 +1,21 @@
 ---
-title: "Canyoning, aneb proč už se mi nechce koupat v Berounce"
-date: 2026-09-22
+title: "Canyoning, aneb proč už se mi nechce koupat v kdejaké louži"
+date: 2026-10-03
 column: "outdoor"
 lang: "cs"
 translationKey: "outdoor-canyoning"
-summary: "Slaňování vodopádů, skoky do průzračných tůní a jeden jarní víkend v Ardèche, kdy měl v neoprenu teplo jenom náš nenarozený syn. Jak jsme propadli canyoningu."
+summary: "Slaňování vodopádů, skoky do průzračných tůní a hodně chladu: Jak jsme propadli canyoningu."
 heroImage: "Eda_furon.jpg"
-draft: true
+draft: false
 ---
 
-Tohle je jeden z blogových příspěvků z kategorie „před dětmi". Chtěla bych se vrátit ke sportu, který mi neskutečně přirostl k srdci, a tím je canyoning.
+V tomhle příspěvku bych se alespoń myšlenkami chtěla vrátit ke sportu, který mi neskutečně přirostl k srdci, a tím je canyoning. (Tohle je jeden z blogových příspěvků z kategorie „před dětmi".)
 
-Canyoning je v podstatě chození korytem většinou dravých potoků a řek, kde se místy musí do vody skočit z vodopádu, sjet ho po skále jako po klouzačce, nebo ho slanit. Snoubí se v něm práce s lanem a skálou s velkou porcí práce s vodou: plavání, orientace pod vodou, zadržování dechu, když je potřeba podplavat balvan.
+Canyoning je v podstatě chození korytem většinou dravějších potoků a řek, kde se místy musí do vody skočit z vodopádu, sjet ho po skále jako po klouzačce, nebo vodopád slanit. Snoubí se v něm práce s lanem a skálou a práce s vodou: plavání, orientace pod vodou, odhad toku, delší zadržování dechu, když je potřeba podplavat balvan. 
 
 ## Jak jsme k tomu přišli
 
-S canyoningem nás seznámili naši kamarádi z CERNu, odborný asistent fyziky [Jason Veatch](https://physics.calpoly.edu/jveatch) a Yuko Maeda. Mluvili o něm už dlouho a já si nemohla pomoct si myslet, že tohle by mě opravdu, ale opravdu mohlo bavit.
+S canyoningem nás seznámili naši kamarádi z CERNu, odborný asistent fyziky [Jason Veatch](https://physics.calpoly.edu/jveatch) a Yuko Maeda. Mluvili o něm už dlouho a já si nemohla pomoct si myslet, že tohle by mě opravdu, ale opravdu mohlo bavit. Potichu jsem se modlila, aby to Edu bavilo taky. Doposavad jsem měla štěstí, že byl Eda stejný nadšenec do outdooru jako já, tak jsem o to štěstí nechtěla přijít. 
 
 A pak jednoho dne nastal den D a vyrazili jsme všichni do kaňonu Agnon kousek od francouzského Annecy.
 
@@ -23,17 +23,18 @@ A pak jednoho dne nastal den D a vyrazili jsme všichni do kaňonu Agnon kousek 
 
 ## Jarní Ardèche
 
-Po úvodním podzimním výletu s Jasonem, Yuko a dalšími kamarády jsme to s Edou brzy na jaře zkusili na složitějších kaňonech s francouzskými guidy.
+Po úvodním podzimním výletu s Jasonem, Yuko a dalšími kamarády jsme to s Edou (kterého to k mému štěstí také chytlo) brzy na jaře zkusili na složitějších kaňonech s francouzskými guidy.
 
 Na začátku dubna jsme jeli na víkend do Ardèche. Já už byla v té době těhotná, takže jsem vůbec neskákala (kvůli dopadu) a všechno slaňovala. Tam, kde slanění nebylo připravené, mi Eda udělal živou kotvu: sedl si za kámen, uvázal moje lano ke svému úvazku a já slanila.
 
-Náš guide nám říkal, že jsme trochu blázni a že o týden dřív by nás nevzal. Šli jsme ale jenom my dva a dva zaučující se guidi, takže to byla naprosto skvělá příležitost naučit se kaňonovat v rychlé a šikovné skupině. První den jsme dali rovnou dva kaňony: La Fustugère a Haut Chassezac (dnes už bohužel zavřený). Guide nám navíc tipnul kaňon, kde se dá zároveň jezdit po laně na kladce: Aéro Besorgues.
+Náš guide nám říkal, že jsme trochu blázni a že o týden dřív by nás nevzal. Šli jsme ale jenom my dva a dva zaučující se guidi, takže to byla naprosto skvělá příležitost naučit se kaňonovat v rychlé a šikovné skupině. První den jsme dali rovnou dva kaňony: La Fustugère a Chassezac. Guide nám navíc dal tip na kaňon pro další dny: kombinace zip lines (jízdy na kladce po laně) a kaňonu: Aéro Besorgues.
 
 ![Cesta k nástupu do kaňonu La Fustugère](./Prichod_ke_kanyonu_Fustugere.JPG)
 
-![V kaňonu La Fustugère](./Fustugere.JPG)
+Některé skupiny jezdí ke kaňonu dvěma auty: jedno nechají nahoře u nástupu a druhé dole u výstupu. Mě se to moc nelíbí, za sebe mám pocit, že si ten kaňon musím aspoň trošku zasloužit a doťapkat si nahoru pěkně pěšky i s vybavením.
 
-<iframe src="https://www.youtube-nocookie.com/embed/8C9AnId-pzk" title="Skok v kaňonu Haut Chassezac" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+![V kaňonu La Fustugère](./Fustugere.JPG)
+<iframe src="https://www.youtube-nocookie.com/embed/8C9AnId-pzk" title="Skok v kaňonu Chassezac" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
 
 Druhý den jsme si s Edou poprvé troufli sami a šli kaňon Borne. Heslem dne se stalo: „Tenhle kaňon by byl úžasný v létě." I přes všechny neopreny nám byla strašná kosa. Kromě našeho syna, ten měl v mojí děloze neopren rozhodně nejlepší. Normálně mám pohyb ve vodě na canyoningu strašně ráda a snažím se ho maximalizovat, ale tady jsme chodili po krajích a do vody lezli jenom tehdy, když to jinak nešlo. Ruce jsme se snažili držet nad hladinou, abychom v nich zachovali aspoň trochu citu.
 
@@ -49,7 +50,7 @@ Poslední den jsme podle doporučení guida vyrazili do teplejšího kaňonu Aé
 
 ## Léto, kdy jsme kaňonům propadli
 
-Zbytek léta jsme kaňonům naprosto propadli. Byli jsme v jeskynním kaňonu Grotte de Gournier, kde jsme šli kus kaňonu zespodu nahoru a k canyoningovému vybavení přibylo jeskyňářské. Průzračně čistá voda v jeskyni je sama o sobě vzácnost, ale tenhle zážitek měl ještě jinačí grády.
+Zbytek léta jsme kaňonům naprosto propadli. Byli jsme v jeskynním kaňonu Grotte de Gournier, kde jsme šli kus kaňonu zespodu nahoru a k canyoningovému vybavení přibylo jeskyňářské. Průzračně čistá voda v jeskyni je sama o sobě vzácnost, ale tenhle zážitek měl ještě jinačí grády: super studené jezírko uprostřed parného léta, část byla navíc mini jeskyňovo: canyoningová via ferrata.
 
 ![Příjezd k jeskyni Gournier na lodi](./Gournier_prijezd_lode.JPG)
 
@@ -101,7 +102,7 @@ Mapa kaňonu většinou vypadá tak, že sledujete profil kaňonu, který klesá
 
 ![Mapa kaňonu](./Canyon_mapa.jpg)
 
-Při pozdějších výpravách jsem se snažila učit se profil cesty nazpaměť: v tekoucí vodě je někdy krajně nepříjemné lovit mapu z nepromokavého sudu v batohu.
+Při pozdějších výpravách jsem se snažila učit se profil cesty nazpaměť: v tekoucí vodě je někdy krajně nepříjemné lovit mapu z nepromokavého sudu v batohu. Velmi užitečné jsou také video-mapy, záznamy z kamer go-pro skupin, které příslušný kaňon dokončily. Bylo pro mě tímhle způsobem jednodušší si canyon představit. Z mapy vím, přibližně, jak bude vysoký, ale neodhadnu, jak bude široký, ani, kde přesně jsou přitlučené kotvy, o které můžeme zachytit lano. 
 
 ### Vybavení
 
@@ -109,17 +110,17 @@ Při pozdějších výpravách jsem se snažila učit se profil cesty nazpaměť
 
 **Neopren.** Na canyoning je potřeba hrubý neopren, většinou dvoudílný: kalhoty s laclem a bunda. Kolem 4 mm na nohou, 5 mm na rukou, a protože se na hrudníku obě vrstvy překrývají, je tam nezřídka skoro 9 mm. Velmi časně zjara může být zima i v něm, naopak v létě v teplejších, prohřátějších kaňonech jsme občas chodili bez vrchní vrstvy.
 
-**Boty a ponožky.** Neoprenové ponožky a pevné boty s podrážkou, která drží na mokré skále.
+**Boty a ponožky.** Neoprenové ponožky a pevné boty s podrážkou, která drží na mokré skále. (Existují speciálně canyoningové, ale mě se více osvědčily klasické trekové boty, které dobře drží na mokrých kamenech)
 
-**Helma.** Na hlavu padají kameny a hlava padá na kameny.
+**Helma.** Stejně jako u lezení může spadnout na hlavu nějaký úlomek, nebo si můžeme natlouct hlavu o skálu. 
 
-**Úvazek s chráničem.** Kaňoningové úvazky mají vzadu zesílený chránič, protože se po skále hodně klouže po zadku.
+**Úvazek s chráničem.** Kaňoningové úvazky mají na zadku zesílený chránič, protože se po skále hodně klouže po zadku.
 
-**Slaňovací brzda, odsedky a karabiny.** Odsedky jsou krátké smyčky s karabinou, kterými se zajistíte na oku ještě předtím, než začnete manipulovat s lanem.
+**Slaňovací brzda, odsedky a karabiny.** Odsedkami je třeba se zajistit na oku ještě předtím, než začnete manipulovat s lanem.
 
-**Lano.** Statické, ideálně plovoucí. O délce víc níže.
+**Lano.** Statické, je třeba najít balanc mezi tloušťkou a váhou. Jeden z největších nepřátel kaňonýra je zamotané lano ve vodě. O délce víc níže.
 
-**Batoh a sud.** Batoh s otvory, kterými vyteče voda, a v něm vodotěsný sud na jídlo, lékárničku, mapu a suché oblečení.
+**Batoh a sud.** Batoh s otvory, kterými vyteče voda, a v něm vodotěsný sud na jídlo, telefon a klíče od auta.
 
 **Nůž a píšťalka.** Nůž na přeříznutí lana, kdyby se ve vodě zamotalo, a píšťalka, protože přes hučení vodopádu na sebe neuslyšíte.
 
@@ -147,7 +148,7 @@ Paradoxně největší nebezpečí canyoningu nejsou pády z vodopádu, ale nevy
 
 ## A proč už se mi nechce do Berounky
 
-V jednom ohledu mi canyoning zničil život: když vím, do jakých nádherných průzračných jezírek se dá slanit a sám si plavat uprostřed majestátního jezírka obklopeného skálou, už se mi nechce koupat v kalné Berounce.
+V jednom ohledu mi canyoning zničil život: když vím, do jakých nádherných průzračných jezírek se dá slanit a sám si plavat uprostřed majestátního jezírka obklopeného skálou, už se mi nechce koupat v kdejaké louži.
 
 ## Zdroje
 
