@@ -4,7 +4,7 @@ date: 2026-10-03
 column: "outdoor"
 lang: "cs"
 translationKey: "outdoor-canyoning"
-summary: "Slaňování vodopádů, skoky do průzračných tůní a hodně chladu: Jak jsme propadli canyoningu."
+summary: "Slaňování vodopádů, skoky do průzračných tůní a drkotání zubů: Jak jsme propadli canyoningu."
 heroImage: "Eda_furon.jpg"
 draft: false
 ---
@@ -154,17 +154,14 @@ V jednom ohledu mi canyoning zničil život: když vím, do jakých nádherných
 
 Nejlepší zdroj na evropské kaňony je jednoznačně francouzský server [descente-canyon.com](https://www.descente-canyon.com/): obrovská databáze kaňonů s popisy a fotkami. My jsme si většinou netroufli jít bez guida do kaňonu jako úplně první lidi v sezoně, takže jsem se tam vždycky podívala, jestli už tam někdo byl a jestli má voda po zimě rozumný průtok.
 
-Hodně mi pomáhala i různá video topa na YouTube. U složitějších kaňonů jsem se snažila nakoukat, co nás čeká, a zapamatovat si mapku.
+Hodně mi pomáhala i různá videa na YouTube. U složitějších kaňonů jsem se snažila nakoukat, co nás čeká, a zapamatovat si mapku.
 
 ## Kaňony, které jsme prošli
 
 - Agnon a Montmin (u Annecy)
-- La Fustugère, Haut Chassezac, Borne, Aéro Besorgues (Ardèche, kolem Aubenas)
-- Grotte de Gournier
-- l'Alloix
-- Grotte de l'Olette
-- Furon (spodní)
-- Pont du Diable — můj osobní favorit
+- La Fustugère, Chassezac, Borne, Aéro Besorgues (Ardèche, kolem Aubenas)
+- Grotte de Gournier, l'Alloix, Grotte de l'Olette, Furon (spodní) (kolem Grenoble)
+- Pont du Diable (u Annecy) — můj osobní favorit
 - Château-d'Œx (Švýcarsko)
-- Ruisseau des Gorges — v podstatě jediný bahňouš, který jsme kdy šli
-- Frontenex
+- Ruisseau des Gorges, Francouzská Jura — v podstatě jediný bahňouš, který jsme kdy šli
+- Frontenex (u Annecy)
