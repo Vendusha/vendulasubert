@@ -39,7 +39,9 @@ Some groups drive up to a canyon in two cars: one left at the top by the entry p
 ![Inside La Fustugère canyon](./Fustugere.JPG)
 *photo: inside La Fustugère canyon*
 
-<iframe src="https://www.youtube-nocookie.com/embed/8C9AnId-pzk" title="A jump in the Chassezac canyon" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/8C9AnId-pzk" title="A jump caught on GoPro" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+
+*A jump caught on GoPro.*
 
 On the second day, Eda and I dared to go out on our own for the first time and did the Borne canyon. The phrase of the day became: "This canyon would be amazing in summer." Despite all our wetsuits we were freezing. Except for our son — tucked inside my womb, he definitely had the best wetsuit of all of us. Normally I love moving through the water on a canyoning trip and try to maximise it, but here we stuck to the edges and only got into the water when there was no other way. We tried to keep our hands above the surface, just to hold onto a bit of feeling in them.
 
@@ -51,9 +53,11 @@ On the second day, Eda and I dared to go out on our own for the first time and d
 On the last day, on our guide's recommendation, we headed to the warmer Aéro Besorgues canyon, which combines classic canyoning with a zip line and a slow descent into the water.
 
 ![Riding the zip line at Aéro Besorgues](./Aero_besorgue.jpg)
-*photo: riding the zip line at Aéro Besorgues*
+*Aéro Besorgues*
 
-<iframe src="https://www.youtube-nocookie.com/embed/dj2ratKdhwo" title="Riding the zip line in the Aéro Besorgues canyon" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/dj2ratKdhwo" title="The zip line at Aéro Besorgues" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+
+*The zip line at Aéro Besorgues.*
 
 ## We fell for canyons completely
 
@@ -69,25 +73,31 @@ The majestic Furon, right behind Grenoble, would probably be enough on its own t
 ![Me in the Furon](./ja_furon.JPG)
 *photo: me in the Furon*
 
-<iframe src="https://www.youtube-nocookie.com/embed/rXOV9bqHd_c" title="Eda rappelling in the Furon" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/rXOV9bqHd_c" title="Rappelling the Furon" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+
+*Rappelling the Furon.*
 
 At the l'Alloix waterfall, a professional photographer caught us on camera. He asked for our emails at the bottom of the falls and later sent us the professional shots.
 
 ![Rappelling down the l'Alloix waterfall](./l_Alloix_profi1.jpg)
-*photo: rappelling down the l'Alloix waterfall*
+*photo: rappelling l'Alloix (me)*
 
 ![At the foot of the l'Alloix waterfall](./l_Alloix_profi3.jpg)
-*photo: at the foot of the l'Alloix waterfall*
+*photo: at the foot of one of the l'Alloix waterfalls*
 
 ![The l'Alloix waterfall](./l_Alloix_profi4.jpg)
-*photo: the l'Alloix waterfall*
+*photo: rappelling l'Alloix (me)*
 
 ![The forty-metre l'Alloix waterfall from above](./l_Alloix_40_m_shora.JPG)
 *photo: the forty-metre l'Alloix waterfall from above*
 
-<iframe src="https://www.youtube-nocookie.com/embed/EUJRPyEqV8s" title="Rappelling down one of the shorter falls at l'Alloix" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/EUJRPyEqV8s" title="Rappelling l'Alloix, view from above" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
 
-<iframe src="https://www.youtube-nocookie.com/embed/9pIMIqbC2w4" title="Eda rappelling at l'Alloix" loading="lazy" allowfullscreen style="display:block;width:100%;max-width:360px;aspect-ratio:9/16;border:0;margin:0 auto;"></iframe>
+*Rappelling l'Alloix, view from above.*
+
+<iframe src="https://www.youtube-nocookie.com/embed/9pIMIqbC2w4" title="Rappelling l'Alloix, view from below" loading="lazy" allowfullscreen style="display:block;width:100%;max-width:360px;aspect-ratio:9/16;border:0;margin:0 auto;"></iframe>
+
+*Rappelling l'Alloix, view from below.*
 
 My personal favourite, though, is Pont du Diable: a beautiful, fairly deep and narrow canyon. It was short, so we did it twice.
 

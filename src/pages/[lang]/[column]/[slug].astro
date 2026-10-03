@@ -232,6 +232,25 @@ if (post.data.translationKey) {
 		}
 	}
 
+	/* A video caption: an italic-only paragraph directly after an <iframe>
+	   (blank line between them in the Markdown, same as a photo needs one
+	   around it — otherwise the caption line gets swallowed into the
+	   iframe's own raw-HTML block instead of parsing as a paragraph).
+	   Matches the photo caption's look; iframe + p can't reuse the photo
+	   caption selector above since there's no <img> here to match on. */
+	.post-photos iframe + p:has(> em):not(:has(> :not(em))) {
+		margin-top: -1.2em;
+		text-align: center;
+	}
+	.post-photos iframe + p:has(> em):not(:has(> :not(em))) em {
+		display: block;
+		font-family: var(--font-body);
+		font-style: italic;
+		font-size: 13px;
+		line-height: 1.4;
+		color: var(--ink-soft);
+	}
+
 	/*
 		A comparison group: several photo+caption pairs written back to back
 		with no blank lines at all between them (unlike a single tucked-in

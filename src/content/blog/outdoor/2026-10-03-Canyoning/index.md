@@ -39,7 +39,9 @@ Některé skupiny jezdí ke kaňonu dvěma auty: jedno nechají nahoře u nástu
 ![V kaňonu La Fustugère](./Fustugere.JPG)
 *foto: v kaňonu La Fustugère*
 
-<iframe src="https://www.youtube-nocookie.com/embed/8C9AnId-pzk" title="Skok v kaňonu Chassezac" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/8C9AnId-pzk" title="Skok zachycený na GoPro" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+
+*Skok zachycený na GoPro.*
 
 Druhý den jsme si s Edou poprvé troufli sami a šli kaňon Borne. Heslem dne se stalo: „Tenhle kaňon by byl úžasný v létě." I přes všechny neopreny nám byla strašná kosa. Kromě našeho syna, ten měl v mojí děloze neopren rozhodně nejlepší. Normálně mám pohyb ve vodě na canyoningu strašně ráda a snažím se ho maximalizovat, ale tady jsme chodili po krajích a do vody lezli jenom tehdy, když to jinak nešlo. Ruce jsme se snažili držet nad hladinou, abychom v nich zachovali aspoň trochu citu.
 
@@ -51,9 +53,11 @@ Druhý den jsme si s Edou poprvé troufli sami a šli kaňon Borne. Heslem dne s
 Poslední den jsme podle doporučení guida vyrazili do teplejšího kaňonu Aéro Besorgues, který kombinuje klasický canyoning s jízdou po laně a pomalým dojezdem do vody.
 
 ![Jízda po laně v Aéro Besorgues](./Aero_besorgue.jpg)
-*foto: jízda po laně v Aéro Besorgues*
+*Aéro Besorgues*
 
-<iframe src="https://www.youtube-nocookie.com/embed/dj2ratKdhwo" title="Jízda po laně v kaňonu Aéro Besorgues" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/dj2ratKdhwo" title="Zip line v Aéro Besorgues" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+
+*Zip line v Aéro Besorgues.*
 
 ## Kaňonům jsme propadli
 
@@ -69,25 +73,31 @@ Majestátní Furon přímo za Grenoblem by mě asi sám o sobě přesvědčil, a
 ![Já ve Furonu](./ja_furon.JPG)
 *foto: já ve Furonu*
 
-<iframe src="https://www.youtube-nocookie.com/embed/rXOV9bqHd_c" title="Eda slaňuje ve Furonu" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/rXOV9bqHd_c" title="Slaňování Furonu" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+
+*Slaňování Furonu.*
 
 Na vodopádu l'Alloix nás zachytil profesionální fotograf. Pod vodopádem se nás zeptal na e-maily a pak nám poslal profi fotky.
 
 ![Slanění vodopádu l'Alloix](./l_Alloix_profi1.jpg)
-*foto: slanění vodopádu l'Alloix*
+*foto: slaňování l'Alloix (já)*
 
 ![Pod vodopádem l'Alloix](./l_Alloix_profi3.jpg)
-*foto: pod vodopádem l'Alloix*
+*foto: pod jedním z vodopádů l'Alloix*
 
 ![Vodopád l'Alloix](./l_Alloix_profi4.jpg)
-*foto: vodopád l'Alloix*
+*foto: slaňování l'Alloix (já)*
 
 ![Čtyřicetimetrový vodopád l'Alloix shora](./l_Alloix_40_m_shora.JPG)
 *foto: čtyřicetimetrový vodopád l'Alloix shora*
 
-<iframe src="https://www.youtube-nocookie.com/embed/EUJRPyEqV8s" title="Slaňuju jeden z kratších vodopádů na l'Alloix" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/EUJRPyEqV8s" title="Slaňování l'Alloix, pohled seshora" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
 
-<iframe src="https://www.youtube-nocookie.com/embed/9pIMIqbC2w4" title="Eda slaňuje na l'Alloix" loading="lazy" allowfullscreen style="display:block;width:100%;max-width:360px;aspect-ratio:9/16;border:0;margin:0 auto;"></iframe>
+*Slaňování l'Alloix, pohled seshora.*
+
+<iframe src="https://www.youtube-nocookie.com/embed/9pIMIqbC2w4" title="Slaňování l'Alloix, pohled zespoda" loading="lazy" allowfullscreen style="display:block;width:100%;max-width:360px;aspect-ratio:9/16;border:0;margin:0 auto;"></iframe>
+
+*Slaňování l'Alloix, pohled zespoda.*
 
 Mým osobním favoritem je ale Pont du Diable: krásný, docela hluboký a úzký kaňon. Byl krátký, tak jsme si ho dali dvakrát.
 
