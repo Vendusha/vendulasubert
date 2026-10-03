@@ -41,7 +41,7 @@ Některé skupiny jezdí ke kaňonu dvěma auty: jedno nechají nahoře u nástu
 
 <iframe src="https://www.youtube-nocookie.com/embed/8C9AnId-pzk" title="Skok zachycený na GoPro" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
 
-*Skok zachycený na GoPro.*
+*video: skok zachycený na GoPro.*
 
 Druhý den jsme si s Edou poprvé troufli sami a šli kaňon Borne. Heslem dne se stalo: „Tenhle kaňon by byl úžasný v létě." I přes všechny neopreny nám byla strašná kosa. Kromě našeho syna, ten měl v mojí děloze neopren rozhodně nejlepší. Normálně mám pohyb ve vodě na canyoningu strašně ráda a snažím se ho maximalizovat, ale tady jsme chodili po krajích a do vody lezli jenom tehdy, když to jinak nešlo. Ruce jsme se snažili držet nad hladinou, abychom v nich zachovali aspoň trochu citu.
 
@@ -57,7 +57,7 @@ Poslední den jsme podle doporučení guida vyrazili do teplejšího kaňonu Aé
 
 <iframe src="https://www.youtube-nocookie.com/embed/dj2ratKdhwo" title="Zip line v Aéro Besorgues" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
 
-*Zip line v Aéro Besorgues.*
+*video: zip line v Aéro Besorgues.*
 
 ## Kaňonům jsme propadli
 
@@ -75,7 +75,7 @@ Majestátní Furon přímo za Grenoblem by mě asi sám o sobě přesvědčil, a
 
 <iframe src="https://www.youtube-nocookie.com/embed/rXOV9bqHd_c" title="Slaňování Furonu" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
 
-*Slaňování Furonu.*
+*video: slaňování Furonu.*
 
 Na vodopádu l'Alloix nás zachytil profesionální fotograf. Pod vodopádem se nás zeptal na e-maily a pak nám poslal profi fotky.
 
@@ -93,11 +93,11 @@ Na vodopádu l'Alloix nás zachytil profesionální fotograf. Pod vodopádem se 
 
 <iframe src="https://www.youtube-nocookie.com/embed/EUJRPyEqV8s" title="Slaňování l'Alloix, pohled seshora" loading="lazy" allowfullscreen style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
 
-*Slaňování l'Alloix, pohled seshora.*
+*video: slaňování l'Alloix, pohled seshora.*
 
 <iframe src="https://www.youtube-nocookie.com/embed/9pIMIqbC2w4" title="Slaňování l'Alloix, pohled zespoda" loading="lazy" allowfullscreen style="display:block;width:100%;max-width:360px;aspect-ratio:9/16;border:0;margin:0 auto;"></iframe>
 
-*Slaňování l'Alloix, pohled zespoda.*
+*video: slaňování l'Alloix, pohled zespoda.*
 
 Mým osobním favoritem je ale Pont du Diable: krásný, docela hluboký a úzký kaňon. Byl krátký, tak jsme si ho dali dvakrát.
 
