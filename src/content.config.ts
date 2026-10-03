@@ -35,6 +35,16 @@ const blog = defineCollection({
 			// a candid in-the-moment shot) isn't always the best wide banner shot
 			// for the post's own page.
 			thumbnail: image().optional(),
+			// CSS object-position for the hero banner's crop — overrides the
+			// 'center 30%' default used whenever a post sets its own heroImage
+			// (see [slug].astro). Only needed when that default crops the
+			// wrong part of a specific photo away.
+			heroPosition: z.string().optional(),
+			// Post photos get the tilted/framed "tucked into the page" look by
+			// default (see the is:global style block in [slug].astro). Set to
+			// false to turn that off for every photo in this post — e.g. a
+			// photo-heavy trip report where the rotation reads as too busy.
+			photoTilt: z.boolean().default(true),
 			draft: z.boolean().default(false),
 		}),
 });

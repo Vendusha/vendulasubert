@@ -28,12 +28,14 @@ const base = import.meta.env.BASE_URL;
 const readingTime = estimateReadingTime(post.body ?? '');
 const relatedPosts = await getRelatedPosts(post);
 const heroImage = post.data.heroImage ?? column.heroImage;
-// A post-specific heroImage doesn't have a hand-picked crop position in the
-// frontmatter (most posts don't need one) — "center 30%" is a reasonable
-// general-purpose bias toward the upper part of the frame, where the subject
-// usually is in a standing full-body outdoor/lab photo. Falls back to the
-// column's own tuned position when the post is using the column's default.
-const heroPosition = post.data.heroImage ? 'center 30%' : (column.heroPosition ?? 'center');
+// post.data.heroPosition is a per-post override for when the default below
+// crops the wrong part of a specific photo away. Without one, a post-specific
+// heroImage defaults to "center 30%" — a reasonable general-purpose bias
+// toward the upper part of the frame, where the subject usually is in a
+// standing full-body outdoor/lab photo. Falls back to the column's own tuned
+// position when the post is using the column's default image entirely.
+const heroPosition =
+	post.data.heroPosition ?? (post.data.heroImage ? 'center 30%' : (column.heroPosition ?? 'center'));
 
 // The language toggle needs the SPECIFIC sibling post (same translationKey,
 // other language), not just the column index — falls back to the column
@@ -87,7 +89,7 @@ if (post.data.translationKey) {
 			{copy.blog.publishedOn} {post.data.date.toISOString().slice(0, 10)} · {copy.blog.readingTime(readingTime)}
 		</p>
 
-		<div class="prose post-photos">
+		<div class:list={['prose', 'post-photos', { 'no-tilt': !post.data.photoTilt }]}>
 			<Content />
 		</div>
 	</article>
@@ -246,21 +248,31 @@ if (post.data.translationKey) {
 	*/
 	.post-photos p:has(> img):not(:has(> :not(img):not(em))):has(> img ~ img) {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		/* No fixed column count: grid-auto-flow: column with no
+		   grid-template-columns creates exactly as many implicit columns as
+		   there are image+caption pairs, each sized by grid-auto-columns —
+		   works the same for a pair as for three or more. */
+		grid-auto-columns: 1fr;
 		grid-template-rows: auto auto;
 		grid-auto-flow: column;
+		/* end, not stretch: when photos in the same row are a mix of
+		   portrait and landscape, this lines up every photo's bottom edge
+		   (and so every caption right under its own photo) instead of
+		   leaving a gap under whichever photo is shorter. */
+		align-items: end;
 		gap: 6px 14px;
-		max-width: 480px;
+		max-width: 640px;
 		margin: 1.8em auto;
 		text-align: center;
 	}
 	.post-photos p:has(> img):not(:has(> :not(img):not(em))):has(> img ~ img) img {
+		display: block;
+		width: 100%;
+		height: auto;
 		border: 1px solid var(--ink);
 		outline: none;
 		box-shadow: none;
 		transform: none !important;
-		aspect-ratio: 3 / 4;
-		object-fit: cover;
 	}
 	.post-photos p:has(> img):not(:has(> :not(img):not(em))):has(> img ~ img) em {
 		margin-top: 4px;
@@ -268,9 +280,15 @@ if (post.data.translationKey) {
 	}
 	@media (max-width: 480px) {
 		.post-photos p:has(> img):not(:has(> :not(img):not(em))):has(> img ~ img) {
-			grid-template-columns: repeat(3, 1fr);
 			max-width: 100%;
 			gap: 4px 8px;
 		}
+	}
+
+	/* photoTilt: false — every photo in this post, single or in a row,
+	   renders flat (no rotation). The single-photo rule above still sets a
+	   rotation per nth-of-type; this just overrides it back to none. */
+	.post-photos.no-tilt p:has(> img):not(:has(> :not(img):not(em))) img {
+		transform: none !important;
 	}
 </style>
