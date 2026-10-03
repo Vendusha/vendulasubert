@@ -138,7 +138,7 @@ Při pozdějších výpravách jsem se snažila učit se profil cesty nazpaměť
 
 **Slaňovací brzda, odsedky a karabiny.** Odsedkami je třeba se zajistit na oku ještě předtím, než začnete manipulovat s lanem.
 
-**Lano.** Statické, je třeba najít balanc mezi tloušťkou a váhou. Jeden z největších nepřátel kaňonýra je zamotané lano ve vodě. O délce víc níže.
+**Lano.** Statické, je třeba najít balanc mezi tloušťkou a váhou. Jeden z největších nepřátel kaňonýra je zamotané lano ve vodě. Délka většinou dvakrát tak dlouhá jako nejdelší vodopád (za jeden konec lana se slaňuje, za druhý se tahá, aby lano spadlo dolů). V případě velmi dlouhých vodopádů se někdy bere jen poloviční lano a naváže se na tenký provázek, kterým se potom stahuje tlusté lano dolů. Tento setup má jisté nevýhody: stáhnutí je netriviální a tenké lano se nesmí při slanování zamotat.
 
 **Batoh a sud.** Batoh s otvory, kterými vyteče voda, a v něm vodotěsný sud na jídlo, telefon a klíče od auta.
 
