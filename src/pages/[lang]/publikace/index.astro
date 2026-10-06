@@ -5,6 +5,7 @@ import TranslationNotice from '../../../components/TranslationNotice.astro';
 import { loadPage } from '../../../lib/pages';
 import { getPublications, type PubGroup } from '../../../lib/publications';
 import { t, locales, type Locale } from '../../../lib/i18n';
+import { absUrl } from '../../../lib/seo';
 
 export function getStaticPaths() {
 	return locales.map((lang) => ({ params: { lang } }));
@@ -47,6 +48,7 @@ function linkLabel(type: 'doi' | 'arxiv' | 'url'): string {
 	hasTranslation={hasTranslation}
 	title={entry.data.title}
 	description={entry.data.description}
+	alternates={hasTranslation ? { cs: absUrl('/cs/publikace/'), en: absUrl('/en/publikace/') } : undefined}
 >
 	{shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={shownLang} />}
 

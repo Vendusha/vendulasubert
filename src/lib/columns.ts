@@ -15,6 +15,8 @@ export interface ColumnDef {
 	 * --accent, just a different one per column, per the design brief. */
 	accent: string;
 	heroImage: ImageMetadata;
+	/** Alt text for the header photo on the column's index page. */
+	heroAlt: { cs: string; en: string };
 	/** CSS object-position for the header crop — hand-picked per photo so
 	 * the actual subject (not just the geometric centre) stays in frame. */
 	heroPosition?: string;
@@ -39,6 +41,10 @@ export const COLUMNS: ColumnDef[] = [
 		},
 		accent: '#3b6142',
 		heroImage: outdoorImg,
+		heroAlt: {
+			cs: 'Člověk v neoprenu sjíždí po skále pod vodopádem, kolem něj stříká voda',
+			en: 'A person in a wetsuit sliding down rock under a waterfall, spray all around',
+		},
 		heroPosition: 'center 38%',
 	},
 	{
@@ -50,6 +56,10 @@ export const COLUMNS: ColumnDef[] = [
 		},
 		accent: '#2e5c8a',
 		heroImage: zvedavostImg,
+		heroAlt: {
+			cs: 'Vendula v ochranné přilbě a roušce v tunelu urychlovače',
+			en: 'Vendula in a hard hat and face mask in an accelerator tunnel',
+		},
 		heroPosition: 'center 22%',
 	},
 	{
@@ -61,6 +71,10 @@ export const COLUMNS: ColumnDef[] = [
 		},
 		accent: '#a24e63',
 		heroImage: zapiskyImg,
+		heroAlt: {
+			cs: 'Vendula na běžkách v zasněženém lese, na zádech nese dítě',
+			en: 'Vendula cross-country skiing through a snowy forest with a child on her back',
+		},
 		heroPosition: 'center 12%',
 	},
 ];

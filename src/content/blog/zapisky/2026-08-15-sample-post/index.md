@@ -5,7 +5,7 @@ column: "zapisky"
 lang: "en"
 translationKey: "zapisky-ukazka"
 summary: "A sample post demonstrating the page layout and frontmatter for this column — the text is deliberately a placeholder."
-draft: false
+draft: true
 ---
 
 This is **placeholder text**, not a real note. It exists only to show what the post layout looks like before I write anything real.

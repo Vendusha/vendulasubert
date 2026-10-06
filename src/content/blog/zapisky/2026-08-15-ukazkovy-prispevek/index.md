@@ -5,7 +5,7 @@ column: "zapisky"
 lang: "cs"
 translationKey: "zapisky-ukazka"
 summary: "Ukázkový příspěvek, který demonstruje rozvržení stránky a frontmatter pro tuto rubriku — text je záměrně placeholder."
-draft: false
+draft: true
 ---
 
 Tohle je **ukázkový text**, ne skutečný zápisek. Existuje jen proto, abych viděla, jak vypadá rozvržení stránky s příspěvkem, než napíšu cokoliv opravdového.

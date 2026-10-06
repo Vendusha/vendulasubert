@@ -4,7 +4,7 @@ date: 2026-08-11
 column: "fejetony"
 lang: "cs"
 summary: "Zkušební příspěvek, který ověřuje, že celý publikační proces funguje od uložení souboru až po živou stránku."
-draft: false
+draft: true
 ---
 
 Ahojíček čajíček rohlíček rohlíčkový.

@@ -8,4 +8,4 @@ I'm finishing my first comic novel. It's called **ALEFUJ!**, and it's half detec
 
 **Status:** finishing the manuscript, getting it ready for editing.
 
-More about the book — excerpts, updates, publication details — at [alefuj.cz](https://alefuj.cz).
+More about the book — excerpts, updates, publication details — at [alefuj.cz](https://alefuj.cz/en/).

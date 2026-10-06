@@ -5,7 +5,7 @@ column: "zvedavost"
 lang: "cs"
 translationKey: "zvedavost-ukazka"
 summary: "Ukázkový příspěvek, který demonstruje rozvržení stránky a frontmatter pro tuto rubriku — text je záměrně placeholder."
-draft: false
+draft: true
 ---
 
 Tohle je **ukázkový text**, ne skutečný sloupek o vědě. Ukazuje jen to, jak bude vypadat stránka příspěvku v této rubrice, než ji naplním skutečnými texty.

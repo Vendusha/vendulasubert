@@ -9,4 +9,4 @@ Dokončuji svůj první humoristický román. Jmenuje se **ALEFUJ!** a je to nap
 
 **Stav:** dokončuji rukopis, připravuji na redakci. 
 
-Víc o knize — ukázky, novinky, informace o vydání — najdete na [alefuj.cz](https://alefuj.cz).
+Víc o knize — ukázky, novinky, informace o vydání — najdete na [alefuj.cz](https://alefuj.cz/cs/).

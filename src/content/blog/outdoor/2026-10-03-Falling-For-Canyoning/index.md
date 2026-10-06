@@ -6,6 +6,7 @@ lang: "en"
 translationKey: "outdoor-canyoning"
 summary: "Rappelling down waterfalls, jumping into crystal-clear pools, and teeth chattering with cold: how we fell for canyoning."
 heroImage: "Eda_furon.jpg"
+heroAlt: "A person in a blue helmet and wetsuit walking under the Furon waterfall"
 heroPosition: "center 70%"
 photoTilt: false
 draft: false

@@ -35,6 +35,10 @@ const blog = defineCollection({
 			// a candid in-the-moment shot) isn't always the best wide banner shot
 			// for the post's own page.
 			thumbnail: image().optional(),
+			// Alt text for the post's header photo. Empty means decorative.
+			heroAlt: z.string().optional(),
+			// Used only in <title> and og:title/twitter:title — the H1 stays as title.
+			seoTitle: z.string().optional(),
 			// CSS object-position for the hero banner's crop — overrides the
 			// 'center 30%' default used whenever a post sets its own heroImage
 			// (see [slug].astro). Only needed when that default crops the

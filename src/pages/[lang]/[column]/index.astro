@@ -4,9 +4,10 @@ import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import TranslationNotice from '../../../components/TranslationNotice.astro';
 import { loadPage } from '../../../lib/pages';
-import { getColumnPosts, estimateReadingTime } from '../../../lib/blog';
+import { getColumnPosts, readingTimeOf } from '../../../lib/blog';
 import { COLUMNS } from '../../../lib/columns';
 import { t, locales, type Locale } from '../../../lib/i18n';
+import { absUrl } from '../../../lib/seo';
 
 export function getStaticPaths() {
 	return COLUMNS.flatMap((col) => locales.map((lang) => ({ params: { lang, column: col.slug } })));
@@ -28,7 +29,7 @@ const base = import.meta.env.BASE_URL;
 const posts = await getColumnPosts(columnSlug, lang);
 const postsWithMeta = posts.map((post) => ({
 	post,
-	readingTime: estimateReadingTime(post.body ?? ''),
+	readingTime: readingTimeOf(post),
 	thumbnail: post.data.thumbnail ?? post.data.heroImage ?? column.heroImage,
 }));
 ---
@@ -40,12 +41,14 @@ const postsWithMeta = posts.map((post) => ({
 	title={column.title[lang]}
 	description={entry.data.description}
 	image={column.heroImage}
+	alternates={{ cs: absUrl(`/cs/${columnSlug}/`), en: absUrl(`/en/${columnSlug}/`) }}
+	noindex={lang === 'en' && posts.length === 0}
 >
 	<div class:list={['column-header', { 'image-right': imageRight, quiet: column.quiet }]}>
 		<div class="column-header-image">
 			<Picture
 				src={column.heroImage}
-				alt=""
+				alt={column.heroAlt[lang]}
 				width={320}
 				widths={[240, 320, 480]}
 				sizes="(max-width: 720px) 240px, 320px"
@@ -89,7 +92,7 @@ const postsWithMeta = posts.map((post) => ({
 							/>
 							<div class="post-card-text">
 								<p class="post-date">
-									{post.data.date.toISOString().slice(0, 10)} · {copy.blog.readingTime(readingTime)}
+									<time datetime={post.data.date.toISOString().slice(0, 10)}>{post.data.date.toISOString().slice(0, 10)}</time> · {copy.blog.readingTime(readingTime)}
 								</p>
 								<h2>{post.data.title}</h2>
 								<p class="post-summary">{post.data.summary}</p>

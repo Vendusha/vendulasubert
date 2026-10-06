@@ -4,6 +4,7 @@ import Layout from '../../../layouts/Layout.astro';
 import TranslationNotice from '../../../components/TranslationNotice.astro';
 import { loadPage } from '../../../lib/pages';
 import { t, locales, type Locale } from '../../../lib/i18n';
+import { absUrl } from '../../../lib/seo';
 
 export function getStaticPaths() {
 	return locales.map((lang) => ({ params: { lang } }));
@@ -21,12 +22,13 @@ const copy = t(lang).book;
 	hasTranslation={hasTranslation}
 	title={entry.data.title}
 	description={entry.data.description}
+	alternates={hasTranslation ? { cs: absUrl('/cs/book/'), en: absUrl('/en/book/') } : undefined}
 >
 	{shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={shownLang} />}
 	<article class="prose">
 		<h1>{entry.data.title}</h1>
 		<Content />
-		<p><a class="button" href="https://alefuj.cz">{copy.ctaLabel}</a></p>
+		<p><a class="button" href={`https://alefuj.cz/${lang}/`}>{copy.ctaLabel}</a></p>
 	</article>
 </Layout>
 

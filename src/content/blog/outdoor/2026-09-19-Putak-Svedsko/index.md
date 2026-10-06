@@ -6,6 +6,7 @@ lang: "cs"
 translationKey: "outdoor-svedsko-putak"
 summary: "Svatba u jezera Uspen, dvě noci pod stanem a jeden půjčený croozer. Jak vypadá puťák, když jste měli dva pod dva."
 heroImage: "Putak.jpg"
+heroAlt: "Eda a Vendula stojí vedle croozeru s dvěma dětmi v něm na lesní cestě"
 thumbnail: "Svacinka.jpg"
 draft: false
 ---

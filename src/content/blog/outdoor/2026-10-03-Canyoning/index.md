@@ -6,6 +6,7 @@ lang: "cs"
 translationKey: "outdoor-canyoning"
 summary: "Slaňování vodopádů, skoky do průzračných tůní a drkotání zubů: Jak jsme propadli canyoningu."
 heroImage: "Eda_furon.jpg"
+heroAlt: "Člověk v modré přilbě a neoprenu jde pod vodopádem Furon"
 heroPosition: "center 70%"
 photoTilt: false
 draft: false

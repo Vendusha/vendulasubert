@@ -6,6 +6,7 @@ import TranslationNotice from '../../components/TranslationNotice.astro';
 import { loadPage } from '../../lib/pages';
 import { t, locales, type Locale } from '../../lib/i18n';
 import { COLUMNS } from '../../lib/columns';
+import { absUrl, personJsonLd } from '../../lib/seo';
 import portrait from '../../assets/portrait.jpg';
 
 export function getStaticPaths() {
@@ -23,7 +24,15 @@ const copy = t(lang);
 const base = import.meta.env.BASE_URL;
 ---
 
-<Layout lang={lang} section="home" hasTranslation={hasTranslation} title={entry.data.title} description={entry.data.description}>
+<Layout
+	lang={lang}
+	section="home"
+	hasTranslation={hasTranslation}
+	title={entry.data.title}
+	description={entry.data.description}
+	alternates={{ cs: absUrl('/cs/'), en: absUrl('/en/') }}
+	jsonLd={personJsonLd()}
+>
 	{shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={shownLang} />}
 
 	<div class="hero" id="ahoj">
@@ -167,7 +176,8 @@ const base = import.meta.env.BASE_URL;
 	}
 </style>
 
-<!--
+<style is:global>
+	/*
 	"Tucked into the page" photos for O mně, moved here from the old
 	standalone /o-mne/ route along with the section itself. See that
 	component's git history for the original explanation: filename
@@ -177,8 +187,7 @@ const base = import.meta.env.BASE_URL;
 	<Content /> is a separately-scoped component a normal scoped <style>
 	can't reach. Selectors target h3 here (not h2, as on the old page)
 	because the section now nests under this page's own "O mně" <h2>.
--->
-<style is:global>
+	*/
 	.o-mne-photos h3 {
 		clear: both;
 	}

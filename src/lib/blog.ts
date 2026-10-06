@@ -54,3 +54,7 @@ export function estimateReadingTime(markdownBody: string): number {
 	const words = text.split(/\s+/).filter(Boolean).length;
 	return Math.max(1, Math.round(words / WORDS_PER_MINUTE));
 }
+
+export function readingTimeOf(post: CollectionEntry<'blog'>): number {
+	return estimateReadingTime(post.body ?? '');
+}

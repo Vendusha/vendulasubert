@@ -6,6 +6,7 @@ lang: "en"
 translationKey: "outdoor-svedsko-putak"
 summary: "A wedding by Lake Uspen, two nights under canvas, and one rented croozer. What backpacking looks like when you've got two kids under two."
 heroImage: "Putak.jpg"
+heroAlt: "Eda and Vendula standing beside a croozer with two kids in it on a forest path"
 thumbnail: "Svacinka.jpg"
 draft: false
 ---

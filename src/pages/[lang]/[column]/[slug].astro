@@ -2,9 +2,11 @@
 import { Picture } from 'astro:assets';
 import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
-import { getBlogPosts, getRelatedPosts, estimateReadingTime } from '../../../lib/blog';
+import { getBlogPosts, getRelatedPosts, readingTimeOf } from '../../../lib/blog';
 import { getColumn } from '../../../lib/columns';
 import { t, locales, otherLocale, type Locale } from '../../../lib/i18n';
+import { absUrl } from '../../../lib/seo';
+import { getImage } from 'astro:assets';
 
 export async function getStaticPaths() {
 	const paths = [];
@@ -25,7 +27,7 @@ const { Content } = await render(post);
 const copy = t(lang);
 const base = import.meta.env.BASE_URL;
 
-const readingTime = estimateReadingTime(post.body ?? '');
+const readingTime = readingTimeOf(post);
 const relatedPosts = await getRelatedPosts(post);
 const heroImage = post.data.heroImage ?? column.heroImage;
 // post.data.heroPosition is a per-post override for when the default below
@@ -41,16 +43,35 @@ const heroPosition =
 // other language), not just the column index — falls back to the column
 // index when no translation exists, per the toggle's own contract.
 let toggleHref: string;
+let siblingHref: string | undefined;
 if (post.data.translationKey) {
 	const other = otherLocale(lang);
 	const siblings = await getBlogPosts(other);
 	const sibling = siblings.find((p) => p.data.translationKey === post.data.translationKey);
-	toggleHref = sibling
-		? `${base}${other}/${sibling.data.column}/${sibling.id.split('/')[1]}/`
-		: `${base}${other}/${post.data.column}/`;
+	siblingHref = sibling ? `${base}${other}/${sibling.data.column}/${sibling.id.split('/')[1]}/` : undefined;
+	toggleHref = siblingHref ?? `${base}${other}/${post.data.column}/`;
 } else {
 	toggleHref = `${base}${otherLocale(lang)}/${post.data.column}/`;
 }
+
+const postPath = `${base}${lang}/${post.data.column}/${post.id.split('/')[1]}/`;
+const alternates = siblingHref
+	? { [lang]: absUrl(postPath), [otherLocale(lang)]: absUrl(siblingHref) }
+	: undefined;
+const ogHero = await getImage({ src: heroImage, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
+const dateIso = post.data.date.toISOString().slice(0, 10);
+const jsonLd = {
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	headline: post.data.title,
+	description: post.data.summary,
+	datePublished: dateIso,
+	inLanguage: lang,
+	image: absUrl(ogHero.src),
+	mainEntityOfPage: absUrl(postPath),
+	url: absUrl(postPath),
+	author: { '@type': 'Person', name: 'Vendula Šubert', url: absUrl('/') },
+};
 ---
 
 <Layout
@@ -59,9 +80,13 @@ if (post.data.translationKey) {
 	hasTranslation={false}
 	toggleHref={toggleHref}
 	title={post.data.title}
+	seoTitle={post.data.seoTitle}
 	description={post.data.summary}
 	image={heroImage}
 	ogType="article"
+	alternates={alternates}
+	jsonLd={jsonLd}
+	publishedTime={post.data.date}
 >
 	<article class:list={['post', { quiet: column.quiet }]}>
 		<p class="back-link">
@@ -72,7 +97,7 @@ if (post.data.translationKey) {
 
 		<Picture
 			src={heroImage}
-			alt=""
+			alt={post.data.heroAlt ?? ''}
 			width={1000}
 			widths={[600, 1000]}
 			sizes="(max-width: 720px) 100vw, 1040px"
@@ -86,7 +111,7 @@ if (post.data.translationKey) {
 
 		<h1>{post.data.title}</h1>
 		<p class="meta">
-			{copy.blog.publishedOn} {post.data.date.toISOString().slice(0, 10)} · {copy.blog.readingTime(readingTime)}
+			{copy.blog.publishedOn} <time datetime={dateIso}>{dateIso}</time> · {copy.blog.readingTime(readingTime)}
 		</p>
 
 		<div class:list={['prose', 'post-photos', { 'no-tilt': !post.data.photoTilt }]}>
@@ -162,7 +187,8 @@ if (post.data.translationKey) {
 	}
 </style>
 
-<!--
+<style is:global>
+	/*
 	Generic "tucked into the page" treatment for any post photo written on
 	its own line (blank lines before and after — same convention as an
 	O mně photo), optionally followed with no blank line by an italic
@@ -185,8 +211,7 @@ if (post.data.translationKey) {
 	Global + .post-photos-scoped for the same reason as O mně's version:
 	<Content /> is a separately-scoped component a normal scoped <style>
 	here can't reach.
--->
-<style is:global>
+	*/
 	.post-photos p:has(> img):not(:has(> :not(img):not(em))) {
 		max-width: 420px;
 		margin: 1.8em auto;

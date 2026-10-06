@@ -5,7 +5,7 @@ column: "zvedavost"
 lang: "en"
 translationKey: "zvedavost-ukazka"
 summary: "A sample post demonstrating the page layout and frontmatter for this column — the text is deliberately a placeholder."
-draft: false
+draft: true
 ---
 
 This is **placeholder text**, not a real science column. It only shows what the post page in this column will look like before it's filled with real writing.
