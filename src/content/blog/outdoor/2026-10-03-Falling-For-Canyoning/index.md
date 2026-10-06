@@ -20,10 +20,10 @@ Canyoning is basically making your way down the bed of a usually fast-flowing st
 
 We were introduced to canyoning by our friends from CERN, physics assistant professor [Jason Veatch](https://physics.calpoly.edu/jveatch) and Yuko Maeda. They'd been talking about it for ages, and I couldn't help thinking this was something I'd really, really love. Quietly, I was hoping Eda would love it too. So far I'd been lucky that he was just as much of an outdoor enthusiast as I am, and I didn't want to push my luck.
 
-And then one day the big day came, and we all headed out to the Agnon canyon, not far from Annecy in France.
+And then one day the big day came, and we all headed out to the Angon canyon, not far from Annecy in France.
 
-![The Agnon canyon near Annecy](./Angon.JPG)
-*photo: the Agnon canyon near Annecy*
+![The Angon canyon near Annecy](./Angon.JPG)
+*photo: the Angon canyon near Annecy*
 
 ## Spring in Ardèche
 
@@ -191,7 +191,7 @@ Various videos on YouTube helped a lot too. For the more technical canyons, I'd 
 
 ## Canyons we've done
 
-- Agnon and Montmin (near Annecy)
+- Angon and Montmin (near Annecy)
 - La Fustugère, Chassezac, Borne, Aéro Besorgues (Ardèche, around Aubenas)
 - Grotte de Gournier, l'Alloix, Grotte de l'Olette, Furon (lower) (around Grenoble)
 - Pont du Diable (near Annecy) — my personal favourite

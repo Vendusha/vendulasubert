@@ -12,18 +12,18 @@ photoTilt: false
 draft: false
 ---
 
-V tomhle příspěvku bych se alespoń myšlenkami chtěla vrátit ke sportu, který mi neskutečně přirostl k srdci, a tím je canyoning. (Tohle je jeden z blogových příspěvků z kategorie „před dětmi".)
+V tomhle příspěvku bych se alespoň myšlenkami chtěla vrátit ke sportu, který mi neskutečně přirostl k srdci, a tím je canyoning. (Tohle je jeden z blogových příspěvků z kategorie „před dětmi".)
 
 Canyoning je v podstatě chození korytem většinou dravějších potoků a řek, kde se místy musí do vody skočit z vodopádu, sjet ho po skále jako po klouzačce, nebo vodopád slanit. Snoubí se v něm práce s lanem a skálou a práce s vodou: plavání, orientace pod vodou, odhad toku, delší zadržování dechu, když je potřeba podplavat balvan. 
 
 ## Jak jsme k tomu přišli
 
-S canyoningem nás seznámili naši kamarádi z CERNu, odborný asistent fyziky [Jason Veatch](https://physics.calpoly.edu/jveatch) a Yuko Maeda. Mluvili o něm už dlouho a já si nemohla pomoct si myslet, že tohle by mě opravdu, ale opravdu mohlo bavit. Potichu jsem se modlila, aby to Edu bavilo taky. Doposavad jsem měla štěstí, že byl Eda stejný nadšenec do outdooru jako já, tak jsem o to štěstí nechtěla přijít. 
+S canyoningem nás seznámili naši kamarádi z CERNu, odborný asistent fyziky [Jason Veatch](https://physics.calpoly.edu/jveatch) a Yuko Maeda. Mluvili o něm už dlouho a já si nemohla pomoct si myslet, že tohle by mě opravdu, ale opravdu mohlo bavit. Potichu jsem se modlila, aby to Edu bavilo taky. Doposud jsem měla štěstí, že byl Eda stejný nadšenec do outdooru jako já, tak jsem o to štěstí nechtěla přijít. 
 
-A pak jednoho dne nastal den D a vyrazili jsme všichni do kaňonu Agnon kousek od francouzského Annecy.
+A pak jednoho dne nastal den D a vyrazili jsme všichni do kaňonu Angon kousek od francouzského Annecy.
 
-![Kaňon Agnon u Annecy](./Angon.JPG)
-*foto: kaňon Agnon u Annecy*
+![Kaňon Angon u Annecy](./Angon.JPG)
+*foto: kaňon Angon u Annecy*
 
 ## Jarní Ardèche
 
@@ -44,7 +44,7 @@ Některé skupiny jezdí ke kaňonu dvěma auty: jedno nechají nahoře u nástu
 
 *video: skok zachycený na GoPro.*
 
-Druhý den jsme si s Edou poprvé troufli sami a šli kaňon Borne. Heslem dne se stalo: „Tenhle kaňon by byl úžasný v létě." I přes všechny neopreny nám byla strašná kosa. Kromě našeho syna, ten měl v mojí děloze neopren rozhodně nejlepší. Normálně mám pohyb ve vodě na canyoningu strašně ráda a snažím se ho maximalizovat, ale tady jsme chodili po krajích a do vody lezli jenom tehdy, když to jinak nešlo. Ruce jsme se snažili držet nad hladinou, abychom v nich zachovali aspoň trochu citu.
+Druhý den jsme si s Edou poprvé troufli sami a šli kaňon Borne. Heslem dne se stalo: „Tenhle kaňon by byl úžasný v létě.“ I přes všechny neopreny nám byla strašná kosa. Kromě našeho syna, ten měl v mojí děloze neopren rozhodně nejlepší. Normálně mám pohyb ve vodě na canyoningu strašně ráda a snažím se ho maximalizovat, ale tady jsme chodili po krajích a do vody lezli jenom tehdy, když to jinak nešlo. Ruce jsme se snažili držet nad hladinou, abychom v nich zachovali aspoň trochu citu.
 
 ![Kaňon Borne](./Borne.JPG)
 *foto: kaňon Borne*
@@ -149,7 +149,7 @@ Při pozdějších výpravách jsem se snažila učit se profil cesty nazpaměť
 
 **Slaňovací brzda, odsedky a karabiny.** Odsedkami je třeba se zajistit na oku ještě předtím, než začnete manipulovat s lanem.
 
-**Lano.** Statické, je třeba najít balanc mezi tloušťkou a váhou. Jeden z největších nepřátel kaňonýra je zamotané lano ve vodě. Délka většinou dvakrát tak dlouhá jako nejdelší vodopád (za jeden konec lana se slaňuje, za druhý se tahá, aby lano spadlo dolů). V případě velmi dlouhých vodopádů se někdy bere jen poloviční lano a naváže se na tenký provázek, kterým se potom stahuje tlusté lano dolů. Tento setup má jisté nevýhody: stáhnutí je netriviální a tenké lano se nesmí při slanování zamotat.
+**Lano.** Statické, je třeba najít balanc mezi tloušťkou a váhou. Jeden z největších nepřátel kaňonistů je zamotané lano ve vodě. Délka většinou dvakrát tak dlouhá jako nejdelší vodopád (za jeden konec lana se slaňuje, za druhý se tahá, aby lano spadlo dolů). V případě velmi dlouhých vodopádů se někdy bere jen poloviční lano a naváže se na tenký provázek, kterým se potom stahuje tlusté lano dolů. Tento setup má jisté nevýhody: stáhnutí je netriviální a tenké lano se nesmí při slanování zamotat.
 
 **Batoh a sud.** Batoh s otvory, kterými vyteče voda, a v něm vodotěsný sud na jídlo, telefon a klíče od auta.
 
@@ -191,7 +191,7 @@ Hodně mi pomáhala i různá videa na YouTube. U složitějších kaňonů jsem
 
 ## Kaňony, které jsme prošli
 
-- Agnon a Montmin (u Annecy)
+- Angon a Montmin (u Annecy)
 - La Fustugère, Chassezac, Borne, Aéro Besorgues (Ardèche, kolem Aubenas)
 - Grotte de Gournier, l'Alloix, Grotte de l'Olette, Furon (spodní) (kolem Grenoble)
 - Pont du Diable (u Annecy) — můj osobní favorit
