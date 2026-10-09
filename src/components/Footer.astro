@@ -19,6 +19,7 @@ const base = import.meta.env.BASE_URL;
 		<Newsletter lang={lang} instanceId="footer" />
 		<p class="copyright">
 			© {year} {copy.copyright} · <a href={`${base}${lang}/rss.xml`}>{blogCopy.rssLabel}</a> ·{' '}
+			<a href={`${base}${lang}/soukromi/`}>{copy.privacyLabel}</a> ·{' '}
 			<a href="#toggle-goatcounter">{copy.analyticsToggleLabel}</a>
 		</p>
 	</div>

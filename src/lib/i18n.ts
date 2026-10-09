@@ -33,6 +33,9 @@ interface Translations {
 		submitLabel: string;
 		copyright: string;
 		analyticsToggleLabel: string;
+		privacyLabel: string;
+		newsletterPrivacyPrefix: string;
+		newsletterPrivacyLinkLabel: string;
 	};
 	translationNotice: {
 		onlyInCzech: string;
@@ -104,6 +107,9 @@ export const translations: Record<Locale, Translations> = {
 			submitLabel: 'Přihlásit se k odběru',
 			copyright: 'Vendula Šubert',
 			analyticsToggleLabel: 'Vypnout měření návštěvnosti v tomto prohlížeči',
+			privacyLabel: 'Ochrana osobních údajů',
+			newsletterPrivacyPrefix: 'Zpracování e-mailu se řídí',
+			newsletterPrivacyLinkLabel: 'zásadami ochrany osobních údajů',
 		},
 		translationNotice: {
 			onlyInCzech: 'Tento obsah je zatím jen v češtině.',
@@ -173,6 +179,9 @@ export const translations: Record<Locale, Translations> = {
 			submitLabel: 'Subscribe',
 			copyright: 'Vendula Šubert',
 			analyticsToggleLabel: 'Turn off visit tracking in this browser',
+			privacyLabel: 'Privacy policy',
+			newsletterPrivacyPrefix: 'Your email is handled according to the',
+			newsletterPrivacyLinkLabel: 'privacy policy',
 		},
 		translationNotice: {
 			onlyInCzech: 'Tento obsah je zatím jen v češtině.',
