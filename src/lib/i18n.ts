@@ -32,6 +32,7 @@ interface Translations {
 		emailPlaceholder: string;
 		submitLabel: string;
 		copyright: string;
+		analyticsToggleLabel: string;
 	};
 	translationNotice: {
 		onlyInCzech: string;
@@ -102,6 +103,7 @@ export const translations: Record<Locale, Translations> = {
 			emailPlaceholder: 'Váš e-mail',
 			submitLabel: 'Přihlásit se k odběru',
 			copyright: 'Vendula Šubert',
+			analyticsToggleLabel: 'Vypnout měření návštěvnosti v tomto prohlížeči',
 		},
 		translationNotice: {
 			onlyInCzech: 'Tento obsah je zatím jen v češtině.',
@@ -170,6 +172,7 @@ export const translations: Record<Locale, Translations> = {
 			emailPlaceholder: 'Your email',
 			submitLabel: 'Subscribe',
 			copyright: 'Vendula Šubert',
+			analyticsToggleLabel: 'Turn off visit tracking in this browser',
 		},
 		translationNotice: {
 			onlyInCzech: 'Tento obsah je zatím jen v češtině.',
