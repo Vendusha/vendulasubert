@@ -125,13 +125,17 @@ export const SONGS: Song[] = [
 	},
 	{
 		id: 'kocka-leze-dirou',
-		title: { cs: 'Kočka leze dírou' },
-		description: { cs: 'TODO – doplním.' },
+		title: { cs: 'Kočka leze dírou (jazz)' },
+		description: {
+			cs:
+				'Jednoho dne za mnou přišel zoufalý Eda: „Vendy, mám pro tebe hudební projekt. Nesnáším dětské nahrávky, mám pocit, že mi z nich praskne hlava. Můžeš nahrát dětskou lidovku, ale nějak normálně?“\n\n' +
+				'Tak jsem se snažila. „Tohle jsem přesně nemyslel“ řekl Eda, když uslyšel můj hudební počin a dodal, že si myslí, že tentokrát je sice hudba poslouchatelná pro dospělé, ale už ne pro děti.\n\n' +
+				'Náš syn to ale nevěděl a i když nemám kdovíjakou radost poslouchat svoje amatérské nahrávky pořád dokola, možná, že to přece jen bylo, alespoň částečné řešení (trochu se stydící smajlík.)',
+		},
 		categories: ['pro-deti'],
-		status: 'draft',
+		status: 'published',
 		platform: 'youtube',
-		// No youtubeId yet — fine while status is 'draft', since draft songs
-		// never render. Add one before flipping this to 'published'.
+		youtubeId: 'xCRwTr0YoS4',
 	},
 ];
 
