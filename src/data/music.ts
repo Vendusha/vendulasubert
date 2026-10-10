@@ -128,13 +128,10 @@ export const SONGS: Song[] = [
 				'Tak jsem se snažila. „Tohle jsem přesně nemyslel“ řekl Eda, když uslyšel můj hudební počin a dodal, že si myslí, že tentokrát je sice hudba poslouchatelná pro dospělé, ale už ne pro děti.\n\n' +
 				'Náš syn to ale nevěděl a i když nemám kdovíjakou radost poslouchat svoje amatérské nahrávky pořád dokola, možná, že to přece jen bylo, alespoň částečné řešení (trochu se stydící smajlík.)',
 		},
-		// Shown once at the top as the featured song — it still has a home
-		// (in full) under "Pro děti" too, same pattern as before.
 		categories: ['pro-deti'],
 		status: 'published',
 		platform: 'youtube',
 		youtubeId: 'xCRwTr0YoS4',
-		featured: true,
 	},
 ];
 
