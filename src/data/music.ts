@@ -60,6 +60,14 @@ export interface Song {
 // or hiding (visible: false) a category is just editing this array.
 export const MUSIC_CATEGORIES: MusicCategory[] = [
 	{
+		id: 'pro-deti',
+		title: { cs: 'Pro děti' },
+		intro: {
+			cs: 'Nesnáším uklinkané dětské melodie. Tak se snažím dělat si svoje vlastní lidovky.',
+		},
+		visible: true,
+	},
+	{
 		id: 'ze-zivota',
 		title: { cs: 'Ze života' },
 		intro: { cs: 'Písničky, které vznikaly pro různé příležitosti.' },
@@ -72,14 +80,6 @@ export const MUSIC_CATEGORIES: MusicCategory[] = [
 			cs: 'V knize ALEFUJ! je skládá Veronika. Já jsem si je dovolila zhudebnit.',
 		},
 		link: 'https://alefuj.cz/cs/',
-		visible: true,
-	},
-	{
-		id: 'pro-deti',
-		title: { cs: 'Pro děti' },
-		intro: {
-			cs: 'Nesnáším uklinkané dětské melodie. Tak se snažím dělat si svoje vlastní lidovky.',
-		},
 		visible: true,
 	},
 	{
