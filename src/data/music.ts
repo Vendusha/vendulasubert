@@ -103,14 +103,10 @@ export const SONGS: Song[] = [
 		description: {
 			cs: 'Mírně satirická písnička o mladistvém hledání partnera. Moje paní učitelka vždycky říkala, že by už mladá být nechtěla – vybírat si zaměstnání a životního partnera. Pomalu se dostávám do fáze, kdy si myslím totéž, a tohle je vzpomínka na ta léta snahy zaujmout někoho, kdo možná chce, ale možná taky nechce být zaujat.',
 		},
-		// Already shown once at the top as the featured song — kept out of
-		// "Ze života" so it doesn't render there a second time right below
-		// it; it still has a home (in full) under "Z knihy ALEFUJ!".
 		categories: ['alefuj'],
 		status: 'published',
 		platform: 'youtube',
 		youtubeId: 'X0lMcfhJ6LQ',
-		featured: true,
 	},
 	{
 		id: 'svatebni',
@@ -132,10 +128,13 @@ export const SONGS: Song[] = [
 				'Tak jsem se snažila. „Tohle jsem přesně nemyslel“ řekl Eda, když uslyšel můj hudební počin a dodal, že si myslí, že tentokrát je sice hudba poslouchatelná pro dospělé, ale už ne pro děti.\n\n' +
 				'Náš syn to ale nevěděl a i když nemám kdovíjakou radost poslouchat svoje amatérské nahrávky pořád dokola, možná, že to přece jen bylo, alespoň částečné řešení (trochu se stydící smajlík.)',
 		},
+		// Shown once at the top as the featured song — it still has a home
+		// (in full) under "Pro děti" too, same pattern as before.
 		categories: ['pro-deti'],
 		status: 'published',
 		platform: 'youtube',
 		youtubeId: 'xCRwTr0YoS4',
+		featured: true,
 	},
 ];
 
