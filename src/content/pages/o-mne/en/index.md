@@ -25,7 +25,7 @@ I can design a detector, bring it to life, take measurements, run simulations, a
 ![Vendula and Mína at a chanson concert](chanson-koncert.jpg)
 *photo: a chanson concert, Ostrava*
 
-I studied piano at the Janáček Conservatory in Ostrava, performed at concerts (accompanying the artist Vilemína Hana Ondrušová at chanson evenings), and even had my own programme, "Musical Melodies." I played organ and piano at weddings and funerals in both the Czech Republic and Sweden. I sang in a choir at a concert in Copenhagen on a Game of Thrones music tour — conducted by Ramin Djawadi himself.
+I studied piano and organ at the Janáček Conservatory in Ostrava, performed at concerts (accompanying the artist Vilemína Hana Ondrušová at chanson evenings), and even had my own programme, "Musical Melodies." I played organ and piano at weddings and funerals in both the Czech Republic and Sweden. I sang in a choir at a concert in Copenhagen on a Game of Thrones music tour — conducted by Ramin Djawadi himself.
 
 ### Who else I am
 
