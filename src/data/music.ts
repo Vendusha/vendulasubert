@@ -131,7 +131,7 @@ export const SONGS: Song[] = [
 		categories: ['pro-deti'],
 		status: 'published',
 		platform: 'youtube',
-		youtubeId: 'xCRwTr0YoS4',
+		youtubeId: 'KUqBtbBJJk4',
 	},
 ];
 
