@@ -6,7 +6,7 @@ import TranslationNotice from '../../components/TranslationNotice.astro';
 import { loadPage } from '../../lib/pages';
 import { t, locales, type Locale } from '../../lib/i18n';
 import { COLUMNS } from '../../lib/columns';
-import { absUrl, personJsonLd } from '../../lib/seo';
+import { absUrl } from '../../lib/seo';
 import portrait from '../../assets/portrait.jpg';
 
 export function getStaticPaths() {
@@ -31,7 +31,6 @@ const base = import.meta.env.BASE_URL;
 	title={entry.data.title}
 	description={entry.data.description}
 	alternates={{ cs: absUrl('/cs/'), en: absUrl('/en/') }}
-	jsonLd={personJsonLd()}
 >
 	{shownLang !== lang && <TranslationNotice requestedLang={lang} shownLang={shownLang} />}
 

@@ -17,6 +17,24 @@ const base = import.meta.env.BASE_URL;
 	<div class="container">
 		<hr class="hairline" />
 		<Newsletter lang={lang} instanceId="footer" />
+		<p class="profiles">
+			{copy.profilesLabel}{' '}
+			<a rel="me noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/vendula-subert-425a9184"
+				>LinkedIn</a
+			>{' '}
+			·{' '}
+			<a
+				rel="me noopener noreferrer"
+				target="_blank"
+				href="https://www.researchgate.net/profile/Vendula-Subert">ResearchGate</a
+			>{' '}
+			·{' '}
+			<a rel="me noopener noreferrer" target="_blank" href="https://www.youtube.com/@vendulasubert"
+				>YouTube</a
+			>{' '}
+			·{' '}
+			<a rel="me noopener noreferrer" target="_blank" href={`https://alefuj.cz/${lang}/`}>ALEFUJ.cz</a>
+		</p>
 		<p class="copyright">
 			© {year} {copy.copyright} · <a href={`${base}${lang}/rss.xml`}>{blogCopy.rssLabel}</a> ·{' '}
 			<a href={`${base}${lang}/soukromi/`}>{copy.privacyLabel}</a> ·{' '}
@@ -30,10 +48,16 @@ const base = import.meta.env.BASE_URL;
 		margin-top: 4rem;
 		padding-bottom: 48px;
 	}
-	.copyright {
+	.profiles {
 		font-family: var(--font-meta);
 		font-size: 12px;
 		color: var(--ink-soft);
 		margin-top: 2.5em;
+	}
+	.copyright {
+		font-family: var(--font-meta);
+		font-size: 12px;
+		color: var(--ink-soft);
+		margin-top: 0.6em;
 	}
 </style>

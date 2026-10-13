@@ -36,6 +36,7 @@ interface Translations {
 		privacyLabel: string;
 		newsletterPrivacyPrefix: string;
 		newsletterPrivacyLinkLabel: string;
+		profilesLabel: string;
 	};
 	translationNotice: {
 		onlyInCzech: string;
@@ -110,6 +111,7 @@ export const translations: Record<Locale, Translations> = {
 			privacyLabel: 'Ochrana osobních údajů',
 			newsletterPrivacyPrefix: 'Zpracování e-mailu se řídí',
 			newsletterPrivacyLinkLabel: 'zásadami ochrany osobních údajů',
+			profilesLabel: 'Najdete mě i na',
 		},
 		translationNotice: {
 			onlyInCzech: 'Tento obsah je zatím jen v češtině.',
@@ -182,6 +184,7 @@ export const translations: Record<Locale, Translations> = {
 			privacyLabel: 'Privacy policy',
 			newsletterPrivacyPrefix: 'Your email is handled according to the',
 			newsletterPrivacyLinkLabel: 'privacy policy',
+			profilesLabel: 'Find me also on',
 		},
 		translationNotice: {
 			onlyInCzech: 'Tento obsah je zatím jen v češtině.',

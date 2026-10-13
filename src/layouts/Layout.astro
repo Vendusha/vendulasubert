@@ -4,6 +4,7 @@ import { getImage } from 'astro:assets';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { siteName, type Locale } from '../lib/i18n';
+import { personJsonLd, websiteJsonLd } from '../lib/seo';
 import defaultOgImage from '../assets/portrait.jpg';
 import '../styles/global.css';
 
@@ -46,14 +47,22 @@ const {
 	ogType = 'website',
 } = Astro.props;
 const pageTitle = section === 'home' ? siteName : `${seoTitle ?? title} — ${siteName}`;
-const jsonLdText = jsonLd
-	? JSON.stringify(jsonLd).replace(/</g, '\\u003c')
-	: undefined;
 
 // Social platforms expect a 1200x630 preview (Facebook's recommended share
 // size), so crop to that rather than shipping the source's own proportions.
 const ogImage = await getImage({ src: image, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
 const absoluteImageUrl = new URL(ogImage.src, Astro.site).toString();
+
+// WebSite goes on every page, generated here rather than copied into each
+// one. Person is added only on the homepage, where it belongs — it reuses
+// the OG image already resolved above instead of redoing that transform.
+const extraJsonLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const allJsonLd = [
+	websiteJsonLd(lang),
+	...(section === 'home' ? [personJsonLd(lang, absoluteImageUrl)] : []),
+	...extraJsonLd,
+];
+const jsonLdText = JSON.stringify(allJsonLd).replace(/</g, '\\u003c');
 ---
 
 <!doctype html>

@@ -1,8 +1,64 @@
 ---
-// Static root: always lands on the Czech site. English is only ever
-// reached via the header language toggle, never auto-selected — so this
-// is an unconditional redirect, same stub pattern as old-URL redirects.
-import Redirect from '../components/Redirect.astro';
+// Static root: always lands on the Czech site. English is only ever reached
+// via the header language toggle, never auto-selected.
+//
+// GitHub Pages serves plain static files with no server-side redirect
+// support (no _redirects, no vercel.json, no .htaccess rewrites) — so this
+// can't return a real HTTP 301. The best available alternative is to carry
+// full, real metadata on this URL itself (title, description, OG tags,
+// hreflang, a canonical pointing at /cs/) rather than leaving it as a bare
+// "Redirecting…" stub with nothing for a crawler to read, then redirect
+// instantly via <meta http-equiv="refresh">. Mirrors the pattern already
+// proven on alefuj.cz's own root page (src/pages/index.astro there).
+import { getImage } from 'astro:assets';
+import { siteName } from '../lib/i18n';
+import { absUrl } from '../lib/seo';
+import portrait from '../assets/portrait.jpg';
+
+const base = import.meta.env.BASE_URL;
+const csHref = `${base}cs/`;
+const enHref = `${base}en/`;
+const csUrl = absUrl('/cs/');
+const enUrl = absUrl('/en/');
+const rootUrl = absUrl('/');
+
+const pageTitle = `${siteName} — fyzička a spisovatelka`;
+const description =
+	'Vendula Šubert: fyzička (CERN, European Spallation Source), autorka knihy ALEFUJ!, hudebnice a písničkářka.';
+
+const ogImage = await getImage({ src: portrait, width: 1200, height: 630, fit: 'cover', format: 'jpg' });
+const ogImageUrl = new URL(ogImage.src, Astro.site).toString();
 ---
 
-<Redirect to="cs/" />
+<!doctype html>
+<html lang="cs">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{pageTitle}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={csUrl} />
+		<link rel="alternate" hreflang="cs" href={csUrl} />
+		<link rel="alternate" hreflang="en" href={enUrl} />
+		<link rel="alternate" hreflang="x-default" href={csUrl} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content={siteName} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={rootUrl} />
+		<meta property="og:locale" content="cs_CZ" />
+		<meta property="og:locale:alternate" content="en_US" />
+		<meta property="og:image" content={ogImageUrl} />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={pageTitle} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageUrl} />
+
+		<meta http-equiv="refresh" content={`0; url=${csHref}`} />
+	</head>
+	<body>
+		<p><a href={csHref}>Pokračovat v češtině</a> / <a href={enHref}>Continue in English</a></p>
+	</body>
+</html>
