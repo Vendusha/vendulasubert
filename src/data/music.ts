@@ -64,7 +64,9 @@ export const MUSIC_CATEGORIES: MusicCategory[] = [
 		title: { cs: 'Pro děti', en: 'For kids' },
 		intro: {
 			cs: 'Snažím se předělávat tradičně české dětské lidovky tak, aby je mohli poslouchat i dospělí.',
-			en: 'I try to rework traditional Czech children’s songs so adults can listen to them too.',
+			en:
+				'I try to rework traditional Czech children’s songs so adults can listen to them too. ' +
+				"This is the one part of my music I'm not planning to translate into English :)",
 		},
 		visible: true,
 	},
