@@ -81,10 +81,10 @@ export const MUSIC_CATEGORIES: MusicCategory[] = [
 	},
 	{
 		id: 'alefuj',
-		title: { cs: 'Z knihy ALEFUJ!', en: 'From the book ALEFUJ!' },
+		title: { cs: 'Z knihy ALEFUJ!', en: 'From the book YOUCKY!' },
 		intro: {
 			cs: 'V knize ALEFUJ! je skládá Veronika. Já jsem si je dovolila zhudebnit.',
-			en: 'In the book ALEFUJ!, these are written by the character Veronika. I took the liberty of setting them to music.',
+			en: 'In the book YOUCKY!, these are written by the character Veronika. I took the liberty of setting them to music.',
 		},
 		link: 'https://alefuj.cz/cs/',
 		visible: true,

@@ -20,7 +20,7 @@ export function personJsonLd(lang: Locale, imageUrl: string) {
 	const description =
 		lang === 'cs'
 			? 'Česká fyzička (CERN, European Spallation Source), autorka humoristické knihy ALEFUJ!, hudebnice a písničkářka.'
-			: 'Czech physicist (CERN, European Spallation Source), author of the comic novel ALEFUJ!, musician and songwriter.';
+			: 'Czech physicist (CERN, European Spallation Source), author of the comic novel YOUCKY!, musician and songwriter.';
 	const knowsAbout =
 		lang === 'cs'
 			? ['Neutronika', 'Křemíkové detektory', 'Radiační poškození materiálů', 'Fyzika částic']

@@ -161,7 +161,7 @@ export const translations: Record<Locale, Translations> = {
 			about: 'About',
 			blog: 'My blog',
 			cv: 'My CV',
-			book: 'ALEFUJ!',
+			book: 'YOUCKY!',
 			music: 'Music',
 			langToggleTo: 'CS',
 		},
@@ -172,7 +172,7 @@ export const translations: Record<Locale, Translations> = {
 		footer: {
 			newsletterHeading: 'Stay in the loop',
 			newsletterBody:
-				"What I've written on the blog, and how ALEFUJ! is coming along — a summary once a month, straight to your inbox.",
+				"What I've written on the blog, and how YOUCKY! is coming along — a summary once a month, straight to your inbox.",
 			newsletterConfirmNote:
 				"After signing up you'll get a confirmation email — click the link in it, or the subscription won't go through.",
 			newsletterSuccess: "Thanks! Check your email and confirm your subscription.",
