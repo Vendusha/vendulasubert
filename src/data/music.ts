@@ -61,26 +61,28 @@ export interface Song {
 export const MUSIC_CATEGORIES: MusicCategory[] = [
 	{
 		id: 'pro-deti',
-		title: { cs: 'Pro děti' },
+		title: { cs: 'Pro děti', en: 'For kids' },
 		intro: {
 			cs: 'Snažím se předělávat tradičně české dětské lidovky tak, aby je mohli poslouchat i dospělí.',
-			en:
-				'I try to rework traditional Czech children’s songs so adults can listen to them too. ' +
-				"This is the one part of my music I'm not planning to translate into English :)",
+			en: 'I try to rework traditional Czech children’s songs so adults can listen to them too.',
 		},
 		visible: true,
 	},
 	{
 		id: 'ze-zivota',
-		title: { cs: 'Ze života' },
-		intro: { cs: 'Písničky, které vznikaly pro různé příležitosti.' },
+		title: { cs: 'Ze života', en: 'From life' },
+		intro: {
+			cs: 'Písničky, které vznikaly pro různé příležitosti.',
+			en: 'Songs written for various occasions.',
+		},
 		visible: true,
 	},
 	{
 		id: 'alefuj',
-		title: { cs: 'Z knihy ALEFUJ!' },
+		title: { cs: 'Z knihy ALEFUJ!', en: 'From the book ALEFUJ!' },
 		intro: {
 			cs: 'V knize ALEFUJ! je skládá Veronika. Já jsem si je dovolila zhudebnit.',
+			en: 'In the book ALEFUJ!, these are written by the character Veronika. I took the liberty of setting them to music.',
 		},
 		link: 'https://alefuj.cz/cs/',
 		visible: true,
@@ -135,6 +137,10 @@ export const SONGS: Song[] = [
 				'Jednoho dne za mnou přišel zoufalý Eda: „Vendy, mám pro tebe hudební projekt. Nesnáším dětské nahrávky, mám pocit, že mi z nich praskne hlava. Můžeš nahrát dětskou lidovku, ale nějak normálně?“\n\n' +
 				'Tak jsem se snažila. „Tohle jsem přesně nemyslel“ řekl Eda, když uslyšel můj hudební počin a dodal, že si myslí, že tentokrát je sice hudba poslouchatelná pro dospělé, ale už ne pro děti.\n\n' +
 				'Náš syn to ale nevěděl a i když nemám kdovíjakou radost poslouchat svoje amatérské nahrávky pořád dokola, možná, že to přece jen bylo, alespoň částečné řešení (trochu se stydící smajlík.)',
+			en:
+				'One day, a desperate Eda came to me: “Vendy, I’ve got a music project for you. I can’t stand children’s recordings — I feel like my head’s about to split open. Could you record a kids’ folk song, but, like, normally?”\n\n' +
+				'So I tried. “That’s not quite what I meant,” Eda said once he heard what I’d made, adding that this time the music was listenable for adults, sure — just not for kids anymore.\n\n' +
+				'Our son had no idea, though, and even though I’m not thrilled about listening to my own amateur recordings on repeat, maybe it was at least a partial solution (a slightly embarrassed smiley).',
 		},
 		categories: ['pro-deti'],
 		status: 'published',
