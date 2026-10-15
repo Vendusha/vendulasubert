@@ -63,7 +63,10 @@ export const MUSIC_CATEGORIES: MusicCategory[] = [
 		id: 'pro-deti',
 		title: { cs: 'Pro děti' },
 		intro: {
-			cs: 'Nesnáším uklinkané dětské melodie. Tak se snažím dělat si svoje vlastní lidovky.',
+			cs: 'Snažím se předělávat tradičně české dětské lidovky tak, aby je mohli poslouchat i dospělí.',
+			en:
+				'I try to rework traditional Czech children’s songs so adults can listen to them too. ' +
+				"This is the one part of my music I'm not planning to translate into English :)",
 		},
 		visible: true,
 	},
@@ -101,7 +104,10 @@ export const SONGS: Song[] = [
 		id: 'zivotni-partner',
 		title: { cs: 'Životní partner' },
 		description: {
-			cs: 'Mírně satirická písnička o mladistvém hledání partnera. Moje paní učitelka vždycky říkala, že by už mladá být nechtěla – vybírat si zaměstnání a životního partnera. Pomalu se dostávám do fáze, kdy si myslím totéž, a tohle je vzpomínka na ta léta snahy zaujmout někoho, kdo možná chce, ale možná taky nechce být zaujat.',
+			cs:
+				'Satirická písnička o hledání životního partnera. Moje paní učitelka vždycky říkala, že by už mladá být nechtěla – vybírat si zaměstnání a životního partnera. Pomalu se dostávám do fáze, kdy si myslím totéž, a tohle je vzpomínka na ta léta snahy zaujmout někoho, kdo možná chce, ale možná taky nechce být zaujat. A že je někdy možná lepší být sám sebou.',
+			en:
+				"A Czech satirical song (I've got the English version written, recorded and ready — it'll go up here in two weeks) about looking for a life partner. My teacher always used to say she wouldn't want to be young again — choosing a career and a life partner. I'm slowly getting to the stage where I think the same, and this is a memory of those years spent trying to catch the interest of someone who might want to be caught, or might not. And that maybe it's sometimes better to just be yourself.",
 		},
 		categories: ['alefuj'],
 		status: 'published',
@@ -112,7 +118,9 @@ export const SONGS: Song[] = [
 		id: 'svatebni',
 		title: { cs: 'Pár hvězd tmou' },
 		description: {
-			cs: 'Napsala jsem ji na svatbu přátel, u kterých se to hledání naopak završilo šťastným koncem. Doplněná o outdoorová videa, protože outdoor je vždycky hezký.',
+			cs: 'Jedna z vážnějších písní mého repertoáru: napsala jsem ji na svatbu svých přátel. Doplněná o outdoorová videa, protože outdoor je vždycky hezký.',
+			en:
+				"One of the more serious songs in my repertoire (an English version will be added here eventually): I wrote it for my friends' wedding. With some outdoor footage mixed in, because the outdoors always looks nice.",
 		},
 		categories: ['ze-zivota'],
 		status: 'published',

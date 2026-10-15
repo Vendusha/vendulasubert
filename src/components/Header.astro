@@ -34,6 +34,12 @@ const toggleHref =
 // it and "Můj blog" at once, which reads as noise rather than orientation.
 const onHome = section === 'home';
 const onColumn = COLUMNS.some((col) => col.slug === section);
+// The Music page's URL slug differs per language ("hudba" vs "music" —
+// src/pages/cs/hudba/ and src/pages/en/music/ are separate literal routes,
+// not a shared [lang]/[page]/ one), so both the link and its aria-current
+// check need to branch on language instead of reusing `section` directly.
+const musicSlug = lang === 'cs' ? 'hudba' : 'music';
+const onMusic = section === 'hudba' || section === 'music';
 ---
 
 <header class="site-header">
@@ -71,13 +77,9 @@ const onColumn = COLUMNS.some((col) => col.slug === section);
 				href={`${base}${lang}/publikace/`}
 				aria-current={section === 'publikace' ? 'page' : undefined}>{nav.cv}</a
 			>
-			{
-				lang === 'cs' && (
-					<a href={`${base}${lang}/hudba/`} aria-current={section === 'hudba' ? 'page' : undefined}>
-						{nav.music}
-					</a>
-				)
-			}
+			<a href={`${base}${lang}/${musicSlug}/`} aria-current={onMusic ? 'page' : undefined}>
+				{nav.music}
+			</a>
 			<a href={`${base}${lang}/book/`} aria-current={section === 'book' ? 'page' : undefined}
 				>{nav.book}</a
 			>
