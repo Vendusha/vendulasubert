@@ -37,17 +37,17 @@ On another day, they climbed the Großglockner. On the way down, following some 
 ![Our kids' mummified friend on a stretcher](./mumifikovaná_sestřenice.jpg)
 *photo: Our kids' mummified friend on a stretcher*
 
-On the day our cactus-collecting grandpa was running the program, they went to South America. The kids built a raft on the lake, then tried lying down on the ground and assembling themselves into an anaconda faster than the opposing team — whose average age was sixty.
+On the day our cactus-collecting grandpa was running the program, they went to South America. The kids built a raft on Lake Titicaca, supposedly used for growing potatoes, then tried lying down on the ground and assembling themselves into an anaconda faster than the opposing team — whose average age was sixty.
 
-![A raft for crossing a South American lake](./Deti_vyrobily_clun_na_preplavani_jihoamerickeho_jezera.jpg)
-*photo: A raft for crossing a South American lake*
+![A raft for growing potatoes on Lake Titicaca](./Deti_vyrobily_clun_na_preplavani_jihoamerickeho_jezera.jpg)
+*photo: A raft for growing potatoes on Lake Titicaca*
 
 ![Our grandpa showing the kids South America](./Legendarni_cestovatel_deda_ukazuje_Jizni_Ameriku.jpg)
 *photo: Our grandpa showing the kids South America*
 
-So it was a completely classic summer camp — the only difference being that the counselors weren't seasoned outdoor types with teenage helpers, but grandparents. A campfire with a guitar in the evening, morning warm-ups in camp T-shirts. I imagine the warm-ups probably aren't run at quite the same pace as at a camp not organized by retirees. Though knowing our grandma and grandpa, it could easily be the exact opposite.
+So it was a completely classic summer camp — the only difference being that the counselors weren't young outdoor types with teenage helpers, but grandparents. A campfire with a guitar in the evening, morning warm-ups in camp T-shirts. I imagine the warm-ups probably aren't run at quite the same pace as at a camp not organized by retirees. Though knowing our grandma and grandpa, it could easily be the exact opposite.
 
-One of the grandmas did the cooking too, and my kids got on extremely well with her.
+My kids got on especially well with the cook.
 
 ![Our three-year-old chopping wood](./Triletak_reze_drevo.jpg)
 *photo: Our three-year-old chopping wood*

@@ -33,20 +33,20 @@ Děti tak viděly divadlo v japonštině, nebo přinejmenším v českém foneti
 
 Jiný den vyšly na Gross-Glockner. Cestou dolů musely podle fiktivních zranění ošetřit člena týmu, zabalit ho do obvazů a odnést na nosítkách do základního tábora. Na fotce je mumifikovaná kamarádka našich dětí, která si prý roli zraněného užila víc než zbytek výpravy.
 
-![Mumifikovaná sestřenice na nosítkách](./mumifikovaná_sestřenice.jpg)
-*foto: Mumifikovaná sestřenice na nosítkách*
+![Mumifikovaná kamarádka na nosítkách](./mumifikovaná_sestřenice.jpg)
+*foto: Mumifikovaná kamarádka na nosítkách*
 
-V den, kdy měl program náš dědeček kaktusář, se jelo do Jižní Ameriky. Děti si postavily vor na jezeře a pak se snažily lehnout si na zem a poskládat dohromady anakondu rychleji než protihrající tým, tvořený lidmi s věkovým průměrem šedesát let.
+V den, kdy měl program náš dědeček kaktusář, se jelo do Jižní Ameriky. Děti si postavily vor na jezeře Titicaca, na kterém se údajně pěstovaly brambory a pak se snažily lehnout si na zem a poskládat dohromady anakondu rychleji než protihrající tým, tvořený lidmi s věkovým průměrem šedesát let.
 
-![Vor na přeplavání jihoamerického jezera](./Deti_vyrobily_clun_na_preplavani_jihoamerickeho_jezera.jpg)
-*foto: Vor na přeplavání jihoamerického jezera*
+![Vor na pěstování brambor na jezeře Titicaca](./Deti_vyrobily_clun_na_preplavani_jihoamerickeho_jezera.jpg)
+*foto: Vor na pěstování brambor na jezeře Titicaca*
 
 ![Náš dědeček ukazuje dětem Jižní Ameriku](./Legendarni_cestovatel_deda_ukazuje_Jizni_Ameriku.jpg)
 *foto: Náš dědeček ukazuje dětem Jižní Ameriku*
 
-Byl to tedy úplně klasický tábor, jen vedoucí nebyli ostřílení outdooristé s pomocnými puberťáky, ale prarodiče. Večer táborák s kytarou, ráno rozcvička v táborových tričkách. Představuju si, že rozcvička asi není ve stejném tempu jako na táboře, který neorganizují důchodci. Jak ale znám naši babičku s dědečkem, může to být klidně přesně naopak.
+Byl to tedy úplně klasický tábor, jen vedoucí nebyli mladí outdooristé s pomocnými puberťáky, ale prarodiče. Večer táborák s kytarou, ráno rozcvička v táborových tričkách. Představuju si, že rozcvička asi není ve stejném tempu jako na táboře, který neorganizují důchodci. Jak ale znám naši babičku s dědečkem, může to být klidně přesně naopak.
 
-Vařila taky jedna babička důchodkyně a moje děti s ní byly extrémně zadobře.
+S kuchařkou byly moje děti obzvláště zadobře.
 
 ![Náš tříleťák řeže dřevo](./Triletak_reze_drevo.jpg)
 *foto: Náš tříleťák řeže dřevo*
