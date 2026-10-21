@@ -6,12 +6,12 @@ lang: en
 translationKey: outdoor-tabor-prarodice
 summary: A camp dreamed up by one grandma, because her own kids wouldn't go anywhere without hot water. Tents on wooden platforms, morning warm-ups in camp T-shirts, and the youngest campers still in diapers.
 heroImage: Klasicky_tabor_s_drevenyma_podsadama.jpg
-heroAlt: A campsite with tents on wooden platforms
+heroAlt: A campsite with tents
 draft: false
 ---
 This post is exactly what it says on the tin: a camp run by a group of grandparents, for their own grandkids.
 
-It started because one enthusiastic outdoorswoman was pretty sad to discover that her own kids had no intention of taking their own kids camping anywhere that didn't have a hot shower. So she decided to give her grandchildren that experience herself. It's called "Grandparents with Kids," and it works exactly like it sounds: grandmas and grandpas rent a campsite with tents on wooden platforms for seven days and bring their grandkids along.
+It started because one enthusiastic outdoorswoman was pretty sad to discover that her own kids had no intention of taking their own kids camping anywhere that didn't have a hot shower. So she decided to give her grandchildren that experience herself. It's called "Grandparents with Kids," and it works like it sounds: grandmas and grandpas book a campsite with tents belonging to the Turnov branch of the Czech Tourist Club for seven days and bring their grandkids along.
 
 This year my own kids went too. Granted, plenty of kids go to this camp. Mine, though, were a year and a half and not quite three at the time.
 

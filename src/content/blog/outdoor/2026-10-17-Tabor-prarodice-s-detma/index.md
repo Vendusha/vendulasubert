@@ -6,11 +6,11 @@ lang: cs
 translationKey: outdoor-tabor-prarodice
 summary: Tábor, který vymyslela babička, protože její vlastní děti nechtěly jezdit tam, kde neteče teplá voda. Stany s podsadama, rozcvička v táborových tričkách a nejmladší účastníci v plenách.
 heroImage: Klasicky_tabor_s_drevenyma_podsadama.jpg
-heroAlt: Tábořiště se stany s dřevěnýma podsadama
+heroAlt: Tábořiště se stany
 draft: false
 ---
 Tenhleten příspěvek bude přesně o tom, co slibuje. O táboře, který organizuje skupina prarodičů pro svá vnoučata.
-Tábor vznikl tak, že jedna nadšená outdooristka byla moc smutná, když zjistila, že její děti nehodlají jezdit se svými dětmi na tábor, kde neteče teplá sprcha. A tak se rozhodla, že ten zážitek vnoučatům dopřeje sama. Jmenuje se „Prarodiče s dětmi“ a funguje přesně tak, jak to zní: babičky a dědové si na sedm dní pronajmou tábořiště se stany s dřevěnýma podsadama a vezmou svoje praratolesti s sebou.
+Tábor vznikl tak, že jedna nadšená outdooristka byla moc smutná, když zjistila, že její děti nehodlají jezdit se svými dětmi na tábor, kde neteče teplá sprcha. A tak se rozhodla, že ten zážitek vnoučatům dopřeje sama. Jmenuje se „Prarodiče s dětmi“ a funguje tak, jak to zní: babičky a dědové si na sedm dní zamluví tábořiště se stany Turnovského klubu českých turistů  a vezmou svoje praratolesti s sebou.
 
 Letos na něj jely i moje děti. Což o to, na tábor jezdí spousta dětí. Mým ale bylo v té době rok a půl a necelé tři roky.
 
