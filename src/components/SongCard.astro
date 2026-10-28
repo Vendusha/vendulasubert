@@ -23,15 +23,16 @@ const copy = t(lang).music;
 const title = pick(song.title, lang);
 const description = pick(song.description, lang);
 const lyrics = song.lyrics ? pick(song.lyrics, lang) : undefined;
+const youtubeId = song.youtubeId ? pick(song.youtubeId, lang) : undefined;
 ---
 
 <article class="song-card" id={anchorId}>
 	<h3>{title}</h3>
 
 	{
-		song.platform === 'youtube' && song.youtubeId && (
+		song.platform === 'youtube' && youtubeId && (
 			<YouTubeEmbed
-				videoId={song.youtubeId}
+				videoId={youtubeId}
 				title={title}
 				playLabel={copy.playLabel}
 				thumbnailAlt={copy.thumbnailAlt}

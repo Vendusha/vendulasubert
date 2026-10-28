@@ -45,8 +45,11 @@ export interface Song {
 	 * link — same convention as a blog post's draft: true. */
 	status: SongStatus;
 	platform: SongPlatform;
-	/** Required when platform is 'youtube'. */
-	youtubeId?: string;
+	/** Required when platform is 'youtube'. `en` lets a song link to a
+	 * separately recorded English version instead of just reusing the
+	 * Czech video — pick() falls back to `cs` the same as any other
+	 * Localized field when there isn't one yet. */
+	youtubeId?: Localized;
 	/** Required when platform is 'soundcloud' (the outbound link for the
 	 * card) — also usable as a generic fallback link for other platforms. */
 	url?: string;
@@ -106,17 +109,17 @@ export const MUSIC_CATEGORIES: MusicCategory[] = [
 export const SONGS: Song[] = [
 	{
 		id: 'zivotni-partner',
-		title: { cs: 'Životní partner' },
+		title: { cs: 'Životní partner', en: 'Partner for Life' },
 		description: {
 			cs:
 				'Satirická písnička o hledání životního partnera. Moje paní učitelka vždycky říkala, že by už mladá být nechtěla – vybírat si zaměstnání a životního partnera. Pomalu se dostávám do fáze, kdy si myslím totéž, a tohle je vzpomínka na ta léta snahy zaujmout někoho, kdo možná chce, ale možná taky nechce být zaujat. A že je někdy možná lepší být sám sebou.',
 			en:
-				"A Czech satirical song (I've got the English version written, recorded and ready — it'll go up here in two weeks) about looking for a life partner. My teacher always used to say she wouldn't want to be young again — choosing a career and a life partner. I'm slowly getting to the stage where I think the same, and this is a memory of those years spent trying to catch the interest of someone who might want to be caught, or might not. And that maybe it's sometimes better to just be yourself.",
+				"A satirical song about looking for a life partner. My teacher always used to say she wouldn't want to be young again — choosing a career and a life partner. I'm slowly getting to the stage where I think the same, and this is a memory of those years spent trying to catch the interest of someone who might want to be caught, or might not. And that maybe it's sometimes better to just be yourself.",
 		},
 		categories: ['alefuj'],
 		status: 'published',
 		platform: 'youtube',
-		youtubeId: 'X0lMcfhJ6LQ',
+		youtubeId: { cs: 'X0lMcfhJ6LQ', en: 'XlZm7wip73A' },
 	},
 	{
 		id: 'svatebni',
@@ -129,7 +132,7 @@ export const SONGS: Song[] = [
 		categories: ['ze-zivota'],
 		status: 'published',
 		platform: 'youtube',
-		youtubeId: 'Cj-3F9i3TMg',
+		youtubeId: { cs: 'Cj-3F9i3TMg' },
 	},
 	{
 		id: 'kocka-leze-dirou',
@@ -147,7 +150,7 @@ export const SONGS: Song[] = [
 		categories: ['pro-deti'],
 		status: 'published',
 		platform: 'youtube',
-		youtubeId: 'KUqBtbBJJk4',
+		youtubeId: { cs: 'KUqBtbBJJk4' },
 	},
 ];
 
