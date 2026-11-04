@@ -7,6 +7,6 @@ description: "Připravovaný humoristický román Venduly Šubert."
 
 Dokončuji svůj první humoristický román. Jmenuje se **ALEFUJ!** a je to napůl detektivka z prostředí slavných fyzikálních Nobelistů a napůl humoristické povídání ve stylu Saturnina nebo anglického spisovatele jménem Jerome K. Jerome.
 
-**Stav:** dokončuji rukopis, připravuji na redakci. 
+**Stav:** teď prochází redakturou u [Barbory Miklasové](https://www.linkedin.com/in/barbora-miklasov%C3%A1-42b457a2/).
 
 Víc o knize — ukázky, novinky, informace o vydání — najdete na [alefuj.cz](https://alefuj.cz/cs/).
