@@ -21,8 +21,9 @@ export interface MusicCategory {
 	/** Short intro shown under the category heading, before any songs. */
 	intro: Localized;
 	/** Optional outbound link related to the category (e.g. the book the
-	 * songs are from) — shown as a small link under the intro. */
-	link?: string;
+	 * songs are from) — shown as a small link under the intro. Localized
+	 * since alefuj.cz has its own /cs/ and /en/ like this site does. */
+	link?: Localized;
 	/** Categories with visible: false are never rendered (and their songs,
 	 * if any, simply won't appear there) — a place to draft a category
 	 * before it's ready, same spirit as a post's draft: true. */
@@ -89,7 +90,7 @@ export const MUSIC_CATEGORIES: MusicCategory[] = [
 			cs: 'V knize ALEFUJ! je skládá Veronika. Já jsem si je dovolila zhudebnit.',
 			en: 'In the book YOUCKY!, these are written by the character Veronika. I took the liberty of setting them to music.',
 		},
-		link: 'https://alefuj.cz/cs/',
+		link: { cs: 'https://alefuj.cz/cs/', en: 'https://alefuj.cz/en/' },
 		visible: true,
 	},
 	{

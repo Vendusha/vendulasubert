@@ -43,15 +43,16 @@ const categories = getVisibleCategories();
 			const entries = getCategorySongs(cat.id);
 			const full = entries.filter((e) => e.isPrimary);
 			const compact = entries.filter((e) => !e.isPrimary);
-			const linkHost = cat.link ? new URL(cat.link).hostname : undefined;
+			const catLink = cat.link ? pick(cat.link, lang) : undefined;
+			const linkHost = catLink ? new URL(catLink).hostname : undefined;
 
 			return (
 				<section class="music-category">
 					<h2>{pick(cat.title, lang)}</h2>
 					<p class="category-intro">{pick(cat.intro, lang)}</p>
-					{cat.link && (
+					{catLink && (
 						<p>
-							<a class="category-link" href={cat.link} target="_blank" rel="noopener noreferrer">
+							<a class="category-link" href={catLink} target="_blank" rel="noopener noreferrer">
 								{linkHost} →
 							</a>
 						</p>

@@ -52,7 +52,7 @@ export function personJsonLd(lang: Locale, imageUrl: string) {
 			'https://www.linkedin.com/in/vendula-subert-425a9184',
 			'https://www.researchgate.net/profile/Vendula-Subert',
 			'https://www.youtube.com/@vendulasubert',
-			'https://alefuj.cz/cs/',
+			`https://alefuj.cz/${lang}/`,
 		],
 	};
 }
