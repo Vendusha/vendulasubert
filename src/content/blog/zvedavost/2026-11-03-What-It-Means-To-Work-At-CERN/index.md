@@ -6,33 +6,42 @@ lang: en
 translationKey: zvedavost-co-je-cern
 summary: Particle collisions, four giant detectors, radiation damage to silicon sensors, and a story about a rocking chair that heard about the web before the rest of the world did.
 heroImage: cern-detektor-vystava.jpg
-heroAlt: Vendula with her brother at a model of the CMS detector in a former CERN exhibition
+heroAlt: With my brother at a model of the CMS detector in a former CERN exhibition
 draft: false
 ---
-![Vendula with her brother at a model of the CMS detector in a former CERN exhibition](cern-detektor-vystava.jpg)
+![With my brother at a model of the CMS detector in a former CERN exhibition](cern-detektor-vystava.jpg)
 *photo: With my brother at a model of the CMS detector in a former CERN exhibition*
 
 The rocking chair we now have at home is the one our CERN friends' son used to sprawl in, right when Tim Berners-Lee was telling them about his idea for the world wide web. Our friend apparently told him at the time: "Interesting idea, but I don't think it'll catch on." Years later, when he handed the chair over for our newborn, he added with a laugh: "How wrong I was."
 
-Now our youngest has outgrown it too, and the chair is ready to move on. I'll get to that at the end. First, though, let me try to explain what it actually means when I say I worked at CERN.
+Now our youngest has outgrown it too, and the chair is ready to move on.
+Now, though, let's get back to why I'm actually writing this post: I'll try to explain the term CERN a little.
 
-What is CERN, really? A place where physicists scrawl equations on a whiteboard like Sheldon from The Big Bang Theory? Or somewhere nuclear physics gets studied (God knows what that actually means, but it sounds important in Bond movies) and a team of scientists works every day to prevent some kind of catastrophe? I'd say the most common picture people have is: it's a place where something to do with physics happens, and it matters to scientists.
+What is CERN, really? A place where physicists scrawl equations on a whiteboard like Sheldon from The Big Bang Theory? Or somewhere nuclear physics gets studied (God knows what that actually means, but it sounds important in Bond movies) and a team of scientists works every day to prevent some kind of catastrophe? Most people, I'd say, have only a hazy idea of CERN: something to do with physics, something very important. Let me try to bring that into focus a bit.
 
-I worked at CERN for three and a half years, and I look back on them very fondly. I studied how much wear and radiation damage silicon parts of detectors take. I also worked as a guide, showing visitors around the different parts of the complex and explaining what they were for.
+CERN is a European research organization founded in 1954 by twelve countries, based near Geneva, right on the border between Switzerland and France. The acronym comes from its French name, the European Council for Nuclear Research. CERN is funded by its member states; Czechia has been a member since 1993 (Czechoslovakia since 1992). Thousands of staff work here, plus more than ten thousand scientists from universities and institutes around the world who come to run experiments.
 
-## CERN is a hammer
+I worked at CERN for three and a half years, and I look back on them very fondly. I studied how much wear and radiation damage silicon parts of detectors take — I'm planning a separate post about the actual substance of my work. But I also worked as a guide, showing visitors around the different parts of the complex and explaining what they were for.
 
-At its core, CERN is a hammer that smashes matter. In a very simplified metaphor, physicists describe the world as being built out of a handful (17, by the usual count) of Lego bricks that everything else is made of. Or put differently: imagine 17 basic ingredients you could use to cook up anything in the world. For anyone who remembers a bit of high-school physics: the electron and the neutrino are among these basic ingredients.
+## The LHC is a hammer
 
-This idea isn't exactly new. Dalton's hunt for atoms assumed exactly this: that there are many types of basic building blocks (say, a hydrogen atom or an oxygen atom) that everything else can be built from (water, in the case of those two elements). So chemists tried to break apart the substances around us and extract elements from them. Their hammer for matter was the chemical experiment.
+The most famous part of CERN is the LHC, the Large Hadron Collider, so let's start there. At its core, the LHC is a hammer that smashes matter.
 
-Elements were first sorted into triads, then octaves, and eventually Mendeleev arranged them into a table. Some elements, though, had similar properties, which suggested they shared some common inner structure. (If we've decided that fruit, vegetables, cake, and candy are the basic units of food, then the shared sweetness of cake, candy, and fruit might lead us to suspect they contain something in common — something that causes sweetness.)
+Why would anyone want to smash matter? Imagine that everything in the world could be cooked up from 17 basic ingredients. Or put differently: that everything is built out of 17 kinds of Lego brick. That's the very simplified metaphor physicists use to describe the world (17, by the usual count). For anyone who remembers a bit of high-school physics: the electron and the neutrino are among these basic ingredients. And to find out what things are made of, we have to break them apart.
 
-The first piece found inside the atom was the electron. In 1897, J. J. Thomson studied cathode rays flying out of a metal electrode in a vacuum tube, and measured the ratio of their charge to their mass. Whatever metal he used, the result came out the same, and it also showed these particles were more than a thousand times lighter than the lightest atom. So they had to be the pieces every atom is built from — as if it turned out that the sugar in cake, in candy, and in an apple was exactly the same sugar.
+This idea isn't exactly new. In the early 19th century, John Dalton proposed a theory that there are many types of basic building blocks — atoms (say, a hydrogen atom or an oxygen atom) — that everything else can be built from (water, in the case of those two elements). Chemists at the time tried to break apart the substances around us and extract elements from them. Their hammer for matter was the chemical experiment.
 
-Then, with a new physics hammer called nuclear physics, people managed to smash the atomic nucleus open and discover protons and neutrons inside.
+Elements were first sorted into triads, then octaves, and eventually Mendeleev arranged them into a table.
 
-Then the big laboratories arrived on the scene — CERN, SLAC, DESY, and others — bringing with them a hammer called particle physics. The principle is simple: accelerate two particles to the max and let them collide. (In the past that meant, say, protons with antiprotons, or electrons with positrons; today the LHC accelerates protons, and occasionally heavy lead nuclei too.) It's a bit like throwing a toy car at a wall: throw it hard enough, and from the surviving fragments you can work out what the car looked like inside. The metaphor limps a little here, though: the Higgs boson wasn't hiding inside the proton. It was created from the energy of the collision — which is exactly why we need ever higher energies.
+But are atoms really the basic, indivisible ingredients of everything? The word "atom" literally means "indivisible" in Greek. Yet some elements had similar properties, which suggested they shared some common inner structure. (If we've decided that fruit, vegetables, cake, and candy are the basic units of food, then the shared sweetness of cake, candy, and fruit might lead us to suspect they contain something in common — something that causes sweetness.)
+
+The first piece found inside the atom was the electron. In 1897, J. J. Thomson studied cathode rays flying out of a metal electrode in a vacuum tube, and measured the ratio of their charge to their mass. Whatever metal he used, the result came out the same, and it also showed these particles were more than a thousand times lighter than the lightest atom. The simplest explanation was that this was a tiny piece shared by the atoms of every metal — and maybe by all atoms, period. So the atom isn't indivisible after all. As if it turned out that the sugar in cake, in candy, and in an apple all produced exactly the same sweetness on our tongue.
+
+But electrons only account for a tiny fraction of an atom's mass. So where's the rest? Ernest Rutherford found out: in 1911, he explained an experiment in which a thin sheet of gold foil was bombarded with alpha particles. Most of them flew straight through the foil, but a few bounced straight back — Rutherford compared it to an artillery shell bouncing off a piece of paper. So almost all of an atom's mass had to be concentrated in a tiny nucleus at its center. With a new physics hammer, nuclear physics, people then managed to crack open the nucleus too, and found it's made of protons and neutrons.
+
+Then the big laboratories arrived on the scene — CERN, SLAC, DESY, and others — bringing with them a hammer called particle physics. The principle is simple: accelerate two particles to the highest possible energy and let them collide. (Their speed gets closer and closer to the speed of light but never quite reaches it — further acceleration mostly just raises the particles' energy instead.) In the past, that meant colliding, say, protons with antiprotons, or electrons with positrons; today the LHC accelerates protons, and occasionally heavy lead nuclei too. It's a bit like throwing a toy car at a wall: from the surviving fragments, you can work out what the car looked like inside.
+
+Here, though, the metaphor starts to limp. When protons collide, particles show up among the fragments that were never inside the proton in the first place — as if a truck spilled out of the wreckage after two toy cars crashed into each other. That's exactly how the Higgs boson came about: it wasn't hiding inside the proton, it was created from the energy of the collision. Einstein's E = mc² tells us that energy and mass are two forms of the same thing, so the energy of a collision can be "melted down" into new matter. The heavier the particle we want to create, the more energy we need to put into the collision — and the Higgs boson is about 130 times heavier than a proton. That's why physicists want ever more powerful accelerators: higher energy can produce heavier particles we've never seen before.
 
 ## Why so crude? And why not neutrons?
 
@@ -41,22 +50,26 @@ At this point, two questions might occur to you. Isn't this a rather crude metho
 The answer is similar either way:
 
 1. We don't have a good physics screwdriver that would let us examine the inner structure of atoms at rest.
-2. We don't have a physics remote control for neutrons. We can accelerate, slow down, and redirect protons and electrons because they're charged. Not so much neutrons, since they carry no electric charge. And on top of that, a free neutron decays in roughly fifteen minutes.
-
-That doesn't mean neutrons are useless, though. We don't collide them into each other, but they make an excellent probe for looking inside materials. That's exactly what the European Spallation Source is for, where I worked for three and a half years before joining CERN. I mainly worked on detecting neutrons: I designed a neutron monitor based on a vanadium foil and helium detectors.
+2. We don't have a physics remote control for neutrons. We can accelerate, slow down, and redirect protons and electrons because they're charged. Neutrons carry no electric charge, so we can't manipulate them that way.
 
 ## Rings of accelerators
 
-Acceleration and collisions take up the most physical space at CERN. Acceleration is handled by a whole chain of accelerators: we start with a linear accelerator (Linac4), move on to the small PS Booster ring, then the PS (628 meters around), the SPS (just under 7 km), until we reach the 27-km-long LHC. Right now CERN is talking about possibly adding another ring, the FCC, which would be around 91 kilometers and would run underneath Switzerland and France.
+Getting protons up to the energy at which they collide in the LHC takes more than one accelerator. So why rings at all? The first accelerators were linear: a particle flew through a row of accelerating sections once, and that was it. Anyone who wanted higher energy had to build a longer and longer pipe. A circular accelerator gets around that problem: strong magnets bend the particles' path into a circle, so they fly through the same accelerating sections over and over — in the LHC, more than eleven thousand times a second — getting a small push with every lap.
+
+Each ring, though, only works well within a certain range of energies, so the particles get passed along in a relay.
 
 ![Vendula showing visitors the map of CERN's accelerators, with Olga from the Olinium channel listening in too](mapa-urychlovacu.jpg)
 *photo: The accelerator map was my favorite stop on tours — without it, nobody can make sense of that relay race. In the photo, Olga, who makes science (chemistry) videos for the channel [Olinium](https://www.youtube.com/@Olinium), is listening in too.*
 
-It starts with hydrogen with an extra electron (an H⁻ ion). On entering the Booster, both electrons get stripped off, leaving protons. After running the whole relay of accelerators, we send them around the LHC so that part of the beam circles one way and part the other. At four points we then steer them into each other so they collide.
+A proton's journey starts in an ordinary bottle of hydrogen. The hydrogen is first turned into H⁻ ions — hydrogen atoms with one extra electron — which set off into the linear accelerator **Linac4**, a straight pipe just under a hundred meters long. At its end, they fly through a thin foil that strips off both electrons, leaving bare protons. These continue into the first ring, the **PS Booster** (157 meters around), then the **PS**, the Proton Synchrotron (628 meters), and on into the **SPS**, the Super Proton Synchrotron (just under 7 km). Each ring accelerates the protons a bit further and hands them on to the next. Finally, they end up in the 27-km-long **LHC**, where they circle just a hair slower than light.
+
+In the LHC, the protons are sent around so that part of the beam circles one way and part the other. At four points, the two beams are then steered into each other so they collide.
+
+Right now CERN is talking about possibly adding another ring, the FCC, which would be around 91 kilometers and would run underneath Switzerland and France.
 
 ## Four giant cameras
 
-At the collision points stand four gigantic "cameras" — detectors that capture the collisions: **ATLAS, CMS, ALICE, and LHCb**. ATLAS is as tall as an eight-story building, and CMS weighs more than the Eiffel Tower.
+At the collision points stand four gigantic "cameras" — detectors that capture the collisions: **ATLAS, CMS, ALICE, and LHCb**. ATLAS is as tall as an eight-story building, and CMS weighs more than the Eiffel Tower. A detector surrounds the collision point in layers, like an onion, and each layer picks up something different: which way a particle flew, how much energy it had, what charge it carried. From that, you can piece together what happened in the collision.
 
 A detector isn't a camera calmly shooting from a safe distance, though. It sits right next to the collisions and gets constantly bombarded by them. The core of my work was studying how radiation damages the silicon sensors inside detectors. In physics, that's called non-ionizing energy loss (NIEL). In human terms: a camera that photographs explosions is slowly destroyed by those very explosions. And someone has to calculate how long it'll last, and how much damage each explosion does.
 
@@ -70,7 +83,7 @@ You can only look into the ATLAS cavern when the accelerator is shut down. Here 
 
 *video: walking the walkways on the ATLAS detector: between the barrel muon chambers you can see all the way down to the bottom of the cavern*
 
-![Vendula in a helmet in front of an accelerator poster](vendy-helma.jpg)
+![Vendula in a helmet in front of an accelerator poster, during covid](vendy-helma.jpg)
 *photo: Me in front of an accelerator poster, during covid*
 
 An entire army of analysts then processes the data from these detectors and deduces the basic makeup of the universe from it. That's how CERN found three of those Lego bricks: the W and Z bosons (1983) and the Higgs boson (2012).
@@ -93,4 +106,4 @@ Per capita, Czechia sends roughly 35–40 CZK (about €1.50) a year toward runn
 ![The rocking chair our youngest daughter is sitting in](kresilko.jpg)
 *photo: The rocking chair that listened to Sir Tim when he came up with the idea for the world wide web. In the photo, our youngest is sitting in it.*
 
-The chair that heard about the web before the rest of the world is now looking for a new home — ideally with someone who has a small child and will enjoy telling this story themselves. It's very old, but it has a story: right now it lives with us in the Český ráj (Bohemian Paradise) region. If you're interested, drop me a line at maulerova@gmail.com (note: we got it for free, we're giving it away for free too :) ).
+It's now looking for a new home — ideally with someone who has a small child and will enjoy telling this story themselves. It's very old by now, but that just makes for a better story. It lives with us in the Český ráj (Bohemian Paradise) region, and we'll hand it over in person. If you're interested, drop me a line at maulerova@gmail.com. PS: we got it for free, we're giving it away for free too :)

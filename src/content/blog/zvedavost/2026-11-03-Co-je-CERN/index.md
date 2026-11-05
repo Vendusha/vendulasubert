@@ -6,33 +6,42 @@ lang: cs
 translationKey: zvedavost-co-je-cern
 summary: Srážky částic, čtyři obří detektory, radiační poškození křemíkových senzorů a jedna historka o houpacím křesílku, které o webu slyšelo dřív než zbytek světa.
 heroImage: cern-detektor-vystava.jpg
-heroAlt: Vendula s bratrem u modelu detektoru CMS v bývalé výstavě v CERNu
+heroAlt: S bráchou u modelu detektoru CMS v bývalé výstavě v CERNu
 draft: false
 ---
-![Vendula s bratrem u modelu detektoru CMS v bývalé výstavě v CERNu](cern-detektor-vystava.jpg)
+![S bráchou u modelu detektoru CMS v bývalé výstavě v CERNu](cern-detektor-vystava.jpg)
 *foto: S bráchou u modelu detektoru CMS v bývalé výstavě v CERNu*
 
-Na houpacím křesílku, které teď máme doma, si lebedil syn našich kamarádů z CERNu ve chvíli, kdy jim Tim Berners-Lee vyprávěl o svém nápadu na světový web. Kamarád mu prý tehdy řekl: „Zajímavý nápad, ale nemyslím si, že se to ujme.“ Když nám o mnoho let později křesílko předával pro naše novorozeňátko, dodal se smíchem: „Jak jsem se mýlil.“
+Na houpacím křesílku, které teď máme doma, si lebedil syn našich kamarádů z CERNu ve chvíli, kdy jim Tim Berners-Lee vyprávěl o svém nápadu na světový web. Kamarád mu prý tehdy řekl: „Zajímavý nápad, ale nemyslím si, že se to ujme.“ Když nám o mnoho let později křesílko předával pro naše novorozeně, dodal se smíchem: „Jak jsem se mýlil.“
 
-Teď z něj vyrostla i naše nejmladší a křesílko může jít dál. K tomu se dostanu na konci. Nejdřív ale zkusím vysvětlit, co to vlastně znamená, když řeknu, že jsem pracovala v CERNu.
+Teď z něj vyrostla i naše nejmladší a křesílko může jít dál.
+Teď se ale vraťme k tomu, proč tenhle článek píšu: zkusím pojem CERN trochu vysvětlit.
 
-Co je podstata CERNu? Je to místo, kde fyzici píšou čmáranice na tabuli jako Sheldon ze seriálu Big Bang Theory? Nebo místo, kde se zkoumá jaderná fyzika (Bůh ví, co to znamená, ale v bondovkách vypadá důležitě) a skupina vědců každý den pracuje na tom, aby se předešlo katastrofě? Řekla bych, že nejčastější představa zní: je to místo, kde se dělá něco s fyzikou a pro vědce je to důležité.
+Co je podstata CERNu? Je to místo, kde fyzici píšou čmáranice na tabuli jako Sheldon ze seriálu Big Bang Theory? Nebo místo, kde se zkoumá jaderná fyzika (Bůh ví, co to znamená, ale v bondovkách vypadá důležitě) a skupina vědců každý den pracuje na tom, aby se předešlo katastrofě? Většina lidí má o CERNu jen mlhavou představu: něco s fyzikou, něco hodně důležitého. Zkusím ji trochu zaostřit.
 
-V CERNu jsem pracovala 3,5 roku a na ty roky vzpomínám moc ráda. Zkoumala jsem, jak moc se opotřebovávají a poškozují křemíkové části detektorů. A také jsem dělala průvodkyni: návštěvníkům jsem ukazovala jednotlivé části komplexu a vysvětlovala, k čemu slouží.
+CERN je evropská výzkumná organizace, kterou v roce 1954 založilo dvanáct států a sídlí u Ženevy, přímo na hranici Švýcarska a Francie. Zkratka pochází z francouzského názvu Evropská rada pro jaderný výzkum. CERN financují členské státy; Česko je členem od roku 1993 (Československo od roku 1992). Pracují tu tisíce zaměstnanců a k tomu přes deset tisíc vědců z univerzit a ústavů z celého světa, kteří sem jezdí dělat experimenty.
 
-## CERN je kladivo
+V CERNu jsem pracovala 3,5 roku a na ty roky vzpomínám moc ráda. Zkoumala jsem, jak moc se opotřebovávají a poškozují křemíkové části detektorů, o konkrétní náplni mojí práce plánuju napsat jiný blogpost. Ale také jsem dělala průvodkyni: návštěvníkům jsem ukazovala jednotlivé části komplexu a vysvětlovala, k čemu slouží.
 
-Ve své podstatě je CERN kladivo, které rozbíjí hmotu. Fyzici ve velmi zjednodušené metafoře popisují svět jako stavbu z pár (podle obvyklého počítání 17) kostiček Lega, ze kterých se skládá všechno. Nebo jinak: představte si 17 základních přísad, ze kterých dokážete uvařit všechno na světě. Pro ty, kdo si pamatují ze střední školy trochu fyziky: mezi tyto základní přísady patří například elektron nebo neutrino.
+## LHC je kladivo
 
-Tahle myšlenka není úplně nová. Dalton a jeho hon za atomy předpokládal přesně tohle: že existuje spousta typů základních dílků (například atom vodíku nebo atom kyslíku), ze kterých se dá všechno postavit (třeba voda v případě těchto dvou prvků). Chemici se tedy snažili rozbíjet látky, které máme kolem sebe, a získávat z nich prvky. Jejich kladivem na hmotu byl chemický experiment.
+Nejznámější částí CERNu je LHC, Velký hadronový urychlovač, tak začněme tam. LHC je ve své podstatě kladivo, které rozbíjí hmotu.
 
-Prvky se nejprve řadily do triád, poté do oktáv a nakonec je Mendělejev uspořádal do tabulky. Některé prvky přitom měly podobné vlastnosti, což naznačovalo, že mají nějakou společnou vnitřní strukturu. (Pokud jsme došli k tomu, že mezi základní jednotky jídla patří ovoce, zelenina, bábovky a bonbóny, pak nás společná sladká chuť bábovky, bonbónu a ovoce může dovést k myšlence, že obsahují cosi společného, totiž něco, co způsobuje sladkost.)
+Proč by někdo chtěl rozbíjet hmotu? Představte si, že všechno na světě se dá uvařit ze 17 základních přísad. Nebo jinak: že všechno je postavené ze 17 druhů kostiček Lega. Takhle ve velmi zjednodušené metafoře popisují fyzici svět (17 je podle obvyklého počítání). Pro ty, kdo si pamatují ze střední školy trochu fyziky: mezi tyto základní přísady patří například elektron nebo neutrino. A abychom zjistili, z čeho se věci skládají, musíme je rozbít.
 
-Prvním dílkem, který se našel uvnitř atomu, byl elektron. J. J. Thomson v roce 1897 zkoumal katodové paprsky, které vylétají z kovové elektrody ve vakuové trubici, a změřil poměr jejich náboje a hmotnosti. Ať použil jakýkoli kov, vycházel pořád stejně, a navíc ukazoval, že tyhle částice jsou víc než tisíckrát lehčí než nejlehčí atom. Musely to tedy být kousky, ze kterých jsou poskládané všechny atomy. Jako by se ukázalo, že cukr z bábovky, z bonbónu i z jablka je přesně ten samý cukr.
+Tahle myšlenka není úplně nová. Na začátku 19. století přišel John Dalton s teorií, že existuje spousta typů základních dílků – atomů (například atom vodíku nebo atom kyslíku), ze kterých se dá všechno postavit (třeba voda v případě těchto dvou prvků). Chemici se tehdy snažili rozbíjet látky, které máme kolem sebe, a získávat z nich prvky. Jejich kladivem na hmotu byl chemický experiment.
 
-Poté se s novým fyzikálním kladivem, jadernou fyzikou, podařilo rozbít jádro atomu a zjistit, že uvnitř jsou protony a neutrony.
+Prvky se nejprve řadily do triád, poté do oktáv a nakonec je Mendělejev uspořádal do tabulky.
 
-Pak na scénu nastoupily velké laboratoře – CERN, SLAC, DESY a další – a s nimi kladivo, které se jmenuje částicová fyzika. Princip je jednoduchý: urychlit dvě částice na maximum a nechat je do sebe narazit. (Dříve se srážely například protony s antiprotony nebo elektrony s pozitrony, dnes se v LHC urychlují protony a příležitostně také těžká jádra olova.) Trochu jako kdybyste hodili autíčkem o stěnu: když hodíte hodně, z dochovaných úlomků si dokážete domyslet, jak vypadalo autíčko uvnitř. Tady ale metafora kulhá: Higgsův boson v protonu schovaný nebyl. Vznikl z energie srážky, a proto potřebujeme čím dál vyšší energie.
+Jsou ale atomy opravdu těmi základními, nedělitelnými přísadami všeho? Samo slovo atom znamená řecky „nedělitelný“. Jenže některé prvky měly podobné vlastnosti, což naznačovalo, že mají nějakou společnou vnitřní strukturu. (Pokud jsme došli k tomu, že mezi základní jednotky jídla patří ovoce, zelenina, bábovky a bonbóny, pak nás společná sladká chuť bábovky, bonbónu a ovoce může dovést k myšlence, že obsahují cosi společného, totiž něco, co způsobuje sladkost.)
+
+Prvním dílkem, který se našel uvnitř atomu, byl elektron. J. J. Thomson v roce 1897 zkoumal katodové paprsky, které vylétají z kovové elektrody ve vakuové trubici, a změřil poměr jejich náboje a hmotnosti. Ať použil jakýkoli kov, vycházel pořád stejně, a navíc ukazoval, že tyhle částice jsou víc než tisíckrát lehčí než nejlehčí atom. Nejjednodušší vysvětlení bylo, že jde o kousíček, který v sobě mají atomy všech kovů – a možná všechny atomy vůbec. Atom tedy nedělitelný není. Jako by se ukázalo, že cukr z bábovky, z bonbónu i z jablka vytváří na našem jazyku stejnou sladkost.
+
+Elektrony ale tvoří jen nepatrnou část hmotnosti atomu. Kde je zbytek? To zjistil Ernest Rutherford: v roce 1911 vysvětlil pokus, při kterém se tenká zlatá fólie ostřelovala částicemi alfa. Většina jich fólií prolétla, ale pár se odrazilo zpátky – Rutherford to přirovnal k dělostřeleckému granátu, který se odrazí od papíru. Skoro všechna hmota atomu tedy musí být soustředěná v nepatrném jádru uprostřed. S novým fyzikálním kladivem, jadernou fyzikou, se pak podařilo rozbít i jádro a zjistit, že se skládá z protonů a neutronů.
+
+Pak na scénu nastoupily velké laboratoře – CERN, SLAC, DESY a další – a s nimi kladivo, které se jmenuje částicová fyzika. Princip je jednoduchý: urychlit dvě částice na co nejvyšší energii a nechat je do sebe narazit. (Rychlost se přitom blíží rychlosti světla, ale nikdy ji nedosáhne – při dalším urychlování roste hlavně energie částic.) Dříve se srážely například protony s antiprotony nebo elektrony s pozitrony, dnes se v LHC urychlují protony a příležitostně také těžká jádra olova. Trochu jako kdybyste hodili autíčkem o stěnu: z dochovaných úlomků se můžete dozvědět, jak vypadalo autíčko uvnitř.
+
+Tady ale metafora kulhá. Při srážce protonů se mezi úlomky objevují i částice, které v protonu vůbec nebyly – jako by se po nárazu dvou autíček mezi trosky vysypal náklaďák. Přesně tak vznikl Higgsův boson: v protonu schovaný nebyl, vyrobil se z energie srážky. Einsteinovo E = mc² říká, že energie a hmotnost jsou dvě podoby téhož, takže energii srážky lze „přetavit“ na novou hmotu. Čím těžší částici chceme vyrobit, tím víc energie musíme do srážky dodat – a Higgsův boson je asi 130krát těžší než proton. Proto fyzici chtějí čím dál silnější urychlovače: s vyšší energií mohou vznikat těžší částice, které jsme zatím nikdy neviděli.
 
 ## Proč tak hrubě? A proč ne neutrony?
 
@@ -41,22 +50,26 @@ Na tomto místě mohou čtenáře napadnout dvě otázky. Není to trochu hrubá
 Odpověď je podobná:
 
 1. Nemáme dobrý fyzikální šroubovák, který by umožňoval zkoumat vnitřní složení atomů v klidu.
-2. Nemáme fyzikální ovladač na neutrony. Protony a elektrony dokážeme urychlit, zpomalit a přesměrovat, protože jsou nabité. Neutrony moc ne, protože elektrický náboj nemají. A navíc se volný neutron zhruba za čtvrt hodiny rozpadne.
-
-To ale neznamená, že neutrony nejsou k užitku. Do sebe je sice nesrážíme, ale skvěle se hodí jako sonda, kterou se dá nahlížet do materiálů. Právě na to je European Spallation Source, kde jsem pracovala 3,5 roku, než jsem nastoupila do CERNu. Zabývala jsem se hlavně detekcí neutronů: navrhovala jsem neutronový monitor založený na vanadové fólii a heliových detektorech.
+2. Nemáme fyzikální ovladač na neutrony. Protony a elektrony dokážeme urychlit, zpomalit a přesměrovat, protože jsou nabité. Neutrony elektrický náboj nemají, a tak s nimi takhle manipulovat nedokážeme.
 
 ## Urychlovací kolečka
 
-Urychlování a srážky zabírají v CERNu nejvíce fyzického prostoru. Urychlování obstarává řada urychlovačů: začínáme lineárním urychlovačem (Linac4), pokračujeme do malého kolečka PS Booster, do PS (628 metrů obvodu), do SPS (necelých 7 km), až se dostáváme do 27 km dlouhého LHC. V tuhle chvíli se v CERNu mluví o možném přidání dalšího kolečka, FCC, které by mělo kolem 91 kilometrů a vedlo by pod Švýcarskem a Francií.
+Abychom protony dostali na energii, při které se v LHC srážejí, nestačí jeden urychlovač. Proč vlastně kolečka? První urychlovače byly lineární: částice proletěla řadou urychlovacích úseků jednou za sebou a tím to skončilo. Kdo chtěl vyšší energii, musel stavět delší a delší trubku. Kruhový urychlovač ten problém obchází: silné magnety ohýbají dráhu částic do kruhu, takže proletí stejnými urychlovacími úseky znovu a znovu – v LHC přes jedenáct tisíc krát za sekundu – a při každém oběhu dostanou malé postrčení.
+
+Každé kolečko ale funguje dobře jen v určitém rozsahu energií, a tak si částice předávají štafetu.
 
 ![Vendula ukazuje návštěvníkům mapu urychlovačů v CERNu, poslouchá i Olga z kanálu Olinium](mapa-urychlovacu.jpg)
 *foto: Mapa urychlovačů byla při prohlídkách moje oblíbená zastávka – bez ní se v té štafetě nikdo nevyzná. Na fotce mě poslouchá i Olga, která o vědě (chemii) natáčí kanál [Olinium](https://www.youtube.com/@Olinium).*
 
-Na začátku se vezme vodík s elektronem navíc (iont H⁻). Při vstupu do Boosteru se z něj strhnou oba elektrony a zbydou protony. Potom, co je proženeme celou štafetou urychlovačů, je v LHC pošleme tak, že část obíhá v jednom směru a část v druhém. Na čtyřech místech je pak nasměrujeme proti sobě, aby se srazily.
+Cesta protonu začíná v obyčejné lahvi s vodíkem. Z vodíku se nejprve udělají ionty H⁻ – atomy vodíku s jedním elektronem navíc – a ty se rozběhnou v lineárním urychlovači **Linac4**, rovné trubce dlouhé necelých sto metrů. Na jejím konci proletí tenkou fólií, která z nich strhne oba elektrony, a zbydou holé protony. Ty pokračují do prvního kolečka, **PS Booster** (157 metrů obvodu), pak do **PS**, Protonového synchrotronu (628 metrů), a dál do **SPS**, Super protonového synchrotronu (necelých 7 km). Každé kolečko protony urychlí o kus víc a předá je dalšímu. Nakonec skončí ve 27 km dlouhém **LHC**, kde krouží jen o vlásek pomaleji než světlo.
+
+V LHC se protony pošlou tak, že část obíhá v jednom směru a část v druhém. Na čtyřech místech se pak oba svazky nasměrují proti sobě, aby se srazily.
+
+V tuhle chvíli se v CERNu mluví o možném přidání dalšího kolečka, FCC, které by mělo kolem 91 kilometrů a vedlo by pod Švýcarskem a Francií.
 
 ## Čtyři obří fotoaparáty
 
-V místech srážek stojí čtyři gigantické „fotoaparáty“ – detektory, které srážky zachycují: **ATLAS, CMS, ALICE a LHCb**. ATLAS je vysoký jako osmipatrový dům a CMS váží víc než Eiffelovka.
+V místech srážek stojí čtyři gigantické „fotoaparáty“ – detektory, které srážky zachycují: **ATLAS, CMS, ALICE a LHCb**. ATLAS je vysoký jako osmipatrový dům a CMS váží víc než Eiffelovka. Detektor obklopuje místo srážky ve vrstvách jako cibule a každá vrstva zachytí něco jiného: kudy částice proletěla, jakou měla energii, jaký měla náboj. Z toho se pak dá zpětně poskládat, co se při srážce stalo.
 
 Detektor ale není fotoaparát, který si v klidu fotí z bezpečné vzdálenosti. Sedí přímo u srážek a je jimi neustále ostřelovaný. Podstatou mojí práce bylo zkoumat, jak záření poškozuje křemíkové senzory v detektorech. Fyzikálně se tomu říká neionizační energetické ztráty (NIEL). Lidsky řečeno: fotoaparát, který fotí výbuchy, je těmi výbuchy pomalu ničen. A někdo musí spočítat, jak dlouho vydrží a jak moc se každým výbuchem poničí.
 
@@ -70,7 +83,7 @@ Do jeskyně ATLASu se dá podívat jen tehdy, když je urychlovač odstavený. T
 
 *video: procházka po lávkách na detektoru ATLAS: mezi barelovými mionovými komorami je vidět až na dno jeskyně*
 
-![Vendula v helmě před plakátem urychlovače](vendy-helma.jpg)
+![Vendula v helmě před plakátem urychlovače za covidu](vendy-helma.jpg)
 *foto: Já před plakátem urychlovače za covidu*
 
 Data z detektorů pak analyzuje celá armáda analytiků a dedukuje z nich základní složení vesmíru. V CERNu takto přišli na tři z těch kostiček Lega: W boson a Z boson (1983) a Higgsův boson (2012).
@@ -93,4 +106,4 @@ V přepočtu na obyvatele posílá Česko na fungování CERNu přibližně 35�
 ![Houpací křesílko, ve kterém sedí nejmladší dcera](kresilko.jpg)
 *foto: Křesílko, které poslouchalo sira Tima, když přišel s nápadem na world wide web. Na fotce v něm sedí naše nejmladší.*
 
-Křesílko, které slyšelo o webu dřív než zbytek světa, teď hledá nový domov – ideálně u někoho, kdo má malé dítě a rád si o tom bude vyprávět. Je velmi staré, ale má příběh: teď bydlí u nás v Českém ráji. Pokud byste o něj měli zájem, ozvěte se mi na maulerova@gmail.com (zn. zadarmo jsme dostali, zadarmo dáme :) ).
+Teď hledá nový domov – ideálně u někoho, kdo má malé dítě a rád si o tom bude vyprávět. Je už hodně staré, ale o to lepší má příběh. Bydlí u nás v Českém ráji a předáme ho osobně. Pokud byste o něj měli zájem, ozvěte se mi na maulerova@gmail.com. Zn. zadarmo jsme dostali, zadarmo dáme :)
