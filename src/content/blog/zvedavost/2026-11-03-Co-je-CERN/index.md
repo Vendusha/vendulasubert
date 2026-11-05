@@ -1,10 +1,10 @@
 ---
-title: Co to znamená, že jsem pracovala v CERNu
+title: Co je CERN?
 date: 2026-11-03
 column: zvedavost
 lang: cs
 translationKey: zvedavost-co-je-cern
-summary: Srážky částic, čtyři obří detektory, radiační poškození křemíkových senzorů a jedna historka o houpacím křesílku, které o webu slyšelo dřív než zbytek světa.
+summary: Srážky částic, čtyři obří detektory a jedna historka o houpacím křesílku, které o webu slyšelo dřív než zbytek světa.
 heroImage: cern-detektor-vystava.jpg
 heroAlt: S bráchou u modelu detektoru CMS v bývalé výstavě v CERNu
 draft: false
@@ -107,3 +107,5 @@ V přepočtu na obyvatele posílá Česko na fungování CERNu přibližně 35�
 *foto: Křesílko, které poslouchalo sira Tima, když přišel s nápadem na world wide web. Na fotce v něm sedí naše nejmladší.*
 
 Teď hledá nový domov – ideálně u někoho, kdo má malé dítě a rád si o tom bude vyprávět. Je už hodně staré, ale o to lepší má příběh. Bydlí u nás v Českém ráji a předáme ho osobně. Pokud byste o něj měli zájem, ozvěte se mi na maulerova@gmail.com. Zn. zadarmo jsme dostali, zadarmo dáme :)
+
+Děkuji za čtení, a pokud se chcete na něco zeptat, můžete napsat do e-mailu, do komentářů na Facebooku nebo na LinkedIn, budu moc vděčná za zpětnou vazbu :) 

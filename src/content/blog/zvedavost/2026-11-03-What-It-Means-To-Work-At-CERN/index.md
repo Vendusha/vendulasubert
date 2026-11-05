@@ -1,10 +1,10 @@
 ---
-title: What it actually means that I worked at CERN
+title: What is CERN?
 date: 2026-11-03
 column: zvedavost
 lang: en
 translationKey: zvedavost-co-je-cern
-summary: Particle collisions, four giant detectors, radiation damage to silicon sensors, and a story about a rocking chair that heard about the web before the rest of the world did.
+summary: Particle collisions, four giant detectors, and a story about a rocking chair that heard about the web before the rest of the world did.
 heroImage: cern-detektor-vystava.jpg
 heroAlt: With my brother at a model of the CMS detector in a former CERN exhibition
 draft: false
@@ -107,3 +107,5 @@ Per capita, Czechia sends roughly 35–40 CZK (about €1.50) a year toward runn
 *photo: The rocking chair that listened to Sir Tim when he came up with the idea for the world wide web. In the photo, our youngest is sitting in it.*
 
 It's now looking for a new home — ideally with someone who has a small child and will enjoy telling this story themselves. It's very old by now, but that just makes for a better story. It lives with us in the Český ráj (Bohemian Paradise) region, and we'll hand it over in person. If you're interested, drop me a line at maulerova@gmail.com. PS: we got it for free, we're giving it away for free too :)
+
+Thanks for reading, and if you have any questions, feel free to email me or leave a comment on Facebook or LinkedIn — I'd really appreciate the feedback :)
