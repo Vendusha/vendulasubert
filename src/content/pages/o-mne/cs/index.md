@@ -13,6 +13,8 @@ Jsem fyzička, která jednou na pohovoru řekla, že umí sešroubovat nábytek 
 
 Jeden z největších projektů, na kterých teď dělám, je knížka [ALEFUJ!](https://alefuj.cz/cs/). Je to humoristická kniha, ve které se Kosťa snaží najít práci, která by měla smysl. Ale protože smysl většinou vidí jinde než jeho šéf, v každé kapitole si Kosťa hledá práci novou. Naproti tomu Báře dává smysl studovat chemii, ale místo toho většinu času tráví hlídáním dvou malých příšer, hraním v amatérském orchestru a pátráním po záhadném muži, který desítky let anonymně radil Nobelovu výboru pro fyziku.
 
+**Druhý, přerostlý projekt:** zpívám a nahrávám celou filmovou hudbu ke Společenstvu prstenu, jen svým hlasem. [Víc o tom v sekci Hudba →](/cs/hudba/lotr/)
+
 ### Moje odbornost ve zkratce
 
 ![Vendula testuje beam monitor v laboratoři](beam-monitor-berlin.jpg)

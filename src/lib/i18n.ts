@@ -79,6 +79,17 @@ interface Translations {
 		comingSoon: string;
 		youtubeIntro: string;
 		youtubeCta: string;
+		lotrCardLabel: string;
+		lotrCardCta: string;
+	};
+	lotr: {
+		backToMusicLabel: string;
+		howIMakeItHeading: string;
+		tracklistHeading: string;
+		tracklistNote: string;
+		playlistLinkLabel: string;
+		creditsHeading: string;
+		listenLabel: string;
 	};
 }
 
@@ -154,6 +165,17 @@ export const translations: Record<Locale, Translations> = {
 			comingSoon: 'Připravuji.',
 			youtubeIntro: 'Nové písničky přidávám na YouTube.',
 			youtubeCta: 'Odebírat kanál',
+			lotrCardLabel: 'Přerostlý projekt',
+			lotrCardCta: 'Zjistit víc →',
+		},
+		lotr: {
+			backToMusicLabel: '← zpět na Hudbu',
+			howIMakeItHeading: 'Jak to dělám',
+			tracklistHeading: 'Tracklist',
+			tracklistNote: 'Pořadí a názvy skladeb podle The Complete Recordings. Postupně doplňuju.',
+			playlistLinkLabel: 'Celý playlist na YouTube',
+			creditsHeading: 'Kredity',
+			listenLabel: 'poslechnout',
 		},
 	},
 	en: {
@@ -227,6 +249,17 @@ export const translations: Record<Locale, Translations> = {
 			comingSoon: 'Coming soon.',
 			youtubeIntro: 'I post new songs on YouTube.',
 			youtubeCta: 'Subscribe to the channel',
+			lotrCardLabel: 'A project that got out of hand',
+			lotrCardCta: 'Learn more →',
+		},
+		lotr: {
+			backToMusicLabel: '← back to Music',
+			howIMakeItHeading: 'How I make it',
+			tracklistHeading: 'Tracklist',
+			tracklistNote: 'Track order and names follow The Complete Recordings. Filling it in as I go.',
+			playlistLinkLabel: 'Full playlist on YouTube',
+			creditsHeading: 'Credits',
+			listenLabel: 'listen',
 		},
 	},
 };

@@ -6,6 +6,7 @@ import { render } from 'astro:content';
 import Layout from '../../../layouts/Layout.astro';
 import TranslationNotice from '../../../components/TranslationNotice.astro';
 import SongCard from '../../../components/SongCard.astro';
+import LotrCard from '../../../components/LotrCard.astro';
 import { loadPage } from '../../../lib/pages';
 import { t } from '../../../lib/i18n';
 import { absUrl } from '../../../lib/seo';
@@ -37,6 +38,8 @@ const categories = getVisibleCategories();
 	</article>
 
 	{featured && <SongCard song={featured} lang={lang} anchorId={`featured-${featured.id}`} priority />}
+
+	<LotrCard lang={lang} />
 
 	{
 		categories.map((cat) => {

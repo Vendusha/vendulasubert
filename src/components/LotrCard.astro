@@ -1,0 +1,89 @@
+---
+// Teaser card for the Lord of the Rings a cappella project — used at the
+// top of the Hudba/Music page. Links through to its own subpage rather
+// than embedding the player inline, so it doesn't compete with the
+// regular songs below it.
+import { t, type Locale } from '../lib/i18n';
+import { PAGE_TITLE, CARD_TEXT, LOTR_TRACKS, pick } from '../data/lotr';
+
+interface Props {
+	lang: Locale;
+}
+
+const { lang } = Astro.props;
+const copy = t(lang).music;
+const base = import.meta.env.BASE_URL;
+// Same slug-differs-by-language situation as the Hudba/Music page itself.
+const musicSlug = lang === 'cs' ? 'hudba' : 'music';
+const href = `${base}${lang}/${musicSlug}/lotr/`;
+
+const prologue = LOTR_TRACKS.find((t) => t.youtubeId);
+const thumbnailUrl = prologue ? `https://i.ytimg.com/vi/${prologue.youtubeId}/hqdefault.jpg` : undefined;
+---
+
+<a class="lotr-card" href={href}>
+	{
+		thumbnailUrl && (
+			<img src={thumbnailUrl} alt="" aria-hidden="true" width="480" height="360" loading="lazy" />
+		)
+	}
+	<div class="lotr-card-text">
+		<p class="lotr-eyebrow">{copy.lotrCardLabel}</p>
+		<h2>{pick(PAGE_TITLE, lang)}</h2>
+		<p class="lotr-desc">{pick(CARD_TEXT, lang)}</p>
+		<span class="lotr-cta">{copy.lotrCardCta}</span>
+	</div>
+</a>
+
+<style>
+	.lotr-card {
+		display: grid;
+		grid-template-columns: 160px 1fr;
+		gap: 20px;
+		align-items: center;
+		margin-bottom: 32px;
+		padding: 16px;
+		border: 1px solid var(--ink);
+		text-decoration: none;
+		color: var(--ink);
+	}
+	.lotr-card:hover {
+		border-color: var(--accent);
+	}
+	.lotr-card:hover .lotr-cta {
+		color: var(--accent);
+	}
+	.lotr-card img {
+		display: block;
+		width: 100%;
+		height: auto;
+		aspect-ratio: 4 / 3;
+		object-fit: cover;
+	}
+	.lotr-eyebrow {
+		font-family: var(--font-meta);
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--ink-soft);
+		margin: 0 0 4px;
+	}
+	.lotr-card h2 {
+		margin: 0 0 6px;
+	}
+	.lotr-desc {
+		color: var(--ink-soft);
+		margin: 0 0 8px;
+	}
+	.lotr-cta {
+		font-family: var(--font-meta);
+		font-size: 13px;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+	}
+	@media (max-width: 480px) {
+		.lotr-card {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>
