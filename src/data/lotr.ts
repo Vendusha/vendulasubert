@@ -9,8 +9,8 @@ export { pick };
 // one-file edit, same spirit as src/data/music.ts.
 
 export const PAGE_TITLE: Localized = {
-	cs: 'Pán prstenů jen mým hlasem',
-	en: 'The Lord of the Rings, just my voice',
+	cs: 'Pán prstenů a-capella',
+	en: 'The Lord of the Rings, a cappella',
 };
 
 /** Used as both the meta description and the teaser text on the two small
@@ -22,9 +22,9 @@ export const CARD_TEXT: Localized = {
 
 export const INTRO: Localized = {
 	cs:
-		'Kdo mě zná, ví, že jsem skalní fanoušek Tolkiena. Tolkien vložil do Středozemě nepředstavitelné množství práce – jazyky, mapy, staletí historie. Po něm do toho samé nepředstavitelné množství práce vložil Peter Jackson, aby to přenesl na plátno, Howard Shore k tomu napsal hodiny hudby a stovky lidí roky ručně stavěly „bigatures“, splétaly řetězovou zbroj kroužek po kroužku a lepily vlasy na hobití chodidla. Tak jsem se rozhodla přidat se svým vlastním nesmyslně pracným úkolem: nazpívat celou hudbu ke Společenstvu prstenu jen svým hlasem, vrstvu po vrstvě (uvidíme, jestli se dostanu za třetí písničku, potící se smajlík).',
+		'Kdo mě zná, ví, že jsem skalní fanoušek Tolkiena. Tolkien vložil do Středozemě nepředstavitelné množství práce – jazyky, mapy, staletí historie. Po něm do toho samé nepředstavitelné množství práce vložil Peter Jackson, aby to přenesl na plátno, Howard Shore k tomu napsal hodiny hudby a stovky lidí roky ručně stavěly „bigatures“. Tak jsem se rozhodla přidat se svým vlastním nesmyslně pracným úkolem: nazpívat celou hudbu ke Společenstvu prstenu jen svým hlasem, vrstvu po vrstvě (uvidíme, jestli se dostanu za třetí písničku, potící se smajlík).',
 	en:
-		'If you know me, you know I’m a diehard Tolkien fan. Tolkien put an impossible amount of work into Middle-earth – languages, maps, centuries of history. Then Peter Jackson put an impossible amount of work into bringing it to the screen, Howard Shore wrote hours of music for it, and hundreds of people spent years hand-building "bigatures", forging chainmail ring by ring and gluing hair onto hobbit feet. So I decided to join in with my own absurdly laborious task: singing the whole Fellowship of the Ring score with nothing but my voice, one layer at a time (we’ll see if I even make it past song three, sweating-smile emoji).',
+		'If you know me, you know I’m a diehard Tolkien fan. Tolkien put an impossible amount of work into Middle-earth – languages, maps, centuries of history. Then Peter Jackson put an impossible amount of work into bringing it to the screen, Howard Shore wrote hours of music for it, and hundreds of people spent years hand-building "bigatures". So I decided to join in with my own absurdly laborious task: singing the whole Fellowship of the Ring score with nothing but my voice, one layer at a time (we’ll see if I even make it past song three, sweating-smile emoji).',
 };
 
 export const HOW_I_MAKE_IT: Localized = {
