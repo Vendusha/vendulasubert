@@ -4,7 +4,7 @@ date: 2026-11-03
 column: zvedavost
 lang: en
 translationKey: zvedavost-co-je-cern
-summary: Particle collisions, four giant detectors, and a story about a rocking chair that heard about the web before the rest of the world did.
+summary: Particle collisions, four giant detectors, and a story about a baby bouncer-rocker that heard about the web before the rest of the world did.
 heroImage: cern-detektor-vystava.jpg
 heroAlt: With my brother at a model of the CMS detector in a former CERN exhibition
 draft: false
@@ -12,9 +12,9 @@ draft: false
 ![With my brother at a model of the CMS detector in a former CERN exhibition](cern-detektor-vystava.jpg)
 *photo: With my brother at a model of the CMS detector in a former CERN exhibition*
 
-The rocking chair we now have at home is the one our CERN friends' son used to sprawl in, right when Tim Berners-Lee was telling them about his idea for the world wide web. Our friend apparently told him at the time: "Interesting idea, but I don't think it'll catch on." Years later, when he handed the chair over for our newborn, he added with a laugh: "How wrong I was."
+The baby bouncer-rocker we now have at home is the one our CERN friends' son used to sprawl in, right when Tim Berners-Lee was telling them about his idea for the world wide web. Our friend apparently told him at the time: "Interesting idea, but I don't think it'll catch on." Years later, when he handed the bouncer-rocker over for our newborn, he added with a laugh: "How wrong I was."
 
-Now our youngest has outgrown it too, and the chair is ready to move on.
+Now our youngest has outgrown it too, and the bouncer-rocker is ready to move on.
 Now, though, let's get back to why I'm actually writing this post: I'll try to explain the term CERN a little.
 
 What is CERN, really? A place where physicists scrawl equations on a whiteboard like Sheldon from The Big Bang Theory? Or somewhere nuclear physics gets studied (God knows what that actually means, but it sounds important in Bond movies) and a team of scientists works every day to prevent some kind of catastrophe? Most people, I'd say, have only a hazy idea of CERN: something to do with physics, something very important. Let me try to bring that into focus a bit.
@@ -90,7 +90,7 @@ An entire army of analysts then processes the data from these detectors and dedu
 
 ## Where the web was born
 
-A complex this enormous attracts scientists from all over the world, working on all sorts of problems. The world wide web was born here, too — and that's also where the rocking-chair story from the intro took place.
+A complex this enormous attracts scientists from all over the world, working on all sorts of problems. The world wide web was born here, too — and that's also where the baby-bouncer-rocker story from the intro took place.
 
 ![Bára Miklasová pointing at the "Where the web was born" plaque](cedule-web.jpg)
 *photo: My friend Bára Miklasová pointing at the plaque in the corridor where the web was born. Incidentally, Bára is editing my upcoming book.*
@@ -101,10 +101,10 @@ CERN also develops technologies that have made their way into hospitals. One of 
 
 Per capita, Czechia sends roughly 35–40 CZK (about €1.50) a year toward running CERN. CERN tries to give that back by producing open-source technologies and software that then get used in further research. Hooray for science!
 
-## And what about the chair?
+## And what about the bouncer-rocker?
 
-![The rocking chair our youngest daughter is sitting in](kresilko.jpg)
-*photo: The rocking chair that listened to Sir Tim when he came up with the idea for the world wide web. In the photo, our youngest is sitting in it.*
+![The baby bouncer-rocker our youngest daughter is sitting in](kresilko.jpg)
+*photo: The baby bouncer-rocker that listened to Sir Tim when he came up with the idea for the world wide web. In the photo, our youngest is sitting in it.*
 
 It's now looking for a new home — ideally with someone who has a small child and will enjoy telling this story themselves. It's very old by now, but that just makes for a better story. It lives with us in the Český ráj (Bohemian Paradise) region, and we'll hand it over in person. If you're interested, drop me a line at maulerova@gmail.com. PS: we got it for free, we're giving it away for free too :)
 
