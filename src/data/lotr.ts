@@ -67,7 +67,7 @@ export interface LotrTrack {
 // Complete Recordings tracklist needs to come from her, not be guessed.
 export const LOTR_TRACKS: LotrTrack[] = [
 	{ title: 'Prologue', status: 'published', youtubeId: 'WPlCfO59Q1U' },
-	{ title: 'The Shire', status: 'done' },
+	{ title: 'The Shire', status: 'published', youtubeId: 'IYezENq5Hz8' },
 ];
 
 export function trackStatusLabel(status: TrackStatus, lang: Locale): string {
